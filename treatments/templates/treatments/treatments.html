@@ -12,17 +12,24 @@
 {% endblock %}
 
 {% block content %}
+{% for treatment in treatments %}
 <div class="container">
-    <div class="row">
-        <div class="col-4">
-            <img src="" alt="">
+    <a href="">
+        <div class="row treatment-wrapper">
+            <div class="col-12 col-lg-4">
+                <img class="treatment-img" src="../../../media/test.jpg" alt="">
+            </div>
+            <div class="col-12 col-lg-8">
+                <h4 class="treatment-header">{{ treatment.name }}</h4>
+                <p class="treatment-p">{{ treatment.description }}</p>
+                <span class="treatment-rate-price">{{ treatment.rating }}</span>
+                <span class="treatment-rate-price">£{{ treatment.price }}</span>
+            </div>
+            <div class="col-12">
+                
+            </div>
         </div>
-        <div class="col-8">
-            <h4>Treatment header</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis saepe similique 
-                aliquid hic eligendi cum inventore sed id, vel animi deleniti, eos porro, repudiandae laudantium praesentium vitae labore voluptatibus 
-                tenetur. Laborum ducimus molestiae sequi autem ab, debitis amet expedita modi tempora nisi et obcaecati perspiciatis doloribus totam exercitationem labore odio.</p>
-        </div>
-    </div>
+    </a>
 </div>
+{% endfor %}
 {% endblock %}
