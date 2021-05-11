@@ -13,23 +13,36 @@
 
 {% block content %}
 {% for treatment in treatments %}
-<div class="container">
-    <a href="">
-        <div class="row treatment-wrapper">
-            <div class="col-12 col-lg-4">
-                <img class="treatment-img" src="../../../media/test.jpg" alt="">
-            </div>
-            <div class="col-12 col-lg-8">
-                <h4 class="treatment-header">{{ treatment.name }}</h4>
-                <p class="treatment-p">{{ treatment.description }}</p>
-                <span class="treatment-rate-price">{{ treatment.rating }}</span>
-                <span class="treatment-rate-price">£{{ treatment.price }}</span>
-            </div>
-            <div class="col-12">
-                
-            </div>
+<div class="overlay">
+    <div class="container">
+        <div class="row">
+            <h2 class="center-align treatment-page-heading">Treatments</h2>
         </div>
-    </a>
+        <a href="">
+            <div class="row treatment-wrapper">
+                <div class="col-12 col-lg-4">
+                    {% if treatment.image %}
+                    <img class="treatment-img" src="../../../media/test.jpg" alt="{{ treatment.name }}">
+                    {% else %}
+                    <img src="" alt="{{ treatment.name }}">
+                    {% endif %}
+                </div>
+                <div class="col-12 col-lg-8">
+                    <h4 class="treatment-header">{{ treatment.name }}</h4>
+                    <p class="treatment-p">{{ treatment.description }}</p>
+                    {% if treatment.rating %}
+                    <span class="treatment-rate-price">{{ treatment.rating }}</span>
+                    {% else %}
+                    <span class="treatment-rate-price">No Rating</span>
+                    {% endif %}
+                    <span class="treatment-rate-price">£{{ treatment.price }}</span>
+                </div>
+                <div class="col-12">
+                    
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 {% endfor %}
 {% endblock %}
