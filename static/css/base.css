@@ -79,7 +79,6 @@ body {
     background-color: #fff;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom: 100px; /* Temp fix to lower footer ----!! */
 }
 
 .treatment-wrapper:hover {
@@ -114,6 +113,12 @@ body {
 .treatment-rate-price {
     font-size: 18px;
     padding-left: 10px;
+}
+
+/* Stick footer to bottom of the page */
+.footer-wrapper {
+    position: absolute;
+    bottom: 0;
 }
 
 /* -------------------------------- Media Queries */
