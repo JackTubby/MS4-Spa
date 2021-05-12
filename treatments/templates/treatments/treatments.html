@@ -12,13 +12,10 @@
 {% endblock %}
 
 {% block content %}
+<h2 class="center-align page-padding">Treatments</h2>
 {% for treatment in treatments %}
-<div class="overlay">
     <div class="container">
-        <div class="row">
-            <h2 class="center-align treatment-page-heading">Treatments</h2>
-        </div>
-        <a href="">
+        <a href="{% url 'treatment_detail' treatment.id %}">
             <div class="row treatment-wrapper">
                 <div class="col-12 col-lg-4">
                     {% if treatment.image %}
@@ -43,6 +40,5 @@
             </div>
         </a>
     </div>
-</div>
 {% endfor %}
 {% endblock %}
