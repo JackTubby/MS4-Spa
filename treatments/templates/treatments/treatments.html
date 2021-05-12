@@ -12,9 +12,9 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
 <h2 class="center-align page-padding">Treatments</h2>
 {% for treatment in treatments %}
-    <div class="container">
         <a href="{% url 'treatment_detail' treatment.id %}">
             <div class="row treatment-wrapper">
                 <div class="col-12 col-lg-4">
@@ -43,6 +43,6 @@
                 </div>
             </div>
         </a>
-    </div>
 {% endfor %}
+</div>
 {% endblock %}
