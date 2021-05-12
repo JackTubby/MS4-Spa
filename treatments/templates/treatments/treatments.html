@@ -13,36 +13,45 @@
 
 {% block content %}
 <div class="container">
+<!-- Page Header -->
 <h2 class="center-align page-padding">Treatments</h2>
+<!-- Seach Bar -->
+<div class="input-group">
+    <div class="input-wrapper py-3">
+        <form class="form" method="GET" action="">
+            <input class="form-control search-input" type="text" name="q" placeholder="Search our treatments">
+        </form>
+    </div>
+</div>
+
+<!-- Treatments -->
 {% for treatment in treatments %}
-        <a href="{% url 'treatment_detail' treatment.id %}">
-            <div class="row treatment-wrapper">
-                <div class="col-12 col-lg-4">
-                    {% if treatments.image %}
-                        <a href="{{ treatment.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
-                        </a>
-                    {% endif %}
-                </div>
-                <div class="col-12 col-lg-8">
-                    <h4 class="treatment-header">{{ treatment.name }}</h4>
-                    <p class="treatment-p">{{ treatment.description }}</p>
-                    {% if treatment.rating %}
-                    <span class="treatment-rate-price">{{ treatment.rating }}</span>
-                    {% else %}
-                    <span class="treatment-rate-price">No Rating</span>
-                    {% endif %}
-                    <span class="treatment-rate-price">£{{ treatment.price }}</span>
-                </div>
-                <div class="col-12">
-                    
-                </div>
-            </div>
-        </a>
+<div class="row treatment-wrapper">
+    <a href="{% url 'treatment_detail' treatment.id %}">
+        <div class="col-12 col-lg-4">
+            {% if treatments.image %}
+                <a href="{{ treatment.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
+                </a>
+            {% endif %}
+        </div>
+        <div class="col-12 col-lg-8">
+            <h4 class="treatment-header">{{ treatment.name }}</h4>
+            <p class="treatment-p">{{ treatment.description }}</p>
+            {% if treatment.rating %}
+            <span class="treatment-rate-price">{{ treatment.rating }}</span>
+            {% else %}
+            <span class="treatment-rate-price">No Rating</span>
+            {% endif %}
+            <span class="treatment-rate-price">£{{ treatment.price }}</span>
+            <a class="treatment-details-a" href="{% url 'treatment_detail' treatment.id %}">Details</a>
+        </div>
+    </a>
+</div>
 {% endfor %}
 </div>
 {% endblock %}
