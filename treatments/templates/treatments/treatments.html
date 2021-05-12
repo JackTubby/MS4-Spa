@@ -18,10 +18,14 @@
         <a href="{% url 'treatment_detail' treatment.id %}">
             <div class="row treatment-wrapper">
                 <div class="col-12 col-lg-4">
-                    {% if treatment.image %}
-                    <img class="treatment-img" src="../../../media/test.jpg" alt="{{ treatment.name }}">
-                    {% else %}
-                    <img src="" alt="{{ treatment.name }}">
+                    {% if treatments.image %}
+                        <a href="{{ treatment.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
+                        </a>
                     {% endif %}
                 </div>
                 <div class="col-12 col-lg-8">
