@@ -13,6 +13,8 @@ font-family: 'Lato', sans-serif;
 #fefcdd yellow
 */
 
+
+/* Website Styles */
 html {
     min-height: 100%;
 }
@@ -27,18 +29,67 @@ body {
     font-family: 'Lato';
 }
 
+.yellow {
+    color: #fefcdd;
+}
+
+.orange {
+    color: #f3c1a4;
+}
+
 .shadow-font {
     text-shadow: 2px 2px #000;
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+.text-black {
+    color: #000 !important;
 }
+
+/* Main Nav */
+.menu-btn {
+    background-color: #f3c1a4;
+}
+
+.menu-btn:focus,
+.menu-btn:hover {
+    color: #9eb4a7;
+    box-shadow: none;
+}
+
+/* Index Page */
+.index-topper {
+    margin: 116px auto;
+    position: relative;
+}
+
+.nav-link {
+    color: #000;
+    font-family: 'Courgette', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+.nav-link:hover, 
+.nav-link:active,
+.nav-link:focus {
+    background: none;
+    color: #9eb4a7;
+    box-shadow: none;
+}
+
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+  }
 
 .logo-font {
     color: #fff;
@@ -58,30 +109,7 @@ body {
 
 .take-a-look-button:hover {
     cursor: pointer;
-    background-color: #fff;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
+    background-color: rgba(158, 180, 167);
 }
 
 /* Treatments page */
