@@ -12,9 +12,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<main id="treatment-main">
+<div class="container page-padding">
 <!-- Page Header -->
-<h2 class="center-align page-padding">Treatments</h2>
+<div id="treatment-img">
+    <h2 class="treatment-heading center-align text-black">Treatments</h2>
+</div>
 <!-- Seach Bar -->
 <div class="input-group">
     <div class="input-wrapper py-3">
@@ -54,4 +57,5 @@
 </div>
 {% endfor %}
 </div>
+</main>
 {% endblock %}

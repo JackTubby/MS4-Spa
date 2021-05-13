@@ -117,6 +117,10 @@ body {
 }
 
 /* Treatments page */
+#treatment-main {
+    background-color: #323d50;
+}
+
 .treatment-wrapper {
     color: #000;
     background-color: #fff;
@@ -136,6 +140,18 @@ body {
 
 .page-padding {
     padding-top: 164px;
+}
+
+#treatment-img {
+    height: 26rem;
+    background: url('../../media/spa.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.treatment-heading {
+    font-size: 60px;
+    font-family: 'Courgette', sans-serif;
+    padding: 130px 0 0 50px;
 }
 
 .treatment-img {
@@ -170,7 +186,7 @@ body {
 
 .treatment-details-a:hover {
     text-decoration: none;
-    color: red;
+    color: #;
     padding: 4px;
 }
 
