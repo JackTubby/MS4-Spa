@@ -57,6 +57,10 @@ body {
     box-shadow: none;
 }
 
+header {
+    border-bottom: #000 1px solid;
+}
+
 /* Index Page */
 #index-main {
     min-height: 100vh;
