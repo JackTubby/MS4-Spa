@@ -5,13 +5,14 @@
     <div class="container header-container">
         <div class="row">
             <div class="col">
-                
+
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
+{% include 'includes/main-nav.html' %}
 <main id="treatment-main">
 <div class="container page-padding">
 <!-- Page Header -->
@@ -30,32 +31,32 @@
 <!-- Treatments -->
 {% for treatment in treatments %}
 <div class="row treatment-wrapper">
-    <a href="{% url 'treatment_detail' treatment.id %}">
-        <div class="col-12 col-lg-4">
-            {% if treatments.image %}
-                <a href="{{ treatment.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
-                </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
-                </a>
-            {% endif %}
-        </div>
-        <div class="col-12 col-lg-8">
-            <h4 class="treatment-header">{{ treatment.name }}</h4>
-            <p class="treatment-p">{{ treatment.description }}</p>
-            {% if treatment.rating %}
-            <span class="treatment-rate-price">{{ treatment.rating }}</span>
+    <div class="col-12 col-lg-4">
+        {% if treatments.image %}
+            <a href="{{ treatment.image.url }}" target="_blank">
+                <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
+            </a>
             {% else %}
-            <span class="treatment-rate-price">No Rating</span>
-            {% endif %}
-            <span class="treatment-rate-price">£{{ treatment.price }}</span>
-            <a class="treatment-details-a" href="{% url 'treatment_detail' treatment.id %}">Details</a>
-        </div>
-    </a>
+            <a href="">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
+            </a>
+        {% endif %}
+    </div>
+    <div class="col-12 col-lg-8">
+        <h4 class="treatment-header">{{ treatment.name }}</h4>
+        <p class="treatment-p">{{ treatment.description }}</p>
+        {% if treatment.rating %}
+        <span class="treatment-rate-price">{{ treatment.rating }}</span>
+        {% else %}
+        <span class="treatment-rate-price">No Rating</span>
+        {% endif %}
+        <span class="treatment-rate-price">£{{ treatment.price }}</span>
+        <a class="treatment-details-a" href="{% url 'treatment_detail' treatment.id %}">Details</a>
+    </div>
 </div>
 {% endfor %}
 </div>
 </main>
+{% include 'includes/news-letter.html' %}
+{% include 'includes/footer.html' %}
 {% endblock %}
