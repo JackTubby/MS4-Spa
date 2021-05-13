@@ -118,10 +118,18 @@ body {
 
 /* Treatments page */
 #treatment-main {
-    background-color: #323d50;
+    background-color: #fff;
+}
+
+#treatment-img {
+    height: 26rem;
+    background: url('../../media/spa.jpg') no-repeat center center fixed;
+    border-radius: 10px;
+    background-size: cover;
 }
 
 .treatment-wrapper {
+    border-radius: 10px;
     color: #000;
     background-color: #fff;
     padding: 20px;
@@ -140,12 +148,6 @@ body {
 
 .page-padding {
     padding-top: 164px;
-}
-
-#treatment-img {
-    height: 26rem;
-    background: url('../../media/spa.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 .treatment-heading {
@@ -182,12 +184,14 @@ body {
     font-size: 22px;
     border: 1px #000 solid;
     padding: 3px;
+    border-radius: 10px;
 }
 
 .treatment-details-a:hover {
     text-decoration: none;
-    color: #;
+    color: #fff;
     padding: 4px;
+    background-color: #323d50;
 }
 
 /* Search Bar */
@@ -197,12 +201,12 @@ body {
 
 .search-input {
     width: 100%;
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
 
 .search-input:focus {
     border: solid #000 1px;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(158, 180, 167, 0.5);
 }
 
 /* News Letter */
