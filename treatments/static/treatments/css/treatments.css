@@ -1,0 +1,87 @@
+/* Treatments page */
+#treatment-main {
+    background-color: #fff;
+}
+
+#treatment-img {
+    height: 26rem;
+    background: url('../../../../media/spa.jpg') no-repeat center center fixed;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.treatment-wrapper {
+    border-radius: 10px;
+    color: #000;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 100px; /* Spacing between treatment cards */
+}
+
+.treatment-wrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: box-shadow 0.2s;
+}
+
+.treatment-heading {
+    font-size: 60px;
+    font-family: 'Courgette', sans-serif;
+    padding: 130px 0 0 50px;
+}
+
+.treatment-img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+}
+
+.treatment-header {
+    font-size: 35px;
+}
+
+.treatment-p {
+    font-size: 22px;
+    padding-top: 10px;
+    font-style: normal;
+}
+
+.treatment-rate-price {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.treatment-details-a {
+    right: 0;
+    position: absolute;
+    color: #000;
+    font-size: 22px;
+    border: 1px #000 solid;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.treatment-details-a:hover {
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    background-color: #323d50;
+}
+
+/* Treatment Details */
+.treatment-d-img {
+    height: 36rem;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+.treatment-d-text {
+    font-size: 24px;
+}
