@@ -1,38 +1,48 @@
-<!--<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            Home
-        </a>
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            About Us
-        </a>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Treatments <i class="fas fa-sort-down"></i> 
-            </a>
-            <div class="dropdown-menu border-0 text-center" aria-label="all-treatments-link">
-                <a href="{% url 'treatments' %}" class="dropdown-item">All Treatments</a>
-                <a href="" class="dropdown-item">By Category</a>
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-            </div>
-        </li>
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            Special Offers
-        </a>
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            Testimonals
-        </a>
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            Blog
-        </a>
-        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link">
-            Contact Us
-        </a>
-    </ul>
-</div>-->
-
-  <!-- Button trigger modal, opens modal on the index.html page (menu items) -->
-  <button type="button" class="btn menu-btn" data-toggle="modal" data-target="#exampleModal">
-    <i class="fas fa-bars"></i> Menu
-  </button>
+<!-- Nav menu options, opened from main-nav.html -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title logo-font text-black my-0" id="exampleModalLabel">Purity</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            </button>
+        </div>
+        <div class="modal-body pl-5">
+            <ul>
+                <a class="nav-link" href="#" id="specials-link">
+                    Home
+                </a>
+                <a class="nav-link" href="#" id="specials-link">
+                    About Us
+                </a>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Treatments
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="{% url 'treatments' %}">All Treatments</a>
+                    <a class="dropdown-item" href="#">By Category</a>
+                    <a class="dropdown-item" href="#">By Price</a>
+                    <a class="dropdown-item" href="#">By Rating</a>
+                    </div>
+                </div>
+                <a class=" nav-link" href="#" id="specials-link">
+                    Special Offers
+                </a>
+                <a class=" nav-link" href="#" id="specials-link">
+                    Testimonals
+                </a>
+                <a class=" nav-link" href="#" id="specials-link">
+                    Blog
+                </a>
+                <a class=" nav-link" href="#" id="specials-link">
+                    Contact Us
+                </a>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
