@@ -21,7 +21,10 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{% url 'treatments' %}">All Treatments</a>
-                    <a class="dropdown-item" href="#">By Category</a>
+                    <a class="dropdown-item" href="{% url 'treatments' %}?category=facials">Facials</a>
+                    <a class="dropdown-item" href="{% url 'treatments' %}?category=body_massages">Body Massages</a>
+                    <a class="dropdown-item" href="{% url 'treatments' %}?category=foot_massages">Foot Massages</a>
+                    <a class="dropdown-item" href="{% url 'treatments' %}?category=hand_massages">Hand Massages</a>
                     <a class="dropdown-item" href="#">By Price</a>
                     <a class="dropdown-item" href="#">By Rating</a>
                     </div>
