@@ -23,6 +23,9 @@ def all_treatments(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 treatments = treatments.annotate(lower_name=Lower('name'))
+            # Sorts category by name
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -39,6 +42,7 @@ def all_treatments(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('treatments'))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             treatments = treatments.filter(queries)

@@ -37,6 +37,9 @@
                 <div class="mb-5 mt-md-5">
                     <p class="mb-0 treatment-d-text">{{ treatments.name }}</p>
                     <p class="mb-0 treatment-d-text">{{ treatments.category }}</p>
+                    {% if treatment.category %}
+                    <p class="mb-0 treatment-d-text">{{ treatment.category.friendly_name }}</p>
+                    {% endif %}
                     <p class="lead mb-0 text-left font-weight-bold treatment-d-text">${{ treatments.price }}</p>
                     {% if treatments.rating %}
                         <small class="treatment-d-text"><i class="fas fa-star mr-1"></i>{{ treatments.rating }} / 5</small>
