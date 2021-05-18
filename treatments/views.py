@@ -18,15 +18,13 @@ def all_treatments(request):
 
     if request.GET:
         if 'sort' in request.GET:
-            sortkey = request.GET['sort']#
+            sortkey = request.GET['sort']
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                treatments = treatments.annotate(lower_name=Lower('name'))
-            # Sorts category by name
+                products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
-
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -62,10 +60,10 @@ def all_treatments(request):
 def treatment_detail(request, treatment_id):
     """ A view to show individual treatment details """
 
-    treatments = get_object_or_404(Treatment, pk=treatment_id)
+    treatment = get_object_or_404(Treatment, pk=treatment_id)
 
     context = {
-        'treatments': treatments,
+        'treatment': treatment,
     }
 
     return render(request, 'treatments/treatment_detail.html', context)
