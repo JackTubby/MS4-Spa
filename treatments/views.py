@@ -43,7 +43,7 @@ def all_treatments(request):
     
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             treatments = treatments.filter(queries)
-
+ 
     current_sorting = f'{sort}_{direction}'
 
     context = {
