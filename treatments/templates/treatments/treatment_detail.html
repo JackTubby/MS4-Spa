@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if treatments.image %}
+                    {% if treatment.image %}
                         <a href="{{ treatment.image.url }}" target="_blank">
                             <img class="treatment-d-img img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
                         </a>
@@ -35,18 +35,18 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="mb-5 mt-md-5">
-                    <p class="mb-0 treatment-d-text">{{ treatments.name }}</p>
-                    <p class="mb-0 treatment-d-text">{{ treatments.category }}</p>
+                    <p class="mb-0 treatment-d-text">{{ treatment.name }}</p>
+                    <p class="mb-0 treatment-d-text">{{ treatment.category }}</p>
                     {% if treatment.category %}
                     <p class="mb-0 treatment-d-text">{{ treatment.category.friendly_name }}</p>
                     {% endif %}
-                    <p class="lead mb-0 text-left font-weight-bold treatment-d-text">${{ treatments.price }}</p>
-                    {% if treatments.rating %}
-                        <small class="treatment-d-text"><i class="fas fa-star mr-1"></i>{{ treatments.rating }} / 5</small>
+                    <p class="lead mb-0 text-left font-weight-bold treatment-d-text">${{ treatment.price }}</p>
+                    {% if treatment.rating %}
+                        <small class="treatment-d-text"><i class="fas fa-star mr-1"></i>{{ treatment.rating }} / 5</small>
                     {% else %}
                         <small class="treatment-d-text">No Rating</small>
                     {% endif %}
-                    <p class="mt-3 treatment-d-text">{{ treatments.description }}</p>
+                    <p class="mt-3 treatment-d-text">{{ treatment.description }}</p>
                 </div>
             </div>
         </div>
