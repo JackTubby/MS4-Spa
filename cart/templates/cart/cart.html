@@ -27,17 +27,19 @@
                       </tr>
                     </thead>
                     <tbody>
+                    {% for item in cart_items %}
                       <tr>
                         <th scope="row">
                             <img class="cart-img img-fluid" src="../../../media/spa.jpg" alt="Treatment put in bag">
-                            <h6 class="treatment-name">Name of Treatment</h6>
+                            <h6 class="treatment-name">{{ item.treatment.name }}</h6>
                             <p class="treatment-date">15/06/12 @ 12:30pm</p>
-                            <i>#7388427</i>
+                            <i>{{ item.treatment.sku }}</i>
                         </th>
-                        <td class="treatment-info">£ 12.99</td>
-                        <td class="treatment-info">- 2 +</td>
-                        <td class="treatment-info">£ 12.99</td>
+                        <td class="treatment-info">{{ item.treatment.price }}</td>
+                        <td class="treatment-info">{{ item.treatment.quantity }}</td>
+                        <td class="treatment-info">{{ item.treatment.price }}</td>
                       </tr>
+                      {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -47,18 +49,16 @@
     <div class="col-md-3 right-side">
         <div class="d-md-flex">
             <div class="row text-center cart-content-wrapper">
-            <div class="col-8 cart-line pb-5"></div>
-            <div class="col-12 cart-total pt-4 pb-4">Cart Total <span class="cart-total-price">£12.99</span></div>
-            <div class="col-12 pb-5">  
-                <input type="checkbox" value="">
-                <label class="cart-checkbox-label">
-                  I agree to <a class="cart-tos" href="">Terms & Conditions</a>
-                </label>
-            </div>
-            <div class="col-12 pb-3"><button class="btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></button></div>
-            <i class="fas fa-shopping-bag shopping-bag-icon"></i>
-            <!--HERE-->
-            {{ cart_items }}
+                <div class="col-8 cart-line pb-5"></div>
+                <div class="col-12 cart-total pt-4 pb-4">Cart Total <span class="cart-total-price">£{{ total|floatformat:2 }}</span></div>
+                <div class="col-12 pb-5">  
+                    <input type="checkbox" value="">
+                    <label class="cart-checkbox-label">
+                    I agree to <a class="cart-tos" href="">Terms & Conditions</a>
+                    </label>
+                </div>
+                <div class="col-12 pb-3"><button class="btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></button></div>
+                <i class="fas fa-shopping-bag shopping-bag-icon"></i>
             </div>
         </div>
     </div>  
