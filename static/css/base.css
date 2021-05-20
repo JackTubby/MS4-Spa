@@ -2,6 +2,7 @@
 font-family: 'Courgette', cursive;
 font-family: 'Dancing Script', cursive;
 font-family: 'Lato', sans-serif;
+'Julius Sans One'
 */
 
 /* Colours
@@ -221,4 +222,119 @@ header {
         width: 80%;
         margin: auto;
     }
+}
+
+/* CART */
+#cart-wrapper {
+    min-height: 100vh;
+}
+
+.cart-content-wrapper {
+    margin-top: 50px;
+}
+
+.left-side {
+    height: 100%;
+    /* Padding for large screens only todo */
+    padding-right: 15rem;
+}
+
+/* Removes between rows */
+.table td, .table th {
+    border: none !important;
+}
+
+.table-headers {
+    font-size: 18px;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 2px;
+    color: #000;
+    padding-bottom: 40px !important;
+}
+
+.cart-img {
+    width: 100%;
+    height: 200px;
+    max-width: 200px;
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+.treatment-name {
+    padding-top: 4px;
+    font-size: 18px;
+    word-wrap: break-word;
+    font-weight: 600;
+
+}
+
+.treatment-date {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.treatment-info {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 5rem !important;
+}
+
+.right-side {
+    background-color: #9eb4a7;
+    height: 100%;
+}
+
+.cart-line{
+    width: 112px;
+    height: 47px;
+    border-bottom: 3px solid #000;
+    margin: auto;
+}
+
+.cart-total {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cart-total-price {
+    color: #000;
+    font-size: 20px;
+    font-weight: 800;
+    padding-left: 5px;
+}
+
+.cart-checkbox-label {
+    color: black;
+    font-size: 14px;
+}
+
+.cart-tos {
+    color: #323d50;
+    font-weight: 600;
+}
+
+.cart-btn {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 600;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+
+.cart-btn:hover {
+    background-color: #f3c1a4;
+}
+
+.shopping-bag-icon {
+    padding-top: 3rem;
+    margin: auto;
+    font-size: 160px;
+    color: rgb(255,255,255, 0.5);
 }

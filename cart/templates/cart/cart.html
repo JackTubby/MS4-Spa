@@ -12,29 +12,56 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mb-2 page-padding">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="mb-4">Shopping Bag</h2>
-            <hr>
+<div id="cart-wrapper" class="d-md-flex align-items-center mt-5">
+    <!-- Left Product Info-->
+    <div class="col-md-9 left-side">
+        <div class="text-white text-center cart-content-wrapper">
+            <div class="pt-5 text-black table-responsive">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="table-headers">Treatment</th>
+                        <th scope="col" class="table-headers">Price</th>
+                        <th scope="col" class="table-headers">Qty</th>
+                        <th scope="col" class="table-headers">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                            <img class="cart-img img-fluid" src="../../../media/spa.jpg" alt="Treatment put in bag">
+                            <h6 class="treatment-name">Name of Treatment</h6>
+                            <p class="treatment-date">15/06/12 @ 12:30pm</p>
+                            <i>#7388427</i>
+                        </th>
+                        <td class="treatment-info">£ 12.99</td>
+                        <td class="treatment-info">- 2 +</td>
+                        <td class="treatment-info">£ 12.99</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col">
-            {% if bag_items %}
-                <div class="table-responsive rounded"></div>
-            {% else %}
-                <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'treatments' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
-            {% endif %}
+    <!-- Right Checout Side -->
+    <div class="col-md-3 right-side">
+        <div class="d-md-flex">
+            <div class="row text-center cart-content-wrapper">
+            <div class="col-8 cart-line pb-5"></div>
+            <div class="col-12 cart-total pt-4 pb-4">Cart Total <span class="cart-total-price">£12.99</span></div>
+            <div class="col-12 pb-5">  
+                <input type="checkbox" value="">
+                <label class="cart-checkbox-label">
+                  I agree to <a class="cart-tos" href="">Terms & Conditions</a>
+                </label>
+            </div>
+            <div class="col-12 pb-3"><button class="btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></button></div>
+            <i class="fas fa-shopping-bag shopping-bag-icon"></i>
+            </div>
         </div>
-    </div>
+    </div>  
 </div>
+
+
+
 {% endblock %}
