@@ -78,6 +78,9 @@
         {% if treatment.category %}
         <span>{{ treatment.category.friendly_name }}</span>
         {% endif %}
+        {% if treatment.amount %}
+        <span><i class="fas fa-user"></i> {{ treatment.amount }}</span>
+        {% endif %}
         {% if treatment.rating %}
         <span class="treatment-rate-price">{{ treatment.rating }}</span>
         {% else %}
