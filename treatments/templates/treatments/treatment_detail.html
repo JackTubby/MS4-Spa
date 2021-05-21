@@ -36,9 +36,11 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="mb-5 mt-md-5">
                     <p class="mb-0 treatment-d-text">{{ treatment.name }}</p>
-                    <p class="mb-0 treatment-d-text">{{ treatment.category }}</p>
                     {% if treatment.category %}
                     <p class="mb-0 treatment-d-text">{{ treatment.category.friendly_name }}</p>
+                    {% endif %}
+                    {% if treatment.amount %}
+                    <p><i class="fas fa-user"></i> {{ treatment.amount }}</p>
                     {% endif %}
                     <p class="lead mb-0 text-left font-weight-bold treatment-d-text">${{ treatment.price }}</p>
                     {% if treatment.rating %}
@@ -57,16 +59,45 @@
                                 <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" 
                                     data-item_id="{{ treatment.id }}" id="id_qty_{{ treatment.id }}">
                             </div>
+                            </div>
                             <div class="col-12">
                                 <label>Choose a date:</label>
                                 <input type="date" id="date" name="date"
-                                    value="2018-07-22" min="2018-01-01" max="2018-12-31" 
+                                        max="2021-12-31" 
                                     data-item_id="{{ treatment.id }}" id="id_qty_{{ treatment.id }}" required>
                             </div>
+                            <!-- Pick a time -->
                             <div class="col-12">
-                                <label>Pick a time:</label>
-                                <input type="time" id="time" name="time" min="09:00" max="18:00" 
-                                    data-item_id="{{ treatment.id }}" id="id_qty_{{ treatment.id }}" required>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-primary active">
+                                      <input type="radio" name="options" id="option1" autocomplete="off" required> 9:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                      <input type="radio" name="options" id="option2" autocomplete="off" required> 10:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                      <input type="radio" name="options" id="option3" autocomplete="off" required> 11:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option4" autocomplete="off" required> 12:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option5" autocomplete="off" required> 13:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option6" autocomplete="off" required> 14:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option7" autocomplete="off" required> 15:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option8" autocomplete="off" required> 16:00
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="options" id="option3" autocomplete="off"> 17:00
+                                    </label>
+                                </div>
+                                <div><i>Opening times Mon-Fri 9-18</i></div>
                             </div>
                             <div class="col-12">
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
@@ -79,4 +110,12 @@
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    // Updates date inputs to todays date
+    document.getElementById('date').valueAsDate = new Date();
+</script>
 {% endblock %}
