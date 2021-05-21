@@ -23,6 +23,8 @@
                         <th scope="col" class="table-headers">Treatment</th>
                         <th scope="col" class="table-headers">Price</th>
                         <th scope="col" class="table-headers">Qty</th>
+                        <th scope="col" class="table-headers">Date</th>
+                        <th scope="col" class="table-headers">Time</th>
                         <th scope="col" class="table-headers">Total</th>
                       </tr>
                     </thead>
@@ -37,6 +39,8 @@
                         </th>
                         <td class="treatment-info">{{ item.treatment.price }}</td>
                         <td class="treatment-info">{{ item.quantity }}</td>
+                        <td class="treatment-info">{{ item.date }}</td>
+                        <td class="treatment-info">{{ item.time }}</td>
                         <td class="treatment-info">{{ item.treatment.price }}</td>
                       </tr>
                       {% endfor %}
