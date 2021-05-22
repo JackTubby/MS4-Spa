@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 
@@ -128,11 +127,12 @@
         </div>
     </div>
 </main>
+{% include 'includes/news-letter.html' %}
+{% include 'includes/footer.html' %}
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'treatments/includes/quantity_input_script.html' %}
 <script type="text/javascript">
     // Updates date inputs to todays date
     document.getElementById('date').valueAsDate = new Date();
