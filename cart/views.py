@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
+from django.contrib import messages
 
 
 def view_cart(request):
@@ -21,3 +22,19 @@ def add_to_cart(request, item_id):
     
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def remove_from_cart(request, item_id):
+    """Remove the item from the shopping cart"""
+
+    try:
+        cart = request.session.get('cart', {})
+
+        cart.pop(item_id)
+        messages.success(request, f'You\'ve removed your donation for the {project.name} project')
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
