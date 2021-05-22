@@ -338,3 +338,17 @@ header {
     font-size: 160px;
     color: rgb(255,255,255, 0.5);
 }
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .close:before {
+    content: '✕';
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
