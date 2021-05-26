@@ -69,8 +69,9 @@
                     I agree to <a class="cart-tos" href="">Terms & Conditions</a>
                     </label>
                 </div>
-                <div class="col-12 pb-3"><button class="btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></button></div>
+                <a href="{% url 'checkout' %}" class="col-12 pb-3 btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></a>
                 <i class="fas fa-shopping-bag shopping-bag-icon"></i>
+                <a href="{% url 'checkout' %}">CHECKOUTS</a>
             </div>
         </div>
     </div>  
