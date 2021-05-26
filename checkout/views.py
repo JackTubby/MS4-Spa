@@ -7,12 +7,14 @@ from .forms import OrderForm
 
 
 def checkout(request):
-    bag = request.session.get('bag', {})
-    if not bag:
-        messages.error(request, "There's nothing in your bag!")
+    cart = request.session.get('cart', {})
+    print(cart)
+
+    if not cart:
+        messages.error(request, "There's nothing in your cart!")
         return redirect(reverse('treatments'))
 
-    orfder_form = OrderForm()
+    order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
