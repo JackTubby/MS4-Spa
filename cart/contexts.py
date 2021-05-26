@@ -19,7 +19,7 @@ def cart_contents(request):
         })
 
     grand_total = total
-    
+ 
     context = {
         'cart_items': cart_items,
         'total': total,
