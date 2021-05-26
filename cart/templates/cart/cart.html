@@ -63,7 +63,7 @@
             <div class="row text-center cart-content-wrapper">
                 <div class="col-8 cart-line pb-5"></div>
                 <div class="col-12 cart-total pt-4 pb-4">Cart Total <span class="cart-total-price">£{{ total|floatformat:2 }}</span></div>
-                <div class="col-12 pb-5">  
+                <div class="col-12 pb-5"> 
                     <input type="checkbox" value="">
                     <label class="cart-checkbox-label">
                     I agree to <a class="cart-tos" href="">Terms & Conditions</a>
@@ -71,7 +71,6 @@
                 </div>
                 <a href="{% url 'checkout' %}" class="col-12 pb-3 btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></a>
                 <i class="fas fa-shopping-bag shopping-bag-icon"></i>
-                <a href="{% url 'checkout' %}">CHECKOUTS</a>
             </div>
         </div>
     </div>  
