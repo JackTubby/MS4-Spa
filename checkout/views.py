@@ -38,7 +38,6 @@ def checkout(request):
                         order_line_item = OrderLineItem(
                             order=order,
                             treatment=treatment,
-                            quantity=item_data,
                         )
                         order_line_item.save()
                 except Treatment.DoesNotExist:
