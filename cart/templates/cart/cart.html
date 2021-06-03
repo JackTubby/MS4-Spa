@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
@@ -27,8 +28,7 @@
                       <tr>
                         <th scope="col" class="table-headers">Treatment</th>
                         <th scope="col" class="table-headers">Price</th>
-                        <th scope="col" class="table-headers">Date</th>
-                        <th scope="col" class="table-headers">Time</th>
+                        <th scope="col" class="table-headers">Quantity</th>
                         <th scope="col" class="table-headers">For</th>
                         <th scope="col" class="table-headers">Total</th>
                       </tr>
@@ -46,10 +46,9 @@
                             <i>{{ item.treatment.sku }}</i>
                         </th>
                         <td class="treatment-info">{{ item.treatment.price }}</td>
-                        <td class="treatment-info">{{ item.treatment.date }}</td>
-                        <td class="treatment-info">{{ item.treatment.time }}</td>
+                        <td class="treatment-info">{{ item.quantity }}</td>
                         <td class="treatment-info">1 Person</td>
-                        <td class="treatment-info">{{ item.treatment.price }}</td>
+                        <td class="treatment-info">{{ item.treatment.price | calc_subtotal:item.quantity}}</td>
                       </tr>
                       {% endfor %}
                     </tbody>
