@@ -76,7 +76,7 @@
                                             </button>
                                         </div>
                                     </div>
-                            </div>
+                                </div>
                             <!-- Pick a time -->
                             <div class="col-12">
                                 <div><i>Opening times Mon-Fri 9-18</i></div>
@@ -98,6 +98,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'treatments/includes/quantity_input_script.html' %}
 <script type="text/javascript">
     // Updates date inputs to todays date
     document.getElementById('date').valueAsDate = new Date();
