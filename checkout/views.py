@@ -61,8 +61,17 @@ def checkout(request):
                         order_line_item = OrderLineItem(
                             order=order,
                             treatment=treatment,
+                            quantity=item_data,
                         )
                         order_line_item.save()
+                    else:
+                        for quantity in item_data.items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                treatment=treatment,
+                                quantity=quantity,
+                            )
+                            order_line_item.save()
                 except Treatment.DoesNotExist:
                     messages.error(request, (
                         "An item in your cart wasn't found in our database."
