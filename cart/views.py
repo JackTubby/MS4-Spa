@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
+from treatments.models import Treatment
+
 
 def view_cart(request):
     """ A view to return the index page """
@@ -40,7 +42,7 @@ def adjust_cart(request, item_id):
         messages.success(request, f'Removed {treatment.name} from your cart')
 
     request.session['cart'] = cart
-    return redirect(reverse('cart'))
+    return redirect(reverse('view_cart'))
 
 
 def remove_from_cart(request, item_id):
