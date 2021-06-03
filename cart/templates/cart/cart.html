@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
@@ -38,7 +37,7 @@
                       <tr>
                         <th scope="row">
                             <div class="wrapper">
-                                <img class="cart-img img-fluid" src="../../../media/spa.jpg" alt="Treatment put in bag">
+                                <img class="cart-img img-fluid" src="../../../media/spa.jpg" alt="Treatment put in cart">
                                 <span id="remove_{{ item.item_id }}" class="close remove-item text-danger"></span>
                             </div>
                             <h6 class="treatment-name">{{ item.treatment.name }}</h6>
@@ -46,9 +45,40 @@
                             <i>{{ item.treatment.sku }}</i>
                         </th>
                         <td class="treatment-info">{{ item.treatment.price }}</td>
-                        <td class="treatment-info">{{ item.quantity }}</td>
+                        <td class="treatment-info">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number"
+                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                            data-item_id="{{ item.item_id }}"
+                                            id="id_qty_{{ item.item_id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </td>
                         <td class="treatment-info">1 Person</td>
-                        <td class="treatment-info">{{ item.treatment.price | calc_subtotal:item.quantity}}</td>
+                        <td class="treatment-info">
+                            <p class="my-0">${{ item.treatment.price }}</p>
+                        </td>
                       </tr>
                       {% endfor %}
                     </tbody>
@@ -82,8 +112,14 @@
 
 {% block postloadjs %}
 {{ block.super }}
-
+{% include 'treatments/includes/quantity_input_script.html' %}
 <script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
