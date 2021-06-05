@@ -21,7 +21,7 @@
 <div id="cart-wrapper" class="d-md-flex align-items-center mt-5">
     <!-- Left Product Info-->
     <div class="col-md-9 left-side">
-        <div class="text-white text-center cart-content-wrapper">
+        <div class="text-white text-center">
             <div class="pt-5 text-black table-responsive">
                 <table class="table">
                     <thead>
@@ -42,7 +42,6 @@
                                 <span id="remove_{{ item.item_id }}" class="close remove-item text-danger"></span>
                             </div>
                             <h6 class="treatment-name">{{ item.treatment.name }}</h6>
-                            <p class="treatment-date">15/06/12 @ 12:30pm</p>
                             <i>{{ item.treatment.sku }}</i>
                         </th>
                         <td class="treatment-info">{{ item.treatment.price }}</td>
@@ -107,7 +106,6 @@
         </div>
     </div>  
 </div>
-{% include 'includes/news-letter.html' %}
 {% include 'includes/footer.html' %}
 {% endblock %}
 
