@@ -3,10 +3,6 @@
     min-height: 100vh;
 }
 
-.cart-content-wrapper {
-    margin-top: 50px;
-}
-
 .left-side {
     height: 100%;
     /* Padding for large screens only todo */
