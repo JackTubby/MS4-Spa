@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 {% load static %}
 
@@ -193,12 +192,21 @@
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+					<span class="icon mr-2">
+						<!--ICON TO GO HERE-->
+					</span>
+					<span class="text-uppercase">Back to order history</span>
+				</a>
+                {% else %}
 				<a href="{% url 'treatments' %}" class="btn btn-black rounded-0 my-2">
 					<span class="icon mr-2">
 						<!--ICON TO GO HERE-->
 					</span>
 					<span class="text-uppercase">Take a look at more of our great treatments!</span>
 				</a>
+                {% endif %}
 			</div>
 		</div>
     </div>
