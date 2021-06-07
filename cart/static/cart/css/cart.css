@@ -5,9 +5,14 @@
 
 .left-side {
     height: 100%;
-    /* Padding for large screens only todo */
-    padding-right: 15rem;
 }
+
+/* Padding for large screens only todo */
+@media only screen and (min-width: 1014px) {
+    .left-side {
+        padding-right: 15rem;
+    }
+  }
 
 /* Removes between rows */
 .table td, .table th {
