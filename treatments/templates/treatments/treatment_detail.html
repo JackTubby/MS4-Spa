@@ -77,13 +77,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            <!-- Pick a time -->
                             <div class="col-12">
                                 <div><i>Opening times Mon-Fri 9-18</i></div>
                             </div>
                             <div class="col-12">
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
                             </div>
+                            {% if request.user.is_superuser %}
+                                <a class="btn rounded-0" href="{% url 'edit_treatment' treatment.id %}">Edit</a>
+                                <a class="btn rounded-0" href="{% url 'delete_treatment' treatment.id %}">Delete</a>
+                            {% endif %}
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
