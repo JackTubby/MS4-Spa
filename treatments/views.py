@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Treatment, Category
+from .forms import TreatmentForm
 
 
 def all_treatments(request):
@@ -66,3 +67,14 @@ def treatment_detail(request, treatment_id):
     }
 
     return render(request, 'treatments/treatment_detail.html', context)
+
+
+def add_treatment(request):
+    """ Add a treatment to the store """
+    form = TreatmentForm()
+    template = 'treatments/add_treatment.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
