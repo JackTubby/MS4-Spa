@@ -41,7 +41,7 @@ def all_treatments(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('treatments'))
-  
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             treatments = treatments.filter(queries)
 
@@ -74,9 +74,9 @@ def add_treatment(request):
     if request.method == 'POST':
         form = TreatmentForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            treatment = form.save()
             messages.success(request, 'Successfully added a treatment.')
-            return redirect(reverse('add_treatment'))
+            return redirect(reverse('treatment_detail', args=[treatment.id]))
         else:
             messages.error(request, 'Failed to add a treatment. Please make sure the form is valid!')
     else:
@@ -109,3 +109,11 @@ def edit_treatment(request, treatment_id):
         'treatment': treatment,
     }
     return render(request, template, context)
+
+
+def delete_treatment(request, treatment_id):
+    """ Delete a treatment """
+    treatment = get_object_or_404(Treatment, pk=treatment_id)
+    treatment.delete()
+    messages.success(request, 'Treatment deleted.')
+    return redirect(reverse('treatments'))
