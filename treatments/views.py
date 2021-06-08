@@ -71,7 +71,16 @@ def treatment_detail(request, treatment_id):
 
 def add_treatment(request):
     """ Add a treatment to the store """
-    form = TreatmentForm()
+    if request.method == 'POST':
+        form = TreatmentForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a treatment.')
+            return redirect(reverse('add_treatment'))
+        else:
+            messages.error(request, 'Failed to add a treatment. Please make sure the form is valid!')
+    else:
+        form = TreatmentForm()
     template = 'treatments/add_treatment.html'
     context = {
         'form': form,
