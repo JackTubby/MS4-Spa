@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col pt-5">
+                <hr>
+                <h2 class="logo-font pt-5 text-black">Treatment Management</h2>
+                <h5>Edit a Treatment</h5>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <form action="{% url 'edit_treatment' treatment.id %}" method="POST" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <a class="rounded-0 btn" href="{% url 'treatments' %}">Cancel</a>
+                    <button class="rounded-0 btn" type="submit">Update Treatment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
