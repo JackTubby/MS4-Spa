@@ -1,0 +1,15 @@
+Hello, {{ order.full_name }}
+
+This is an email confirming your order at Purity Spa. Your order information is listed below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Grand Total: £{{ order.grand_total }}
+
+You will recieve an email within 24 hours of your order to book in your treatment.
+
+If you have any questions, please contact us at {{ contact_email }}.
+
+Thank you for your purchase!
+
+Purity Spa
