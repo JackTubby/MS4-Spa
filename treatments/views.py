@@ -96,11 +96,11 @@ def add_treatment(request):
 
 @login_required
 def edit_treatment(request, treatment_id):
-        if not request.user.is_superuser:
+    """ Edit a treatment """
+    if not request.user.is_superuser:
         messages.error(request, 'Sorry only store owners can do that')
         return redirect(reverse('home'))
 
-    """ Edit a treatment """
     treatment = get_object_or_404(Treatment, pk=treatment_id)
     if request.method == 'POST':
         form = TreatmentForm(request.POST, request.FILES, instance=treatment)
@@ -124,11 +124,11 @@ def edit_treatment(request, treatment_id):
 
 @login_required
 def delete_treatment(request, treatment_id):
-    if not request.user.is_superuser:
-    messages.error(request, 'Sorry only store owners can do that')
-    return redirect(reverse('home'))
-
     """ Delete a treatment """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store owners can do that')
+        return redirect(reverse('home'))
+
     treatment = get_object_or_404(Treatment, pk=treatment_id)
     treatment.delete()
     messages.success(request, 'Treatment deleted.')
