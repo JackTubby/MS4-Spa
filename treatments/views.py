@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -69,8 +70,13 @@ def treatment_detail(request, treatment_id):
     return render(request, 'treatments/treatment_detail.html', context)
 
 
+@login_required
 def add_treatment(request):
     """ Add a treatment to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store owners can do that')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = TreatmentForm(request.POST, request.FILES)
         if form.is_valid():
@@ -88,7 +94,12 @@ def add_treatment(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_treatment(request, treatment_id):
+        if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store owners can do that')
+        return redirect(reverse('home'))
+
     """ Edit a treatment """
     treatment = get_object_or_404(Treatment, pk=treatment_id)
     if request.method == 'POST':
@@ -111,7 +122,12 @@ def edit_treatment(request, treatment_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_treatment(request, treatment_id):
+    if not request.user.is_superuser:
+    messages.error(request, 'Sorry only store owners can do that')
+    return redirect(reverse('home'))
+
     """ Delete a treatment """
     treatment = get_object_or_404(Treatment, pk=treatment_id)
     treatment.delete()
