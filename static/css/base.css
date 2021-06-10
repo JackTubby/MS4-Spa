@@ -369,3 +369,45 @@ header {
     border-color: darkred;
     border-radius: 0;
 }
+
+/* Purity Button */
+.purity-btn {
+    border-radius: 6px;
+    background-color: #9eb4a7;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .purity-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #fff;
+  }
+  
+  .purity-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .purity-btn:hover span {
+    padding-right: 25px;
+    color: #fff;
+  }
+  
+  .purity-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
