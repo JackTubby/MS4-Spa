@@ -1,4 +1,31 @@
-/* Styling from Stripe documentation */
+/*-------------------- Order Summary */
+.order-summary-wrapper {
+  background-color: #9eb4a7;
+  border-radius: 20px;
+  padding: 20px 20px;
+}
+
+.order-summary {
+  font-size: 26px;
+  color: #fff;
+}
+
+.total {
+  font-size: 20px;
+  color: #fff;
+}
+
+.item-wrapper {
+  max-width: 8rem;
+}
+
+.item-details {
+  font-size: 18px;
+  padding-top: 64px;
+}
+
+
+/*-------------------- Styling from Stripe documentation */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -36,7 +63,7 @@ select option[value=""] {
   color: #aab7c4 !important;
 }
 
-/* Checkout spinner loading icon */
+/*-------------------- Checkout spinner loading icon */
 #loading-overlay {
 	display: none;
 	position: fixed;
