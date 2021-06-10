@@ -13,6 +13,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified treatment to the shopping cart """
 
+    treatment = Treatment.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -21,6 +22,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
+        messages.success(request, f'Added {treatment.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -48,11 +50,13 @@ def adjust_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
+    treatment = get_object_or_404(Treatment, pk=item_id)
     try:
         cart = request.session.get('cart', {})
 
         cart.pop(item_id)
         request.session['cart'] = cart
+        messages.success(request, f'Removed {treatment.name} from your cart')
         return HttpResponse(status=200)
 
     except Exception as e:
