@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+{% include 'includes/main-nav.html' %}
     {% for blog in blog %}
         <div class="mt-5 pt-5">
             {{ blog.name }}
