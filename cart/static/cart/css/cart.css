@@ -104,6 +104,13 @@
     width: 50%;
 }
 
+/* Media Query for small screens make button full width */
+@media (max-width: 905px) {
+    .cart-btn {
+        width: 100%;
+    }
+}
+
 .cart-btn:hover {
     background-color: #f3c1a4;
 }
