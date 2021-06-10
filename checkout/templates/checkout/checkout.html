@@ -33,46 +33,31 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ treatment_count }})</p>
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                    </div>
-                </div>
-                {% for item in cart_items %}
-                    <div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'treatment_detail' item.treatment.id %}">
-                                {% if item.treatment.image %}
-                                    <img class="w-100" src="{{ item.treatment.image.url }}" alt="{{ treatment.name }}">
-                                {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
-                                {% endif %}
-                            </a>
+            <!-- Order Summary -->
+            <div class="col-12 col-lg-6 order-lg-last mb-5 order-summary-wrapper">
+                <h3 class="order-summary pb-3"><i class="fas fa-shopping-cart"></i> Order Summary ({{ treatment_count }})</h3>
+                <div class="col-12">
+                        <p class="total"><span class="pr-5">Grand Total:</span> £{{ grand_total | floatformat:2 }}</p>
+                        <hr>
+                        {% for item in cart_items %}
+                        <div class="row text-center pt-2">
+                            <div class="col-3 item-wrapper">
+                                <a href="{% url 'treatment_detail' item.treatment.id %}">
+                                    {% if item.treatment.image %}
+                                        <img class="w-100" src="{{ item.treatment.image.url }}" alt="{{ treatment.name }}">
+                                    {% else %}
+                                        <img class="w-100" src="../../../media/test.jpg" alt="{{ treatment.name }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="col-3"><p class="my-0 item-details">{{ item.treatment.name }}</p></div>
+                            <div class="col-3"><p class="my-0 item-details">{{ item.quantity }}</p></div>
+                            <div class="col-3"><p class="my-0 item-details">£{{ item.treatment.price | calc_subtotal:item.quantity }}</p></div>
                         </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.treatment.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ item.treatment.price | calc_subtotal:item.quantity }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-                <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Grand Total:</p>
-                    </div>
-                    <div class="col-3">
-                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+            <!-- Form Billing Info -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
