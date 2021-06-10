@@ -1,18 +1,12 @@
-/* CART */
+/*-------------------- Cart */
 #cart-wrapper {
-    min-height: 100vh;
+    min-height: 100%;
 }
 
+/*-------------------- Left Side*/
 .left-side {
     height: 100%;
 }
-
-/* Padding for large screens only todo */
-@media only screen and (min-width: 1014px) {
-    .left-side {
-        padding-right: 15rem;
-    }
-  }
 
 /* Removes between rows */
 .table td, .table th {
@@ -56,6 +50,21 @@
     padding-top: 5rem !important;
 }
 
+.wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  .close:before {
+    content: '✕';
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+/*-------------------- Right Side*/
 .right-side {
     background-color: #9eb4a7;
     height: 100%;
@@ -84,11 +93,6 @@
     padding-left: 5px;
 }
 
-.cart-checkbox-label {
-    color: black;
-    font-size: 14px;
-}
-
 .cart-tos {
     color: #323d50;
     font-weight: 600;
@@ -104,13 +108,6 @@
     width: 50%;
 }
 
-/* Media Query for small screens make button full width */
-@media (max-width: 905px) {
-    .cart-btn {
-        width: 100%;
-    }
-}
-
 .cart-btn:hover {
     background-color: #f3c1a4;
 }
@@ -122,16 +119,24 @@
     color: rgb(255,255,255, 0.5);
 }
 
-.wrapper {
-    position: relative;
-    display: inline-block;
+/*-------------------- Media Querys*/
+/* Remove 100% widths on all sections */
+@media only screen and (max-width: 767px) {
+    .left-side {
+        height: auto;
+    }
+    .right-side {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+    #cart-wrapper {
+        min-height: auto;
+    }
   }
-  .close:before {
-    content: '✕';
-  }
-  .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-  }
+
+/* Make checkout button full width on sm screens */
+@media (max-width: 905px) {
+    .cart-btn {
+        width: 100%;
+    }
+}
