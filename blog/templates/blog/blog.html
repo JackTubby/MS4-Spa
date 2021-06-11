@@ -1,19 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blogs/css/blogs.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
 {% include 'includes/main-nav.html' %}
-    {% for blog in blog %}
-        <div class="mt-5 pt-5">
-            {{ blog.name }}
+<main id="blog-main">
+    <div class="container page-padding">
+        <!-- Page Header -->
+        <div class="row">
+            <div id="blog-img">
+                <h2 class="blog-heading center-align">Blogs</h2>
+            </div>
         </div>
-    {% endfor %}
+    </div>
+
+    <div class="row mx-3 d-flex justify-content-center">
+        {% for blog in blog %}
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-card-wrapper">
+            <div class="see-more text-center">
+               <span><i class="far fa-eye"></i></span>
+            </div>
+            <article class="text-left">
+               <h2 class="text-uppercase">{{ blog.name }}</h2>
+               <h4>This is a test Description to be changed</h4>
+            </article>
+            <img src="../../../media/spa.jpg" alt="image of blog">
+         </div>
+        {% endfor %}
+    </div>
+</main>
+{% include 'includes/news-letter.html' %}
+{% include 'includes/footer.html' %}
 {% endblock %}
