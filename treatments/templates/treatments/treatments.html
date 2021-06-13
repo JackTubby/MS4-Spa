@@ -62,9 +62,9 @@
 {% for treatment in treatments %}
 <div class="row treatment-wrapper">
     <div class="col-12 col-lg-4">
-        {% if treatments.image %}
+        {% if treatment.image %}
             <a href="{{ treatment.image.url }}" target="_blank">
-                <img class="card-img-top img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
+                <img class="card-img-top img-fluid" src="{{ treatment.image.url }}"" alt="{{ treatment.name }}">
             </a>
             {% else %}
             <a href="">
