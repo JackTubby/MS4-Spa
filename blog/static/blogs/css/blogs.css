@@ -2,11 +2,27 @@
     min-height: auto;
 }
 
-.blog-img {
-    height: 26rem;
-    background: url('../../../../media/spa.jpg') no-repeat center center fixed;
-    border-radius: 10px;
-    background-size: cover;
+#blog-img {
+  height: 26rem;
+  background: url('../../../../media/spa.jpg') no-repeat center center fixed;
+  border-radius: 10px;
+  background-size: cover;
+  width: 90vw;
+  object-fit: cover;
+  margin: auto;
+}
+
+/* Increases blog img width to 100% on small screens */
+@media (max-width: 991px) {
+  #blog-img {
+      width: 100%;
+  }
+}
+
+.blog-heading {
+  font-size: 60px;
+  font-family: 'Courgette', sans-serif;
+  padding: 130px 0 0 50px;
 }
 
 .blog-card-wrapper {
