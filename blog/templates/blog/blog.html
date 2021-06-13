@@ -28,6 +28,7 @@
 
         <div class="row mx-3 d-flex justify-content-center">
             {% for blog in blog %}
+            <a href="{% url 'blog_detail' blog.id %}">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 blog-card-wrapper">
                 <div class="see-more text-center">
                 <span><i class="far fa-eye"></i></span>
@@ -38,6 +39,7 @@
                 </article>
                 <img src="../../../media/spa.jpg" alt="image of blog">
             </div>
+            </a>
             {% endfor %}
         </div>
     </div>
