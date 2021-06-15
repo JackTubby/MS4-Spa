@@ -136,8 +136,9 @@ def delete_treatment(request, treatment_id):
 
 
 @login_required
-def add_rating(request):
+def add_rating(request, treatment_id):
     """ Add a rating to a treatment"""
+    treatment = get_object_or_404(Treatment, pk=treatment_id)
     if request.method == 'POST':
         form = RatingForm(request.POST, request.FILES)
         if form.is_valid():
@@ -151,5 +152,6 @@ def add_rating(request):
     template = 'treatments/add_rating.html'
     context = {
         'form': form,
+        'treatment': treatment
     }
     return render(request, template, context)
