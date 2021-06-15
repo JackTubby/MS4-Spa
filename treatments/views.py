@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Treatment, Category
-from .forms import TreatmentForm
+from .models import Treatment, Category, Rating
+from .forms import TreatmentForm, RatingForm
 
 
 def all_treatments(request):
@@ -133,3 +133,23 @@ def delete_treatment(request, treatment_id):
     treatment.delete()
     messages.success(request, 'Treatment deleted.')
     return redirect(reverse('treatments'))
+
+
+@login_required
+def add_rating(request):
+    """ Add a rating to a treatment"""
+    if request.method == 'POST':
+        form = RatingForm(request.POST, request.FILES)
+        if form.is_valid():
+            rating = form.save()
+            messages.success(request, 'Successfully added a rating.')
+            return redirect(reverse('treatment_detail', args=[treatment.id]))
+        else:
+            messages.error(request, 'Failed to add a rating. Please make sure the form is valid!')
+    else:
+        form = RatingForm()
+    template = 'treatments/add_rating.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
