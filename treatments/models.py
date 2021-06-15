@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 
 class Category(models.Model):
@@ -30,6 +31,7 @@ class Treatment(models.Model):
 
 
 class Rating(models.Model):
+    treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE, null=True)
     rating = models.IntegerField(default=0)
 
     def __str__(self):
