@@ -27,6 +27,10 @@ body {
     font-family: 'Lato';
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .courgette {
     font-family: 'Courgette', sans-serif;
 }
