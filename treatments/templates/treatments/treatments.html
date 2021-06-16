@@ -19,78 +19,104 @@
 {% include 'includes/main-nav.html' %}
 <main id="treatment-main">
 <div class="container page-padding">
-<!-- Page Header -->
-<div id="treatment-img">
-    <h2 class="treatment-heading center-align text-black">Treatments</h2>
-</div>
-<!-- Seach Bar -->
-<div class="input-group">
-    <div class="input-wrapper py-3">
-        <form class="form" method="GET" action="{% url 'treatments' %}">
-            <input class="form-control search-input" type="text" name="q" placeholder="Search our treatments">
-        </form>
-    </div>
-</div>
-
-<div class="row mt-1 mb-2">
-    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-        <div class="sort-select-wrapper w-50">
-            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-            </select>
+    <div class="row">
+        <div class="col-12">
+            <!-- Page Header -->
+            <div id="treatment-img">
+                <h2 class="treatment-heading text-wrap">Treatments</h2>
+            </div>
+            <!-- Seach Bar -->
+            <div class="input-group">
+                <div class="input-wrapper py-3">
+                    <form class="form" method="GET" action="{% url 'treatments' %}">
+                        <input class="form-control search-input" type="text" name="q" placeholder="Search our treatments">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-12 col-md-6 order-md-first">
-        <p class="text-muted mt-3 text-center text-md-left">
-            {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="small"><a href="{% url 'treatments' %}">Treatments Home</a> | </span>
-            {% endif %}
-            {{ treatments|length }} Treatments{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-        </p>
+    <!-- Sort By -->
+    <div class="row mt-1 mb-2">
+        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper w-50">
+                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                </select>
+            </div>
+        </div>
+        <!-- Shows Search Info When Query Is Submitted -->
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                    <span class="small"><a href="{% url 'treatments' %}">Treatments Home</a> | </span>
+                {% endif %}
+                {{ treatments|length }} Treatments{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
     </div>
-</div>
-
-<!-- Treatments -->
-{% for treatment in treatments %}
-<div class="row treatment-wrapper">
-    <div class="col-12 col-lg-4">
-        {% if treatment.image %}
-            <a href="{{ treatment.image.url }}" target="_blank">
-                <img class="card-img-top img-fluid" src="{{ treatment.image.url }}"" alt="{{ treatment.name }}">
-            </a>
-            {% else %}
-            <a href="">
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ treatment.name }}">
-            </a>
-        {% endif %}
+    <!-- Pick Treatment Type Btns -->
+    <div class="row mt-1 fill-btn-wrapper">
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
     </div>
-    <div class="col-12 col-lg-8">
-        <h4 class="treatment-header">{{ treatment.name }}</h4>
-        <p class="treatment-p">{{ treatment.description }}</p>
-        {% if treatment.category %}
-        <span>{{ treatment.category.friendly_name }}</span>
-        {% endif %}
-        {% if treatment.amount %}
-        <span><i class="fas fa-user"></i> {{ treatment.amount }}</span>
-        {% endif %}
-        {% if treatment.rating %}
-        <span class="treatment-rate-price">{{ treatment.rating }}</span>
-        {% else %}
-        <span class="treatment-rate-price">No Rating</span>
-        {% endif %}
-        <span class="treatment-rate-price">£{{ treatment.price }}</span>
-        <a class="treatment-details-a" href="{% url 'treatment_detail' treatment.id %}">Details</a>
+    <div class="row text-center">
+        <div class="col-12">
+            <div class="dropdown-select">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-{% endfor %}
+<hr>
+    <!-- Treatment Cards -->
+    <div class="row">
+    {% for treatment in treatments %}
+    <div class="col-12 col-md-6 col-lg-3">
+        <a href="{% url 'treatment_detail' treatment.id %}">
+            <div class="profile-card-6"><img src="../../../media/test.jpg" class="img img-responsive">
+                <div class="profile-name">{{ treatment.name }}</div>
+                <div class="profile-position">Click to find out more</div>
+                <div class="profile-overview">
+                    <div class="profile-overview">
+                        <div class="row pl-1 text-center">
+                            <div class="col">
+                                <h3>£{{ treatment.price }}</h3>
+                                <p>Price</p>
+                            </div>
+                            <div class="col">
+                                <h3>{{ treatment.amount }}</h3>
+                                <p>People</p>
+                            </div>
+                            <div class="col">
+                                <h3>5/5</h3>
+                                <p>Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+    </div>
 </div>
 </main>
 {% include 'includes/news-letter.html' %}
