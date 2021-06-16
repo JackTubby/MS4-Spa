@@ -64,12 +64,12 @@
     </div>
     <!-- Pick Treatment Type Btns -->
     <div class="row mt-1 fill-btn-wrapper">
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
-        <div class="col-12 col-md-4 col-lg-2"><button class="fill-btn">View Story</button></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}">All</a></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}?category=facials">Facials</a></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}?category=hand_foot">Hand & Foot</a></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}?category=body">Body</a></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}?category=massage">Massage</a></div>
+        <div class="col-12 col-md-4 col-lg-2"><a class="btn fill-btn" href="{% url 'treatments' %}?category=packages_offers">Offers</a></div>
     </div>
     <div class="row text-center">
         <div class="col-12">
