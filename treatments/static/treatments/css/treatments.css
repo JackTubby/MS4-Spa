@@ -1,8 +1,4 @@
 /* Treatments page */
-#treatment-main {
-    background-color: #fff;
-}
-
 #treatment-img {
     height: 26rem;
     background: url('../../../../media/spa.jpg') no-repeat center center fixed;
@@ -12,60 +8,21 @@
     object-fit: cover;
 }
 
-.treatment-wrapper {
-    border-radius: 10px;
-    color: #000;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom: 100px; /* Spacing between treatment cards */
-}
-
-.treatment-wrapper:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-                rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: box-shadow 0.2s;
-}
-
 .treatment-heading {
     font-size: 60px;
     font-family: 'Courgette', sans-serif;
     padding: 130px 0 0 50px;
+    text-shadow: 1px 1px #000;
 }
 
-.treatment-header {
-    font-size: 35px;
-}
+/* Make treatment heading smaller on sm screens */
+@media (max-width: 404px) {
+    .treatment-heading {
+        padding-top: 50%;
+        padding-left: 20px;
+        font-size: 40px;
+    }
 
-.treatment-p {
-    font-size: 22px;
-    padding-top: 10px;
-    font-style: normal;
-}
-
-.treatment-rate-price {
-    font-size: 18px;
-    padding-left: 10px;
-}
-
-.treatment-details-a {
-    right: 0;
-    position: absolute;
-    color: #000;
-    font-size: 22px;
-    border: 1px #000 solid;
-    padding: 3px;
-    border-radius: 10px;
-}
-
-.treatment-details-a:hover {
-    text-decoration: none;
-    color: #fff;
-    padding: 4px;
-    background-color: #323d50;
 }
 
 /* Treatment Details */
@@ -81,3 +38,148 @@
 .treatment-d-text {
     font-size: 24px;
 }
+
+/* HERE */
+/* Make treatment heading smaller on sm screens */
+.profile-card-6 {
+    max-width: 320px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .profile-card-6 {
+        margin: auto;
+    }
+}
+
+.profile-card-6 img {
+    transition: all 0.15s linear;
+    height: 30rem;
+    width: auto;
+}
+
+.profile-card-6 .profile-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #FFF;
+    padding: 15px 20px;
+    transition: all 0.15s linear;
+    text-shadow: 1px 1px #000;
+}
+
+.profile-card-6 .profile-position {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    left: 30px;
+    top: 100px;
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+    color: #FFF;
+    padding: 50px 0px 20px 0px;
+    transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview h3 {
+    font-weight: bold;
+}
+
+.profile-card-6 .profile-overview p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-card-6:hover img {
+    filter: brightness(80%);
+}
+
+.profile-card-6:hover .profile-name {
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.profile-card-6:hover .profile-position {
+    left: 40px;
+}
+
+.profile-card-6:hover .profile-overview {
+    padding-bottom: 25px;
+}
+
+/* Treatment type selection btn */
+.fill-btn-wrapper {
+    margin: auto !important;
+}
+
+.fill-btn {
+    position: relative;
+    display:block;
+    height: 45px;
+    width: 150px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #383736;
+    border: 2px #383736 solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  
+  .fill-btn:hover {
+    color: whitesmoke;
+  }
+  
+  .fill-btn:before {
+    content: "";
+    position: absolute;
+    background: #383736;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+  
+  .fill-btn:hover:before {
+    top: 0;
+}
+/* Hide Btns On Sm Screens */
+@media (max-width: 767px) {
+    .fill-btn-wrapper {
+        display: none;
+    }
+}
+/* Hide dropdown on medium screens up */
+@media (min-width: 768px) {
+    .dropdown-select {
+        display: none;
+    }
+}
+  
