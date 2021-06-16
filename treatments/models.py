@@ -35,4 +35,4 @@ class Rating(models.Model):
     rating = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return self.treatment.name
