@@ -24,7 +24,7 @@
                 <form action="{% url 'add_blog' %}" method="POST" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <a class="rounded-0 btn" href="{% url 'blog' %}">Cancel</a>
+                    <a class="rounded-0 btn" href="{% url 'home' %}">Cancel</a>
                     <button class="rounded-0 btn" type="submit">Add Blog</button>
                 </form>
             </div>
