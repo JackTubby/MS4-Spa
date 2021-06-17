@@ -14,7 +14,7 @@ font-family: 'Lato', sans-serif;
 #fefcdd yellow
 */
 
-/* Website Styles */
+/* ------------------------------- Global Styles */
 html {
     min-height: 100%;
 }
@@ -31,20 +31,8 @@ a {
     text-decoration: none !important;
 }
 
-.courgette {
-    font-family: 'Courgette', sans-serif;
-}
-
-.dancing-script {
-    font-family: 'Dancing Script', sans-serif;
-}
-
-.yellow {
-    color: #fefcdd;
-}
-
-.orange {
-    color: #f3c1a4;
+header {
+    border-bottom: #000 1px solid;
 }
 
 .shadow-font {
@@ -59,7 +47,7 @@ a {
     padding-top: 164px;
 }
 
-/* Main Nav */
+/* ------------------------------- Main Nav */
 .menu-btn {
     background-color: #f3c1a4;
 }
@@ -68,10 +56,6 @@ a {
 .menu-btn:hover {
     color: #9eb4a7;
     box-shadow: none;
-}
-
-header {
-    border-bottom: #000 1px solid;
 }
 
 /* Index Page */
@@ -136,7 +120,7 @@ header {
     background-color: rgba(158, 180, 167);
 }
 
-/* Search Bar */
+/* ------------------------------- Search Bar */
 .input-wrapper {
     width: 30%;
 }
@@ -151,7 +135,7 @@ header {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(158, 180, 167, 0.5);
 }
 
-/* News Letter */
+/* ------------------------------- News Letter*/
 .news-letter-wrapper {
     background-color: #d3b4a2;
     padding: 6px 0;
@@ -175,7 +159,7 @@ header {
     background-color: #9eb4a7;
 }
 
-/* Footer */
+/* ------------------------------- Footer */
 .footer-wrapper {
     border-top: 1px solid #000;
 }
@@ -291,7 +275,7 @@ header {
     }
 }
 
-/* AllAuth template styling */ 
+/* ------------------------------- Allauth Template Styling */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -343,7 +327,7 @@ header {
     color: #17a2b8; /* text-info */
 }
 
-/* Treatment Form */
+/* ------------------------------- Treatment Form */
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -374,7 +358,7 @@ header {
     border-radius: 0;
 }
 
-/* Purity Button */
+/* ------------------------------- Purity Button */
 .purity-btn {
     border-radius: 6px;
     background-color: #9eb4a7;
