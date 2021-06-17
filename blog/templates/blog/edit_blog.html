@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col pt-5">
+                <hr>
+                <h2 class="logo-font pt-5 text-black">Edit a Blog</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <form action="{% url 'edit_blog' blog.id %}" method="POST" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <a class="rounded-0 btn" href="{% url 'home' %}">Cancel</a>
+                    <button class="rounded-0 btn" type="submit">Update Blog</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
+{% endblock %}
