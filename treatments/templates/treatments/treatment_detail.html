@@ -2,100 +2,114 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
+<link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
 {% endblock %}
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
+<!--
+    {{ treatment.image.url }}
+    {{ treatment.name }}
+    {% if treatment.category %}
+    {{ treatment.category.friendly_name }}
+    {% endif %}
+    {% if treatment.amount %}
+    {{ treatment.amount }}
+    {% endif %}
+    {{ treatment.price }}
+    {{ treatment.description }}
 
+    <form class="form" action="{% url 'add_to_cart' treatment.id %}" method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="col-12">
+            <p class="mt-3"><strong>Quantity:</strong></p>
+            <div class="form-group w-50">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="decrement-qty btn btn-black rounded-0" 
+                            data-item_id="{{ treatment.id }}" id="decrement-qty_{{ treatment.id }}">
+                            <span class="icon">
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <input class="form-control qty_input" type="number"
+                        name="quantity" value="1" min="1" max="99"
+                        data-item_id="{{ treatment.id }}"
+                        id="id_qty_{{ treatment.id }}">
+                    <div class="input-group-append">
+                        <button class="increment-qty btn btn-black rounded-0"
+                            data-item_id="{{ treatment.id }}" id="increment-qty_{{ treatment.id }}">
+                            <span class="icon">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <div class="col-12">
+            <div><i>Opening times Mon-Fri 9-18</i></div>
+        </div>
+        <div class="col-12">
+            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+        </div>
+        {% if request.user.is_superuser %}
+            <a class="btn rounded-0" href="{% url 'edit_treatment' treatment.id %}">Edit</a>
+            <a class="btn rounded-0" href="{% url 'delete_treatment' treatment.id %}">Delete</a>
+        {% endif %}
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+    </div>
+</form>
+
+-->
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main id="treatment-details-main">
-    <div class="container-fluid page-padding">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if treatment.image %}
-                        <a href="{{ treatment.image.url }}" target="_blank">
-                            <img class="treatment-d-img img-fluid" src="{{ treatment.image.url }}" alt="{{ treatment.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="treatment-d-img img-fluid" src="../../../media/spa.jpg" alt="{{ treatment.name }}">
-                        </a>
-                    {% endif %}
+    <div class="container page-padding">
+        <div class="d-md-flex h-md-100">
+            <!-- First Half -->
+            <div class="col-md-6">
+                <div class="text-center">
+                    <div class="logoarea pt-5 pb-5">
+                        <img class="treatment-d-img" src="../../../media/spa.jpg" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="mb-5 mt-md-5">
-                    <p class="mb-0 treatment-d-text">{{ treatment.name }}</p>
-                    {% if treatment.category %}
-                    <p class="mb-0 treatment-d-text">{{ treatment.category.friendly_name }}</p>
-                    {% endif %}
-                    {% if treatment.amount %}
-                    <p><i class="fas fa-user"></i> {{ treatment.amount }}</p>
-                    {% endif %}
-                    <p class="lead mb-0 text-left font-weight-bold treatment-d-text">${{ treatment.price }}</p>
-                    <p class="mt-3 treatment-d-text">{{ treatment.description }}</p>
-                    <form class="form" action="{% url 'add_to_cart' treatment.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0" 
-                                                data-item_id="{{ treatment.id }}" id="decrement-qty_{{ treatment.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ treatment.id }}"
-                                            id="id_qty_{{ treatment.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0"
-                                                data-item_id="{{ treatment.id }}" id="increment-qty_{{ treatment.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div class="col-12">
-                                <div><i>Opening times Mon-Fri 9-18</i></div>
-                            </div>
-                            <div class="col-12">
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
-                            </div>
-                            {% if request.user.is_superuser %}
-                                <a class="btn rounded-0" href="{% url 'edit_treatment' treatment.id %}">Edit</a>
-                                <a class="btn rounded-0" href="{% url 'delete_treatment' treatment.id %}">Delete</a>
-                            {% endif %}
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            <!-- Second Half -->
+            <div class="col-md-6">
+                <div class="h-md-100 p-5">
+                    <h2 class="col-12">{{ treatment.name }}</h2>
+                    <hr>
+                    <p class="col-12">£{{ treatment.price }}</p>
+                    <p class="col-12">{{ treatment.description }}</p>
+                    <!-- Quantity -->
+                    <form form class="form-inline" action="{% url 'add_to_cart' treatment.id %}" method="POST">
+                        <div class="col-6">
+                            Quantity
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control qty_input" type="number"
+                                name="quantity" value="1" min="1" max="99"
+                                data-item_id="{{ treatment.id }}"
+                                id="id_qty_{{ treatment.id }}">
+                        </div>
+                        <!-- Add to cart btn -->
+                        <div class="col-12">
+                            <a href="" class="btn fill-btn add-cart-btn">Add To Cart</a>
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <p>4/5</p>
+            </div>  
         </div>
     </div>
 </main>
-{% include 'includes/news-letter.html' %}
 {% include 'includes/footer.html' %}
 {% endblock %}
 
