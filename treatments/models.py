@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.utils import timezone
 from datetime import date
 
 
@@ -31,8 +33,18 @@ class Treatment(models.Model):
 
 
 class Rating(models.Model):
+    RATE_CHOICES = [
+        (1, '1 - Poor'),
+        (2, '2 - Average'),
+        (3, '3 - Good'),
+        (4, '4 - Very Good'),
+        (5, '5 - Excellent'),
+    ]
+
     treatment = models.ForeignKey(Treatment, on_delete=models.CASCADE, null=True)
-    rating = models.IntegerField(default=0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, default=3)
+    time_added = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.treatment.name
+        return self.user.username
