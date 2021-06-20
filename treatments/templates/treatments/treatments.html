@@ -117,6 +117,10 @@
     </div>
     {% endfor %}
     </div>
+    <!-- If no treatments no treatments message will show -->
+    {% if treatments.count < 1 %}
+        <h5>No Treatments!</h5>
+    {% endif %}
 </div>
 </main>
 {% include 'includes/news-letter.html' %}
