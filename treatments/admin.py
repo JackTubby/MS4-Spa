@@ -24,8 +24,11 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class RatingAdmin(admin.ModelAdmin):
     list_display = (
-        'rating',
+        'rate',
+        'time_added',
     )
+    readonly_fields = ('user', 'treatment', 'rate', 'id')
+    ordering = ('time_added',)
 
 
 admin.site.register(Treatment, TreatmentAdmin)
