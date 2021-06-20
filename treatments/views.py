@@ -9,7 +9,7 @@ from .forms import TreatmentForm, RatingForm
 
 
 def all_treatments(request):
-    """ A view to return all treatments, including sorting and search quries """
+    """ A view to return all treatments, including sorting and search queries """
 
     treatments = Treatment.objects.all()
     query = None
