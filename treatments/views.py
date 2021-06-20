@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -58,18 +59,36 @@ def all_treatments(request):
     return render(request, 'treatments/treatments.html', context)
 
 
+##############################################################################################
 def treatment_detail(request, treatment_id):
     """ A view to show individual treatment details """
-
+    # Get treatment
     treatment = get_object_or_404(Treatment, pk=treatment_id)
+    # Set rating obj to a list
+    current_rating_obj = []
+    # Set ratings to a list
+    current_rating = []
+    # get all ratings
+    rating_obj = Rating.objects.all()
+    # Filter rating (work out average)
+    current_rating_obj = Rating.objects.filter(
+        treatment_id=treatment_id).aggregate(Avg('rate'))
+    # Current rating average
+    current_rating = current_rating_obj['rate__avg']
+    # Rating count
+    rating_count = rating_obj.filter(treatment_id=treatment_id).count()
 
     context = {
         'treatment': treatment,
+        'rating_obj': rating_obj,
+        'rating_count': rating_count,
+        'current_rating': current_rating,
     }
 
     return render(request, 'treatments/treatment_detail.html', context)
 
 
+#############################################################################################
 @login_required
 def add_treatment(request):
     """ Add a treatment to the store """
