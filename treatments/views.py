@@ -59,7 +59,6 @@ def all_treatments(request):
     return render(request, 'treatments/treatments.html', context)
 
 
-##############################################################################################
 def treatment_detail(request, treatment_id):
     """ A view to show individual treatment details """
     # Get treatment
@@ -88,7 +87,6 @@ def treatment_detail(request, treatment_id):
     return render(request, 'treatments/treatment_detail.html', context)
 
 
-#############################################################################################
 @login_required
 def add_treatment(request):
     """ Add a treatment to the store """
