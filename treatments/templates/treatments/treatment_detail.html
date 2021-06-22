@@ -28,50 +28,49 @@
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main id="treatment-details-main">
-    <div class="container page-padding">
-        <div class="d-md-flex h-md-100">
-            <!-- First Half -->
-            <div class="col-md-6">
-                <div class="text-center">
-                    <div class="logoarea pt-5 pb-5">
-                        <img class="treatment-d-img" src="../../../media/spa.jpg" alt="">
-                    </div>
+    <div class="container page-height page-padding text-center">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="logoarea pt-5 pb-5">
+                    <img class="treatment-d-img" src="../../../media/spa.jpg" alt="">
                 </div>
             </div>
-            <!-- Second Half -->
-            <div class="col-md-6">
-                <div class="h-md-100 p-5">
-                    <h2 class="col-12">{{ treatment.name }}</h2>
-                    <hr>
-                    <p class="col-12">£{{ treatment.price }}</p>
-                    {% if rating_count > 0 %}
-                    <p class="col-12"><i class="fas fa-smile"></i> {{ current_rating }}</p>
-                    {% else %}
-                    <p>No Reviews</p>
-                    {% endif %}
-                    <p class="col-12">{{ treatment.description }}</p>
-                    <!-- Quantity -->
-                    <form class="form-inline" action="{% url 'add_to_cart' treatment.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="col-6">
-                            Quantity
-                        </div>
-                        <div class="col-6">
-                            <input class="form-control qty_input" type="number"
-                                name="quantity" value="1" min="1" max="99"
-                                data-item_id="{{ treatment.id }}"
-                                id="id_qty_{{ treatment.id }}">
-                        </div>
-                        <!-- Add to cart btn -->
-                        <div class="col-12">
-                            <input type="submit" class="btn fill-btn add-cart-btn" value="Add to Cart">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </form>
-                    <div class="col-12 col-lg-6 d-inline"><a class="btn rounded-0" href="{% url 'edit_treatment' treatment.id %}">Edit</a></div>
-                    <div class="col-12 col-lg-6 d-inline"><a class="btn rounded-0" href="{% url 'delete_treatment' treatment.id %}">Delete</a></div>
-                </div>
-            </div>  
+            <div class="col-12 col-lg-6">
+                <h2 class="pb-3 cart-text">{{ treatment.name }}</h2>
+                <hr>
+                <p class="pb-3 cart-text">{{ treatment.price }}</p>
+                {% if rating_count > 0 %}
+                <p class="pb-3 cart-text"><i class="fas fa-smile"></i> {{ current_rating }}</p>
+                {% else %}
+                <p class="pb-3 cart-text">No Reviews</p>
+                {% endif %}
+                <p class="pb-3 cart-text">{{ treatment.description }}</p>
+                <!-- Quantity -->
+                <form class="form-inline" action="{% url 'add_to_cart' treatment.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="col-6 cart-text">
+                        Quantity
+                    </div>
+                    <div class="col-6">
+                        <input class="form-control qty_input" type="number"
+                            name="quantity" value="1" min="1" max="99"
+                            data-item_id="{{ treatment.id }}"
+                            id="id_qty_{{ treatment.id }}">
+                    </div>
+                    <hr class="pb-5">
+                    <!-- Add to cart btn -->
+                    <div class="col-12">
+                        <button class="btn fill-btn add-cart-btn">
+                            <input type="submit" class="btn" value="">
+                            Add To Cart
+                        </button>
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            
         </div>
     </div>
 </main>
