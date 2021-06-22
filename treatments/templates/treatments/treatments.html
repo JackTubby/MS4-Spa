@@ -74,13 +74,17 @@
     <div class="row text-center">
         <div class="col-12">
             <div class="dropdown-select">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
+                <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false" data-flip="false">
+                Treatment types
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}">All</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}?category=facials">Facials</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}?category=hand_foot">Hand & Foot</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}?category=body">Body</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}?category=massage">Massage</a>
+                <a class="dropdown-item" href="{% url 'treatments' %}?category=packages_offers">Offers</a>
                 </div>
             </div>
         </div>
@@ -89,7 +93,7 @@
     <!-- Treatment Cards -->
     <div class="row">
     {% for treatment in treatments %}
-    <div class="col-12 col-md-6 col-lg-3">
+    <div class="col-12 col-md-6 col-lg-3 pb-2">
         <a href="{% url 'treatment_detail' treatment.id %}">
             <div class="profile-card-6"><img src="../../../media/test.jpg" class="img img-responsive">
                 <div class="profile-name">{{ treatment.name }}</div>
