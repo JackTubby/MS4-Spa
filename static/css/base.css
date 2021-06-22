@@ -47,6 +47,17 @@ header {
     padding-top: 164px;
 }
 
+/* Remove bootstrap default outline & hover */
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+ .btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* ------------------------------- Main Nav */
 .menu-btn {
     background-color: #f3c1a4;
