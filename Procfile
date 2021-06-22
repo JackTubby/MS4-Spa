@@ -1,1 +1,1 @@
-web: gunicorn purity-mxhaib.wsgi:application
+web: gunicorn purity.wsgi:application
