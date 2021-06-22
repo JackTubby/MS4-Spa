@@ -1,1 +1,1 @@
-web: gunicorn MS4-Spa.wsgi:application
+web: gunicorn purity-mxhaib.wsgi:application
