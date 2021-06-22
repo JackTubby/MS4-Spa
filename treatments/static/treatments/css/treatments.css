@@ -25,20 +25,7 @@
 
 }
 
-/* Treatment Details */
-.treatment-d-img {
-    width: auto;
-    height: 50vh;
-}
-
-/* Using fill btn class, !important to overwrite some styles */
-.add-cart-btn {
-    border: 1px solid black !important;
-    width: 100% !important;
-    padding: 10px !important;
-}
-
-/* HERE */
+/* Treatment Cards Styling */
 /* Make treatment heading smaller on sm screens */
 .profile-card-6 {
     max-width: 320px;
@@ -119,7 +106,7 @@
     padding-bottom: 25px;
 }
 
-/* Treatment type selection btn */
+/* Treatment type selection btn & dropdown ----------------------------- */
 .fill-btn-wrapper {
     margin: auto !important;
 }
@@ -127,7 +114,6 @@
 .fill-btn {
     position: relative;
     display:block;
-    height: 45px;
     width: 150px;
     margin: 10px 7px;
     padding: 5px 5px;
@@ -157,7 +143,7 @@
   .fill-btn:before {
     content: "";
     position: absolute;
-    background: #383736;
+    background: #9eb4a7;
     bottom: 0;
     left: 0;
     right: 0;
@@ -180,5 +166,35 @@
     .dropdown-select {
         display: none;
     }
+}
+
+.btn-dropdown {
+    background-color: #9eb4a7;
+    color: white;
+}
+
+.btn-dropdown:active .btn-dropdown:hover .btn-dropdown:focus {
+    background-color: #9eb4a7;
+    color: white;
+}
+
+/* Treatment Details ---------------------------------------- */
+.page-height {
+    min-height: 100vh;
+}
+
+.treatment-d-img {
+    width: auto;
+    height: 50vh;
+}
+
+/* Using fill btn class, !important to overwrite some styles */
+.add-cart-btn {
+    width: 100% !important;
+}
+
+.cart-text {
+    color: #000;
+    font-size: 24px;
 }
   
