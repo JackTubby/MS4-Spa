@@ -23,47 +23,52 @@
                 <hr>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <h5>Your Default Delivery Information</h5>
-            <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn rounded-0">Update Information</button>
-            </form>
-        </div>
-        <div class="col-12 col-lg-6">
-            <h5>Order History</h5>
-            <div class="order-history table-responsive">
-                <table class="table table-sm table-borderless">
-                    <thead>
-                        <tr>Order Number</tr>
-                        <tr>Date</tr>
-                        <tr>Treatments</tr>
-                        <tr>Order Total</tr>
-                    </thead>
-                    <tbody>
-                        {% for order in orders %}
-                            <tr>
-                                <td>
-                                    <a href="{% url 'order_history' order.order_number %}" 
-                                        title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}
-                                    </a>
-                                </td>
-                                <td>{{ order.date }}</td>
-                                <td>
-                                    <ul class="list-unstyled">
-                                    {% for item in order.lineitems.all %}
-                                        {{ item.treatment.name }} x{{ item.quantity }}
-                                    {% endfor %}
-                                    </ul>
-                                </td>
-                                <td>£{{ order.grand_total }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h5>Your Default Billing Information</h5>
+                <p class="text-muted">You can edit & save your information here ready for checkout.</p>
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn rounded-0">Update Information</button>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h5>Order History</h5>
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>Order Number</tr>
+                            <tr>Date</tr>
+                            <tr>Treatments</tr>
+                            <tr>Order Total</tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}" 
+                                            title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul>
+                                        {% if item in order.lineitems %}
+                                        {% for item in order.lineitems.all %}
+                                            {{ item.treatment.name }} x{{ item.quantity }}
+                                        {% endfor %}
+                                        {% else %}
+                                        NOPE
+                                        {% endif %}
+                                        </ul>
+                                    </td>
+                                    <td>£{{ order.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
