@@ -28,8 +28,8 @@
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main id="treatment-details-main">
-    <div class="container page-height page-padding text-center">
-        <div class="row">
+    <div class="container page-height page-padding">
+        <div class="row text-center">
             <div class="col-12 col-lg-6">
                 <div class="logoarea pt-5 pb-5">
                     <img class="treatment-d-img" src="../../../media/spa.jpg" alt="">
@@ -40,9 +40,7 @@
                 <hr>
                 <p class="pb-3 cart-text">{{ treatment.price }}</p>
                 {% if rating_count > 0 %}
-                <p class="pb-3 cart-text"><i class="fas fa-smile"></i> {{ current_rating }}</p>
-                {% else %}
-                <p class="pb-3 cart-text">No Reviews</p>
+                <p class="pb-3 cart-text"><i class="fas fa-smile"></i> {{ current_rating }}/5.0</p>
                 {% endif %}
                 <p class="pb-3 cart-text">{{ treatment.description }}</p>
                 <!-- Quantity -->
@@ -69,8 +67,69 @@
                 </form>
             </div>
         </div>
-        <div class="row">
-            
+        <!-- Ratings -->
+        <div class="rating-wrapper">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h5>Ratings</h5>
+                            {% if current_rating %}
+                               <h5><i class="fas fa-star mr-1"></i>{{current_rating}} / 5.0</h5>
+                               <p>({{rating_count}} Ratings)</p>
+                            {% else %}
+                                <small class="text-muted">This Treatment has no Rating!</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    {% if rating_obj%}
+                        {% for rating in rating_obj%}
+                            {% if rating.treatment_id == treatment.id%}
+                            <div class="col-2">
+                                <div><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
+                                <div><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
+                                    <div class="pull-right">
+                                    {%if rating.rate == 1%}
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        {%elif rating.rate == 2%}
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        {%elif rating.rate == 3%}
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        {%elif rating.rate == 4%}
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o empty"></i>
+                                        {%elif rating.rate == 5%}
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    {% endif%}
+                                </div>
+                            </div>
+                            {%endif%}
+                        {% endfor %}
+                    {%endif%}
+                </div>
+            </div>
         </div>
     </div>
 </main>
