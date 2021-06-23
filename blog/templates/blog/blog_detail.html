@@ -19,6 +19,11 @@
 {% include 'includes/main-nav.html' %}
 <main id="blog-main">
     <div class="container page-padding">
+        <div class="row mb-5">
+            <div class="col-12">
+                <a href="{% url 'blogs' %}" class="purity-btn"><span>Back to blogs </span></a>
+            </div>
+        </div>
         <!-- Page Header -->
         <div class="row">
             <div id="blog-img">
@@ -29,7 +34,7 @@
         <div class="row mx-3 d-flex justify-content-center">
             <div class="col-12">
                 <article>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet pariatur possimus officia repellendus excepturi, 
+                    <p class="blog-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet pariatur possimus officia repellendus excepturi, 
                         nihil non accusantium magni quasi debitis explicabo voluptatum quae sapiente autem assumenda at consequuntur 
                         voluptatibus eius sit eveniet suscipit in. Labore adipisci eum magni reprehenderit, optio itaque minus repellendus 
                         eaque doloribus debitis molestias reiciendis fugiat quas. Odio sunt aliquam labore esse officia quisquam, quos 
@@ -47,10 +52,10 @@
                         quas incidunt.Obcaecati quae vel facere repudiandae, aperiam et consectetur in ad praesentium. Magni, repellendus.</p>
                 </article>
             </div>
-            <a href="{% url 'delete_blog' blog.id %}" class="btn">DELETE</a>
+            <div class="col-12 text-center thanks-reading"><i class="far fa-smile-beam mb-4 pr-2"></i>Thank You For Reading!</div>
+            <a href="{% url 'delete_blog' blog.id %}" class="btn fill-btn text-danger">Delete</a>
         </div>
     </div>
 </main>
-{% include 'includes/news-letter.html' %}
 {% include 'includes/footer.html' %}
 {% endblock %}
