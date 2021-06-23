@@ -105,7 +105,7 @@
 .blog-p {
   padding-top: 50px;
   font-size: 18px;
-  font-family: 'montserrat';
+  font-family: 'montserrat', sans-serif;
 }
 
 .thanks-reading {
