@@ -23,7 +23,6 @@
     <div class="col-md-9 left-side">
         <div class="text-white text-center">
             <div class="pt-5 text-black table-responsive">
-            {% if item in cart_items %}
                 <table class="table">
                     <thead>
                       <tr>
@@ -84,9 +83,6 @@
                       {% endfor %}
                     </tbody>
                 </table>
-            {% else %}
-            <h4 class="pt-5">There are no items in your basket!</h4>
-            {% endif %}
             </div>
         </div>
     </div>
