@@ -99,6 +99,10 @@ header {
   }
 
 /* Index Page ---------------------------- */
+#index-main {
+    padding: 40px 0;
+}
+
 #index-img {
     min-height: 80vh;
     background: url('../../media/spa.jpg') no-repeat center center fixed;
@@ -109,6 +113,12 @@ header {
     color: #fff;
     font-family: 'Courgette', sans-serif;
 }
+
+@media (max-width: 474px) {
+    .logo-font {
+        font-size: 38px;
+    }
+  }
 
 .take-a-look-button {
     color: #000;
@@ -131,7 +141,15 @@ header {
 .about-wrapper {
     height: 20vh;
     background-color: #fff;
+    margin-bottom: 100px;
 }
+
+/* Add margin to bottom on smaller screens */
+@media (max-width: 473px) {
+    .about-wrapper {
+        margin-bottom: 260px;
+    }
+  }
 
 .about-header {
     font-size: 20px;
@@ -146,7 +164,6 @@ header {
 }
 
 .about-p {
-    width: 60rem;
     margin: auto;
 }
 
