@@ -213,6 +213,14 @@
     font-size: 24px;
 }
 
+/* Rating section on treatment details */
+.rating-wrapper {
+    min-height: 20vh;
+    background-color: #9eb4a7;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 /* Refund Policy ---------------------------------------- */
 .refund-policy-wrapper {
     height: 80vh;
