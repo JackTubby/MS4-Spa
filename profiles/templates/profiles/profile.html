@@ -30,19 +30,13 @@
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn rounded-0">Update Information</button>
+                    <button class="btn rounded-0 fill-btn w-100">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
                 <h5>Order History</h5>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
-                        <thead>
-                            <tr>Order Number</tr>
-                            <tr>Date</tr>
-                            <tr>Treatments</tr>
-                            <tr>Order Total</tr>
-                        </thead>
                         <tbody>
                             {% for order in orders %}
                                 <tr>
@@ -54,13 +48,11 @@
                                     <td>{{ order.date }}</td>
                                     <td>
                                         <ul>
-                                        {% if item in order.lineitems %}
                                         {% for item in order.lineitems.all %}
-                                            {{ item.treatment.name }} x{{ item.quantity }}
+                                            <li class="small">
+                                                {{ item.treatment.name }} x{{ item.quantity }}
+                                            </li>
                                         {% endfor %}
-                                        {% else %}
-                                        NOPE
-                                        {% endif %}
                                         </ul>
                                     </td>
                                     <td>£{{ order.grand_total }}</td>
