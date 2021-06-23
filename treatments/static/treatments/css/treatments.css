@@ -212,4 +212,9 @@
     color: #000;
     font-size: 24px;
 }
+
+/* Refund Policy ---------------------------------------- */
+.refund-policy-wrapper {
+    height: 80vh;
+}
   
