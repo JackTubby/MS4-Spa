@@ -43,9 +43,9 @@
             {% endfor %}
         </div>
     </div>
-    <!-- MAKE ADMIN USERS ONLY -->
-    <div class="blobs-container"><a class="blob green" href="{% url 'add_blog' %}"><i class="fas fa-plus"></i></a></div>
+    {% if request.user.is_superuser %}
+        <div class="blobs-container"><a class="blob green" href="{% url 'add_blog' %}"><i class="fas fa-plus"></i></a></div>
+    {% endif %}
 </main>
-{% include 'includes/news-letter.html' %}
 {% include 'includes/footer.html' %}
 {% endblock %}
