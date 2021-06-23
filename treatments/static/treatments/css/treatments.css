@@ -1,3 +1,18 @@
+/* ------------------------------- Search Bar */
+.input-wrapper {
+    width: 30%;
+}
+
+.search-input {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.search-input:focus {
+    border: solid #000 1px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(158, 180, 167, 0.5);
+}
+
 /* Treatments page */
 #treatment-img {
     height: 26rem;
