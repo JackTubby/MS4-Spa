@@ -5,14 +5,6 @@
 <link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
 {% endblock %}
 
-
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
     {{ treatment.image.url }}
     {{ treatment.name }}
     {% if treatment.category %}
@@ -28,7 +20,7 @@
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main id="treatment-details-main">
-    <div class="container page-height page-padding">
+    <div class="container page-height page-padding pb-4">
         <div class="row text-center">
             <div class="col-12 col-lg-6">
                 <div class="logoarea pt-5 pb-5">
@@ -38,11 +30,11 @@
             <div class="col-12 col-lg-6">
                 <h2 class="pb-3 cart-text">{{ treatment.name }}</h2>
                 <hr>
-                <p class="pb-3 cart-text">{{ treatment.price }}</p>
+                <p class="pb-3 cart-text">£{{ treatment.price }}</p>
                 {% if rating_count > 0 %}
-                <p class="pb-3 cart-text"><i class="fas fa-smile"></i> {{ current_rating }}/5.0</p>
+                <p class="pb-3 cart-text"><i class="fas fa-star mr-1"></i>{{ current_rating }}/5.0</p>
                 {% endif %}
-                <p class="pb-3 cart-text">{{ treatment.description }}</p>
+                <p class="pb-3">{{ treatment.description }}</p>
                 <!-- Quantity -->
                 <form class="form-inline" action="{% url 'add_to_cart' treatment.id %}" method="POST">
                     {% csrf_token %}
@@ -66,6 +58,14 @@
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
             </div>
+            {% if request.user.is_superuser %}
+            <div class="col-2">
+                <a class="btn rounded-0 fill-btn" href="{% url 'edit_treatment' treatment.id %}">Edit</a>
+            </div>
+            <div class="col-2">
+                <a class="btn rounded-0 fill-btn text-danger" href="{% url 'delete_treatment' treatment.id %}">Delete</a>
+            </div>
+        {% endif %}
         </div>
         <!-- Ratings -->
         <div class="rating-wrapper">
@@ -88,9 +88,9 @@
                     {% if rating_obj%}
                         {% for rating in rating_obj%}
                             {% if rating.treatment_id == treatment.id%}
-                            <div class="col-2">
-                                <div><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
-                                <div><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
+                            <div class="col-2 rating-single-wrapper">
+                                <div class=""><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
+                                <div class=""><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
                                     <div class="pull-right">
                                     {%if rating.rate == 1%}
                                         <i class="fa fa-star"></i>
