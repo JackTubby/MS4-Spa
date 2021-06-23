@@ -25,7 +25,7 @@ class RatingForm(forms.ModelForm):
 
     class Meta:
         model = Rating
-        fields = '__all__'
+        fields = ['rate']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
