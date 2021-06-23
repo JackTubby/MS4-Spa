@@ -172,3 +172,10 @@ def add_rating(request, treatment_id):
         'treatment': treatment
     }
     return render(request, template, context)
+
+
+def refund_policy(request):
+    """ A view to return the refund policy """
+
+    return render(request, 'treatments/refund-policy.html')
+
