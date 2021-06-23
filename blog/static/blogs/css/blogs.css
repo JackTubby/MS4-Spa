@@ -101,6 +101,20 @@
   top: 13px;
 }
 
+/* Blog Detail Page Only Styling */
+.blog-p {
+  padding-top: 50px;
+  font-size: 18px;
+  font-family: 'montserrat';
+}
+
+.thanks-reading {
+  font-size: 22px;
+}
+
+.thanks-reading i {
+  color: rgb(199, 174, 32);
+}
 
 /*hovers*/
 
