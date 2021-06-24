@@ -1,0 +1,95 @@
+/* Index Page ---------------------------- */
+#index-main {
+    padding: 40px 0;
+}
+
+#index-img {
+    min-height: 80vh;
+    background: url('../../../../media/spa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.logo-font {
+    color: #fff;
+    font-family: 'Courgette', sans-serif;
+}
+
+@media (max-width: 474px) {
+    .logo-font {
+        font-size: 38px;
+    }
+  }
+
+.take-a-look-button {
+    color: #000;
+    min-width: 260px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px !important;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+
+.take-a-look-button:hover {
+    cursor: pointer;
+    background-color: rgba(158, 180, 167);
+}
+
+/* About Section ----------------------------------- */
+
+.about-wrapper {
+    height: 20vh;
+    background-color: #fff;
+    margin-bottom: 100px;
+}
+
+/* Add margin to bottom on smaller screens */
+@media (max-width: 473px) {
+    .about-wrapper {
+        margin-bottom: 260px;
+    }
+  }
+
+.about-header {
+    font-size: 20px;
+    font-family: 'Courgette', sans-serif;
+    color: #9eb4a7;
+}
+
+.home-h5 {
+    font-size: 38px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* FAQ */
+#faq-wrapper {
+    background: url('../../media/spa.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 90vh;
+}
+/* Min height smaller on larger screens */
+@media (min-width: 1450px) {
+    #faq-wrapper {
+      min-height: 60vh;
+    }
+  }
+
+#accordion {
+    width: 80%;
+    margin: auto;
+}
+
+
+.faq-heading {
+    color: #323d50;
+    text-shadow: 1px 1px #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq-heading:hover {
+    color: #9eb4a7;
+}
