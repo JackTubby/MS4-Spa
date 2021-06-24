@@ -16,6 +16,7 @@
 {% endblock %}
 
 {% block content %}
+{% include 'includes/main-nav.html' %}
     <div class="container pt-5">
         <div id="loading-overlay">
             <h1 class="loading-spinner">
@@ -121,6 +122,7 @@
             </div>
         </div>
     </div>
+{% include 'includes/footer.html' %}
 {% endblock %}
 
 {% block postloadjs %}
