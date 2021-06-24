@@ -5,18 +5,6 @@
 <link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
 {% endblock %}
 
-    {{ treatment.image.url }}
-    {{ treatment.name }}
-    {% if treatment.category %}
-    {{ treatment.category.friendly_name }}
-    {% endif %}
-    {% if treatment.amount %}
-    {{ treatment.amount }}
-    {% endif %}
-    {{ treatment.price }}
-    {{ treatment.description }}
-    {{ current_rating }}
-
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main id="treatment-details-main">
@@ -24,12 +12,19 @@
         <div class="row text-center">
             <div class="col-12 col-lg-6">
                 <div class="logoarea pt-5 pb-5">
-                    <img class="treatment-d-img" src="../../../media/spa.jpg" alt="">
+                    {% if treatment.image %}
+                    <img src="{{ treatment.image.url }}" class="img treatment-d-img" alt="{{ treatment.name }}">
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}test.jpg" class="img treatment-d-img" alt="{{ treatment.name }}">
+                    {% endif %}
                 </div>
             </div>
             <div class="col-12 col-lg-6">
                 <h2 class="pb-3 cart-text">{{ treatment.name }}</h2>
                 <hr>
+                {% if treatment.category %}
+                <p class="pb-2 cart-text">{{ treatment.category.friendly_name }}</p>
+                {% endif %}
                 <p class="pb-3 cart-text">£{{ treatment.price }}</p>
                 {% if rating_count > 0 %}
                 <p class="pb-3 cart-text"><i class="fas fa-star mr-1"></i>{{ current_rating }}/5.0</p>

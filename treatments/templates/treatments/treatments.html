@@ -85,7 +85,12 @@
     {% for treatment in treatments %}
     <div class="col-12 col-md-6 col-lg-3 pb-2">
         <a href="{% url 'treatment_detail' treatment.id %}">
-            <div class="profile-card-6"><img src="../../../media/test.jpg" class="img img-responsive">
+            <div class="profile-card-6">
+                {% if treatment.image %}
+                <img src="{{ treatment.image.url }}" class="img" alt="{{ treatment.name }}">
+                {% else %}
+                <img src="{{ MEDIA_URL }}test.jpg" alt="{{ treatment.name }}">
+                {% endif %}
                 <div class="profile-name">{{ treatment.name }}</div>
                 <div class="profile-position">Click to find out more</div>
                 <div class="profile-overview">
