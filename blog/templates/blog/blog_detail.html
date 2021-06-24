@@ -34,25 +34,11 @@
         <div class="row mx-3 d-flex justify-content-center">
             <div class="col-12">
                 <article>
-                    <p class="blog-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet pariatur possimus officia repellendus excepturi, 
-                        nihil non accusantium magni quasi debitis explicabo voluptatum quae sapiente autem assumenda at consequuntur 
-                        voluptatibus eius sit eveniet suscipit in. Labore adipisci eum magni reprehenderit, optio itaque minus repellendus 
-                        eaque doloribus debitis molestias reiciendis fugiat quas. Odio sunt aliquam labore esse officia quisquam, quos 
-                        sint magni corrupti harum architecto maxime consequatur distinctio impedit dolorem fugit veniam, quod hic magnam at, 
-                        cum delectus officiis! Eaque qui amet id recusandae exercitationem voluptate aut blanditiis ipsa molestiae natus 
-                        praesentium repellendus dolorem ab beatae delectus est dolor porro sequi, harum alias sed unde. Voluptatem itaque 
-                        veritatis pariatur ad sit ea? Repellat facilis, sapiente quia rem dicta iste! Eius provident consequatur ad repellat, 
-                        quia placeat inventore porro molestias minus impedit libero officia ullam magnam alias autem magni nobis, error a 
-                        dolor iste nihil in ex! Officia, blanditiis quas facere provident dolores veritatis soluta magnam distinctio culpa 
-                        voluptatem libero ex rem dignissimos repellat magni dolore consequatur neque? Quidem iusto saepe numquam cumque, eius 
-                        aperiam ad quisquam nobis. Maxime, fugit quibusdam nisi quidem error porro blanditiis hic doloremque ea dolores! Ipsa 
-                        sunt officiis id deserunt distinctio et, asperiores nulla aspernatur molestiae, aperiam commodi quibusdam omnis neque 
-                        rerum suscipit sapiente atque minima beatae adipisci voluptate accusantium natus enim numquam quo? Neque ipsam totam 
-                        ab soluta, quam odit esse fugit dolorum voluptates fuga inventore voluptate, debitis adipisci. Eius magnam adipisci 
-                        quas incidunt.Obcaecati quae vel facere repudiandae, aperiam et consectetur in ad praesentium. Magni, repellendus.</p>
+                    <p class="blog-p">{{ blog.description }}</p>
                 </article>
             </div>
             <div class="col-12 text-center thanks-reading"><i class="far fa-smile-beam mb-4 pr-2"></i>Thank You For Reading!</div>
+            <a href="{% url 'edit_blog' blog.id %}" class="btn fill-btn">Edit</a>
             <a href="{% url 'delete_blog' blog.id %}" class="btn fill-btn text-danger">Delete</a>
         </div>
     </div>
