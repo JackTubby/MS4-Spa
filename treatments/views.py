@@ -159,6 +159,9 @@ def add_rating(request, treatment_id):
     if request.method == 'POST':
         form = RatingForm(request.POST, request.FILES)
         if form.is_valid():
+            rating = form.save(commit=False)
+            rating.user = request.user
+            rating.treatment = get_object_or_404(Treatment, pk=treatment_id)
             rating = form.save()
             messages.success(request, 'Successfully added a rating.')
             return redirect(reverse('treatment_detail', args=[treatment.id]))
