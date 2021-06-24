@@ -14,7 +14,8 @@
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main>
-<div class="container-fluid">
+<div class="container-fluid p-0">
+<!-- Hero Section -->
   <div class="row h-100 page-padding" id="index-img">
       <div class="col-7 col-md-6 my-auto pl-5">
           <!-- Slogan -->
@@ -29,14 +30,134 @@
           </div>
       </div>
   </div>
+  <!-- Welcome To Section -->
     <div class="row pt-4 about-wrapper">
         <div class="col-12 text-center">
             <h3 class="about-header">Welcome to</h3>
-            <h5 class="about-h5">PURITY SPA</h5>
+            <h5 class="home-h5">PURITY SPA</h5>
             <p class="about-p">Purity Spa offers a wide range of natural treatments using a wide range of products to achieve the best possible experience and results. Providing bespoke treatments, we can help you achieve your
                 goals in comfort and privacy. We provide excellent service & quality treatments, find your treatment now.
             </p>
         </div>
+    </div>
+    <!-- FAQ Section -->
+    <div id="faq-wrapper" class="text-center py-5">
+        <h5 class="home-h5 text-center">FAQ</h5>
+        <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How do I choose my date & time?
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    You will recieve an email within 24hrs of purchasing with a link to book in a date and time.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How can I cancel my treatment?
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Please read our <a href="">refund policy</a> for all information on cancellation.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How can I change my date & time?
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Please get in contact with us at (ADD  NUMBER HERE)
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do you have lockers to secure my belongings?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                    Yes there are lockers in the changing rooms, which are activated with a padlock which are available from spa reception.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFive">
+                  <h5 class="mb-0">
+                    <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What should I wear for my visit to the spa?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                  <div class="card-body">
+                    We recommend you wear comfortable clothes and all valuables are kept securely in your locker or left at home.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingSix">
+                  <h5 class="mb-0">
+                    <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        I would like a spa package but can’t see one that suits our requirements, do you offer bespoke packages?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                  <div class="card-body">
+                    Yes we are able to offer bespoke packages, please contact the spa to discuss your requirements.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingSeven">
+                  <h5 class="mb-0">
+                    <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        What is the minimum age to use the spa facilities and treatments?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                  <div class="card-body">
+                    The minimum age for access to the spa is 16. Beauty treatments are available from 14, but must be accompanied by the adult at all times.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingEight">
+                  <h5 class="mb-0">
+                    <button class="btn faq-heading collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        What time should I arrive for a spa day or treatment?
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                  <div class="card-body">
+                    We recommend arriving at least 15 minutes prior to your spa day or treatment so you can familiarize yourself with your surroundings, and fill out a health questionnaire.
+                  </div>
+                </div>
+              </div>
+          </div>
     </div>
 </div>
 </main>
