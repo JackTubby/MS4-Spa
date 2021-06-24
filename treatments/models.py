@@ -45,6 +45,7 @@ class Rating(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES, default=3)
     time_added = models.DateTimeField(default=timezone.now)
+    readonly_fields = ['treatment', 'user', 'time_added']
 
     def __str__(self):
         return self.user.username
