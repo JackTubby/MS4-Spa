@@ -6,8 +6,6 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'description',
-        'image_url',
-        'image',
     )
 
 
