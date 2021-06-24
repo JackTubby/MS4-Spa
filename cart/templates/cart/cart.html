@@ -93,7 +93,7 @@
                 <div class="col-8 cart-line pb-5"></div>
                 <div class="col-12 cart-total pt-4 pb-4">Cart Total <span class="cart-total-price">£{{ total|floatformat:2 }}</span></div>
                 <div class="col-12 pb-5"> 
-                    Continuing Agrees To Our <a class="cart-tos" href="">Terms & Conditions</a>
+                    Continuing Agrees To Our <a class="cart-tos" href="{% url 'tos' %}">Terms & Conditions</a>
                 </div>
                 <div class="col-12">
                     <a href="{% url 'checkout' %}" class="col-12 pb-3 btn cart-btn">Checkout <i class="fas fa-shopping-cart"></i></a>

@@ -6,3 +6,10 @@ def index(request):
     """ A view to return the index page """
 
     return render(request, 'home/index.html')
+
+
+# Terms of service Page
+def tos(request):
+    """ A view to return the tos page """
+
+    return render(request, 'home/tos.html')
