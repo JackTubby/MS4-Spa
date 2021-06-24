@@ -422,7 +422,6 @@ header {
     text-align: center;
     font-size: 18px;
     padding: 20px;
-    width: 200px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -454,6 +453,21 @@ header {
     opacity: 1;
     right: 0;
   }
+  .purity-sm-btn {
+      width: 100% !important;
+  }
+/* Make btn smaller on smaller screens */
+@media (max-width: 492px) {
+    .purity-btn {
+        display: none
+    }
+}
+
+@media (min-width: 493px) {
+    .purity-sm-btn {
+        display: none !important;
+    }
+}
 
 /* Fill Btn Global Styling */
 .fill-btn-wrapper {
