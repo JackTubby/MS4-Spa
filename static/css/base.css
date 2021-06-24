@@ -119,6 +119,7 @@ header {
     min-height: 80vh;
     background: url('../../media/spa.jpg') no-repeat center center fixed;
     background-size: cover;
+    margin: 0;
 }
 
 .logo-font {
@@ -169,14 +170,40 @@ header {
     color: #9eb4a7;
 }
 
-.about-h5 {
+.home-h5 {
     font-size: 38px;
     padding-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.about-p {
+/* FAQ */
+#faq-wrapper {
+    background: url('../../media/spa.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 90vh;
+}
+/* Min height smaller on larger screens */
+@media (min-width: 1450px) {
+    #faq-wrapper {
+      min-height: 60vh;
+    }
+  }
+
+#accordion {
+    width: 80%;
     margin: auto;
+}
+
+
+.faq-heading {
+    color: #323d50;
+    text-shadow: 1px 1px #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq-heading:hover {
+    color: #9eb4a7;
 }
 
 /*
