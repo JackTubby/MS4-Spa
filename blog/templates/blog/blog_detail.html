@@ -39,7 +39,29 @@
             </div>
             <div class="col-12 text-center thanks-reading"><i class="far fa-smile-beam mb-4 pr-2"></i>Thank You For Reading!</div>
             <a href="{% url 'edit_blog' blog.id %}" class="btn fill-btn">Edit</a>
-            <a href="{% url 'delete_blog' blog.id %}" class="btn fill-btn text-danger">Delete</a>
+            <!-- Are you sure delete modal -->
+            <!-- Button trigger modal -->
+                <button type="button" class="btn fill-btn text-danger" data-toggle="modal" data-target="#blogDeleteModal">Delete</button>
+            <!-- Delete Modal -->
+            <div class="modal fade" id="blogDeleteModal" tabindex="-1" role="dialog" aria-labelledby="blogDeleteModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="blogDeleteModalLabel">Delete {{ blog.name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete <strong>{{ blog.name }}</strong> this is irreversible!
+                        </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn rounded-0 btn-primary" data-dismiss="modal">Cancel</button>
+                    <a href="{% url 'delete_blog' blog.id %}" class="btn rounded-0 btn-danger">Delete</a>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
