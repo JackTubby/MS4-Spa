@@ -66,7 +66,7 @@
 
 /* FAQ */
 #faq-wrapper {
-    background: url('../../media/spa.jpg') no-repeat center;
+    background: url('../../../../media/spa.jpg') no-repeat center;
     background-size: cover;
     min-height: 90vh;
 }
@@ -92,4 +92,40 @@
 
 .faq-heading:hover {
     color: #9eb4a7;
+}
+
+/* Contact Us */
+.contact-h-wrapper {
+    background-color: #9eb4a7;
+}
+
+/* Increase height on smaller screens */
+@media (max-width: 767px) {
+    .contact-h-wrapper {
+        height: 150px;
+    }
+}
+
+.contact-h {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+    word-wrap: break-word;
+}
+
+
+.contact-i-h {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+}
+
+.contact-i {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
 }
