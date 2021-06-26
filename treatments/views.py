@@ -6,6 +6,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Treatment, Category, Rating
+from profiles.models import UserProfile
+from checkout.models import Order
 from .forms import TreatmentForm, RatingForm
 
 
@@ -63,9 +65,7 @@ def treatment_detail(request, treatment_id):
     """ A view to show individual treatment details """
     # Get treatment
     treatment = get_object_or_404(Treatment, pk=treatment_id)
-    # Set rating obj to a list
     current_rating_obj = []
-    # Set ratings to a list
     current_rating = []
     # get all ratings
     rating_obj = Rating.objects.all()
@@ -77,11 +77,33 @@ def treatment_detail(request, treatment_id):
     # Rating count
     rating_count = rating_obj.filter(treatment_id=treatment_id).count()
 
+    # Get users order history if treatment is in history they can add a rating
+    user_purchased = False
+    profile = None
+    profile_orders = None
+    # Check user is logged in
+    if request.user.is_authenticated:
+        # Get specific user
+        profile = get_object_or_404(UserProfile, user=request.user)
+        # Get all orders from user profile
+        profile_orders = profile.orders.all()
+        # check order is in current users profile
+        for order in profile_orders:
+            all_lineitems = order.lineitems.all()
+            for item in all_lineitems:
+                if item.treatment == treatment:
+                    user_purchased = True
+                else:
+                    return redirect(reverse('treatment_detail', args=[treatment.id]))
+    else:
+        messages.error(request, 'Only authenticated users can do that!')
+        return redirect(reverse('treatment_detail', args=[treatment.id]))
     context = {
         'treatment': treatment,
         'rating_obj': rating_obj,
         'rating_count': rating_count,
         'current_rating': current_rating,
+        'user_purchased': user_purchased,
     }
 
     return render(request, 'treatments/treatment_detail.html', context)
@@ -155,24 +177,39 @@ def delete_treatment(request, treatment_id):
 @login_required
 def add_rating(request, treatment_id):
     """ Add a rating to a treatment"""
+    profile = None
+    profile_orders = None
+    profile = get_object_or_404(UserProfile, user=request.user)
     treatment = get_object_or_404(Treatment, pk=treatment_id)
-    if request.method == 'POST':
-        form = RatingForm(request.POST, request.FILES)
-        if form.is_valid():
-            rating = form.save(commit=False)
-            rating.user = request.user
-            rating.treatment = get_object_or_404(Treatment, pk=treatment_id)
-            rating = form.save()
-            messages.success(request, 'Successfully added a rating.')
-            return redirect(reverse('treatment_detail', args=[treatment.id]))
+    user_purchased = False
+    profile_orders = profile.orders.all()
+    for order in profile_orders:
+        all_lineitems = order.lineitems.all()
+        for item in all_lineitems:
+            if item.treatment == treatment:
+                user_purchased = True
+    if user_purchased == True:
+        if request.method == 'POST':
+            form = RatingForm(request.POST, request.FILES)
+            if form.is_valid():
+                rating = form.save(commit=False)
+                rating.user = request.user
+                rating.treatment = get_object_or_404(Treatment, pk=treatment_id)
+                rating = form.save()
+                messages.success(request, 'Successfully added a rating.')
+                return redirect(reverse('treatment_detail', args=[treatment.id]))
+            else:
+                messages.error(request, 'Failed to add a rating. Please make sure the form is valid!')
         else:
-            messages.error(request, 'Failed to add a rating. Please make sure the form is valid!')
+            form = RatingForm()
     else:
-        form = RatingForm()
+        messages.error(request, 'Only users who purchased this treatment can set ratings!')
+        return redirect(reverse('treatment_detail', args=[treatment.id]))
     template = 'treatments/add_rating.html'
     context = {
+        'treatment': treatment,
+        'user_purchased': user_purchased,
         'form': form,
-        'treatment': treatment
     }
     return render(request, template, context)
 
@@ -181,4 +218,3 @@ def refund_policy(request):
     """ A view to return the refund policy """
 
     return render(request, 'treatments/refund-policy.html')
-
