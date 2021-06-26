@@ -286,6 +286,11 @@ header {
     color: #17a2b8; /* text-info */
 }
 
+.allauth-h {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+}
+
 /* ------------------------------- Treatment Form */
 .btn-file {
     position: relative;
