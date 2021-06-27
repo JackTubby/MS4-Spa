@@ -9,6 +9,7 @@ class TreatmentAdmin(admin.ModelAdmin):
         'category',
         'amount',
         'price',
+        'length',
         'image',
     )
 

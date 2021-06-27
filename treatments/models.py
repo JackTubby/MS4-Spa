@@ -25,6 +25,7 @@ class Treatment(models.Model):
     description = models.TextField(max_length=200)
     amount = models.IntegerField(default=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    length = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
