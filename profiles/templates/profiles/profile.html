@@ -64,6 +64,17 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <!-- Profile settings -->
+        <h3 class="logo-font pt-5 text-black text-center">Profile Settings</h3>
+        <div class="row text-center pt-2 mb-4">
+            <div class="col-12 col-lg-6">
+                <a class="btn btn-warning" href="{% url 'account_reset_password' %}">Change Password</a>
+            </div>
+            <div class="col-12 col-lg-6">For any issues with your account please 
+                <a class="btn btn-info" href="">contact us</a>
+            </div>
+        </div>
     </div>
     {{ profile }}
 {% include 'includes/footer.html' %}
