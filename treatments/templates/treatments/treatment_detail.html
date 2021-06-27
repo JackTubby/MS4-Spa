@@ -29,6 +29,7 @@
                 {% if rating_count > 0 %}
                 <p class="pb-3 cart-text"><i class="fas fa-star mr-1"></i>{{ current_rating }}/5.0</p>
                 {% endif %}
+                <p class="pb-3 cart-text"><i class="fas fa-clock"></i>{{ treatment.length }}</p>
                 <p class="pb-3">{{ treatment.description }}</p>
                 <!-- Quantity -->
                 <form class="form-inline" action="{% url 'add_to_cart' treatment.id %}" method="POST">
@@ -109,8 +110,8 @@
                         {% for rating in rating_obj%}
                             {% if rating.treatment_id == treatment.id%}
                             <div class="col-12 col-md-2 rating-single-wrapper mb-2">
-                                <div class=""><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
-                                <div class=""><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
+                                <div><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
+                                <div><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
                                     <div class="pull-right">
                                     {%if rating.rate == 1%}
                                         <i class="fa fa-star"></i>
