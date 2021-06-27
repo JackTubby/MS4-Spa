@@ -62,7 +62,9 @@ def all_treatments(request):
 
 
 def treatment_detail(request, treatment_id):
-    """ A view to show individual treatment details """
+    """ A view to show individual treatment details | Allows all users to access page
+        checks to see if user is authenticated if so checks user order history, if treatment
+        is in the users history it will show a add rating button in the template. """
     # Get treatment
     treatment = get_object_or_404(Treatment, pk=treatment_id)
     current_rating_obj = []
@@ -105,7 +107,8 @@ def treatment_detail(request, treatment_id):
 
 @login_required
 def add_treatment(request):
-    """ Add a treatment to the store """
+    """ Add a treatment to the store | Checks user is a superuser if they are
+        allows them to access from if not redirect. """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry only store owners can do that')
         return redirect(reverse('home'))
