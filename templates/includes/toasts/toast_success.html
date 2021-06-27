@@ -21,9 +21,9 @@
                     <div class="row">
                         <div class="col-3 my-1">
                             {% if item.treatment.image %}
-                            <img class="w-100" src="{{ item.treatment.image.url }}">
+                            <img class="w-100" src="{{ item.treatment.image.url }}" alt="{{ item.treatment.name }}">
                             {% else %}
-                            <h5>NO IMAGE</h5>
+                            <img class="w-100" src="{{ MEDIA_URL }}test.jpg" alt="item.treatment.name">
                             {% endif %}
                         </div>
                         <div class="col-9">
