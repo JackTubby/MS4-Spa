@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'treatments/css/treatments.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'includes/main-nav.html' %}
+<div class="container page-padding">
+    <h2>500 ERROR</h2>
+</div>
+{% include 'includes/footer.html' %}
+{% endblock %}
