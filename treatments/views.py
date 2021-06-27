@@ -76,7 +76,6 @@ def treatment_detail(request, treatment_id):
     current_rating = current_rating_obj['rate__avg']
     # Rating count
     rating_count = rating_obj.filter(treatment_id=treatment_id).count()
-
     # Get users order history if treatment is in history they can add a rating
     user_purchased = False
     profile = None
@@ -93,11 +92,6 @@ def treatment_detail(request, treatment_id):
             for item in all_lineitems:
                 if item.treatment == treatment:
                     user_purchased = True
-                else:
-                    return redirect(reverse('treatment_detail', args=[treatment.id]))
-    else:
-        messages.error(request, 'Only authenticated users can do that!')
-        return redirect(reverse('treatment_detail', args=[treatment.id]))
     context = {
         'treatment': treatment,
         'rating_obj': rating_obj,
