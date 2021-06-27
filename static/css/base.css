@@ -393,13 +393,13 @@ header {
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 2px;
-    color: #383736;
+    color: black;
     border: 2px #383736 solid;
     border-radius: 4px !important;
+    background-color: #f3c1a4;
     text-transform: uppercase;
     outline: 0;
     overflow:hidden;
-    background: none;
     z-index: 1;
     cursor: pointer;
     transition:         0.08s ease-in;
@@ -408,7 +408,14 @@ header {
     -moz-transition:    0.08s ease-in;
     -webkit-transition: 0.08s ease-in;
   }
-  
+  /*
+#323d50 blue
+#3d3f44 black
+#9eb4a7 green
+#d3b4a2 brown
+#f3c1a4 orange
+#fefcdd yellow
+  */
   .fill-btn:hover {
     color: whitesmoke;
   }
