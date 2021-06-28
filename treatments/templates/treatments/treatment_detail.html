@@ -83,72 +83,24 @@
                     {% endif %}
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
-            </div>
-        </div>
-        <hr>
-        <!-- Ratings -->
-        <div class="rating-wrapper">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="pb-2 text-center cart-text">{{ treatment.name }} Rating(s)</h3>
-                        {% if user_purchased %}
-                        <a class="btn rounded-0 fill-btn p-2 m-0" href="{% url 'add_rating' treatment.id %}">Add Rating</a>
-                        {% else %}
-                        <p>You can only set ratings on treatments you have purchased!</p>
-                        {% endif %}
-                        {% if current_rating %}
-                            <h5><i class="fas fa-star mb-1"></i>{{current_rating}} / 5.0</h5>
-                            <p>({{rating_count}} Ratings)</p>
-                        {% else %}
-                            <small class="text-muted">This Treatment has no Rating!</small>
-                        {% endif %}
-                    </div>
+                <hr>
+                <div class="col-12">
+                    <h3 class="pb-2 text-center cart-text">Ratings for {{ treatment.name }}</h3>
                 </div>
-                <div class="row">
-                    {% if rating_obj%}
-                        {% for rating in rating_obj%}
-                            {% if rating.treatment_id == treatment.id%}
-                            <div class="col-12 col-md-2 rating-single-wrapper mb-2">
-                                <div><h6><i class="fa fa-user-o"></i> {{rating.user}}</h6></div>
-                                <div><p><i class="fa fa-clock-o"></i> {{rating.time_added}}</p></div>
-                                    <div class="pull-right">
-                                    {%if rating.rate == 1%}
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        {%elif rating.rate == 2%}
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        {%elif rating.rate == 3%}
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        {%elif rating.rate == 4%}
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o empty"></i>
-                                        {%elif rating.rate == 5%}
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    {% endif%}
-                                </div>
-                            </div>
-                            {%endif%}
-                        {% endfor %}
-                    {%endif%}
+                <div class="col-12">
+                    {% if current_rating %}
+                        <h5><i class="fas fa-star mb-1"></i>{{current_rating}} / 5.0</h5>
+                        <p>({{rating_count}} Ratings)</p>
+                    {% else %}
+                        <small class="text-muted">This Treatment has no Rating!</small>
+                    {% endif %}
+                </div>
+                <div class="col-12 text-center">
+                    {% if user_purchased %}
+                    <a class="btn rounded-0 fill-btn p-2" href="{% url 'add_rating' treatment.id %}">Add Rating</a>
+                    {% else %}
+                    <p>You can only set ratings on treatments you have purchased!</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
