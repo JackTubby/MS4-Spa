@@ -118,7 +118,9 @@
     </div>
     <!-- If no treatments no treatments message will show -->
     {% if treatments.count < 1 %}
-        <h5>No Treatments!</h5>
+    <div class="row text-center">
+        <h5 class="col-12">No Treatments to show</h5>
+    </div>
     {% endif %}
 </div>
 {% if request.user.is_superuser %}
