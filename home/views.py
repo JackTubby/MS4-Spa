@@ -13,3 +13,10 @@ def tos(request):
     """ A view to return the tos page """
 
     return render(request, 'home/tos.html')
+
+
+# Terms of service Page
+def faq(request):
+    """ A view to return the faq page"""
+
+    return render(request, 'home/faq.html')
