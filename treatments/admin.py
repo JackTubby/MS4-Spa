@@ -7,6 +7,8 @@ class TreatmentAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
+        'hours',
+        'minutes',
         'amount',
         'price',
         'image',
