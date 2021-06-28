@@ -138,8 +138,6 @@ TO ADD
 
 
 ## Deployment
-# Deployment
-
 ## Heroku Deployment
 
 This project was deployed to Heroku via the following steps:
