@@ -85,23 +85,45 @@ In the project, icons were obtained from [Font Awesome](https://fontawesome.com/
 * "Dancing Script" An elegant font fitting the clean and fancy theme, mainly used for headings.
 * "Courgette" Also an elegant font fitting the clean and fancy theme, mainly used for headings.
 * "Monstratt" Used alongside "Lato" it is a clean and readble font perfect for getting information to the user.
-
 #### Imagery
-
+When choosing imagery I used [Pexels](https://www.pexels.com/). Images were used mainly for background images in the site as well as a fallback image if user's uploaded image is not avaliable.
 #### Information Architecture
-
+TO ADD
 #### Wireframes
-
+TO ADD
 
 ## Features
-
 ### Existing Features
+* Created with HTML5, CSS3, JavaScript, jQuery, Bootstrap, Django, Python.
+* Responsive design.
+* Home/Index page for users to understand what the site is.
+* Footer with social media links, navigation links, address and contact details.
+* CRUD functionality for admin users to create treatments or blogs edit and delete them, with any user being able to be read them.
+* Rating system where users who purchase the treatment can set a rating and it works out the average.
+* Full Stripe payment system implemented to purchase treatments.
+* Full user authentications system.
+* Profile page showing users previous orders, save billing information and change password.
+* Treatment search functionality, searching by name and description.
+* Treatment sort by choices.
 
 ### Features Left To Implement
-
+* A future feature I would like to implement would be a discount feature where admin users can run offers on treatments.
+* A future feature I would like to implement would be a booking system, so users can book a date and time for there treatment.
 
 ## Technologies Used
-
+* HTML5
+* CSS3
+* JavaScript
+* Python
+* Bootstrap
+* FontAwesome
+* Google Fonts
+* jQuery
+* Django
+* Git
+* Heroku 
+* GitHub
+* AWS S3 bucket
 
 ## Testing
 
@@ -109,8 +131,13 @@ In the project, icons were obtained from [Font Awesome](https://fontawesome.com/
 ## Deployment
 
 
-## Resources#
-
+## Resources
+* [Stack Overflow]()
+* [Code Institute Course](https://codeinstitute.net/)
+* [YouTube]()
+* [Balsamiq]()
+* [Am I Responsive]()
+* [TinyPNG]()
 
 ## Credits
 
