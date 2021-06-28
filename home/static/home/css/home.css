@@ -68,14 +68,7 @@
 #faq-wrapper {
     background: url('../../../../media/spa.jpg') no-repeat center;
     background-size: cover;
-    min-height: 90vh;
 }
-/* Min height smaller on larger screens */
-@media (min-width: 1450px) {
-    #faq-wrapper {
-      min-height: 60vh;
-    }
-  }
 
 #accordion {
     width: 80%;
