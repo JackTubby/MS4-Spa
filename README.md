@@ -88,7 +88,16 @@ In the project, icons were obtained from [Font Awesome](https://fontawesome.com/
 #### Imagery
 When choosing imagery I used [Pexels](https://www.pexels.com/). Images were used mainly for background images in the site as well as a fallback image if user's uploaded image is not avaliable.
 #### Information Architecture
-TO ADD
+###### Database
+SQLite3 was used during development which is included in the default Django installation. Heroku Postgres is used in the production site.
+###### Apps and Models used
+- Blog App
+- Cart App
+- Checkout App
+- Home App
+- Profiles App
+- Treatments App
+
 #### Wireframes
 TO ADD
 
