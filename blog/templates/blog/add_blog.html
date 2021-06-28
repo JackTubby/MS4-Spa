@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col-12">
                 <form action="{% url 'add_blog' %}" method="POST" class="form" enctype="multipart/form-data">
+                    {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
@@ -22,7 +23,7 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <a class="rounded-0 btn fill-btn w-100 py-3 my-3" href="{% url 'home' %}">Cancel</a>
+                    <a class="rounded-0 btn fill-btn w-100 py-3 my-3" href="{% url 'blogs' %}">Cancel</a>
                     <button class="rounded-0 btn fill-btn w-100 py-3 mb-5" type="submit">Add Blog</button>
                 </form>
             </div>
