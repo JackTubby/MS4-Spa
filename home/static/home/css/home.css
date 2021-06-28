@@ -82,7 +82,6 @@
     margin: auto;
 }
 
-
 .faq-heading {
     color: #323d50;
     text-shadow: 1px 1px #000;
@@ -128,4 +127,11 @@
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     color: #000;
+}
+
+/* Set page height on larger screens */
+@media (min-width: 992px) {
+    .tos-policy-wrapper {
+        height: 80vh;
+    }
 }
