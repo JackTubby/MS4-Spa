@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 {% include 'includes/main-nav.html' %}
-<div class="container page-padding">
-    <div class="row refund-policy-wrapper">
+<div class="container page-padding mt-5">
+    <div class="row tos-policy-wrapper">
         <div class="col-12">
             <h4>Terms Of Service</h4>
         </div>
