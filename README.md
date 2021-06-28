@@ -50,18 +50,41 @@
 ## UX
 
 ### Project Goals
+* Ease of use.
+* Look at the stores treatments.
+* Able to purchase treatments in a simple process.
+* Full authentication functionality.
+* CRUD functionality for store owners to add blogs & treatments.
+* Users who purchase a treatment able to set a rating.
 
 ### Scope
+* Allow users to make purchases on the site.
+* Allow users to set ratings on treatments they have purchased.
+* Allow users to register for an account & change password when needed.
+* Allow Admins to use CRUD functionality to add treatments & blogs.
+* Create the site using FullStack development skills.
 
 ### Structure
+* Fixed navigation bar, This will increase UI/UX for all users on a wide range of devices. For example small screens can easily navigate from anywhere in the page.
+* The navigation bar will contain a drop down menu containing page links and the website title. Also located in the navigation bar will be a profile dropdown containing login/signup or profile for logged in users, admins will have a link to add a treatment or blog. The final link in the navbar will be a link to the cart also showing the cart total.
+* The top right just below the navbar will show all toast messages.
+* Every page will contain a footer which will consist of the company address, links, contact details and social media links.
 
 ### Surface
-
 #### Colours
-
+I have chosen a wide range of colours for my website:
+* #9eb4a7 This light shade of green was used to give a calm and relaxing feeling to the site. It was used mainly on buttons and on some backgrounds making the text stand out more.
+* #f3c1a4 A mix of orange and beige complimenting the overall theme of the site, this was mainly used on buttons and background colours.
+* White was used alot over the site giving it a clean and calm feel inline with the sites goal. White was used on a lot of backgrounds and used on some text when on a dark background.
+* Black was used for text to make it stand out on lighter backgrounds and catch the users eye.
+* Any other colours where chosen through development, a case of this may be when using a previously chosen colour the text did not stand out enough so the colour was changed to match this.
 #### Icons
-
+In the project, icons were obtained from [Font Awesome](https://fontawesome.com/). Icons were used for different settings, for example they was used for social media icons but also to help users understand details. An example of this is the checkout button showing a locked lock to give the feel this is the final step to take payment.
 #### Typography
+* "Lato" used as a base font as it is readable and simple.
+* "Dancing Script" An elegant font fitting the clean and fancy theme, mainly used for headings.
+* "Courgette" Also an elegant font fitting the clean and fancy theme, mainly used for headings.
+* "Monstratt" Used alongside "Lato" it is a clean and readble font perfect for getting information to the user.
 
 #### Imagery
 
