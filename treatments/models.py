@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
-from datetime import date
 
 
 class Category(models.Model):
@@ -23,6 +22,8 @@ class Treatment(models.Model):
     sku = models.CharField(max_length=12)
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200)
+    hours = models.IntegerField(default=0)
+    minutes = models.IntegerField(default=0)
     amount = models.IntegerField(default=1)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
