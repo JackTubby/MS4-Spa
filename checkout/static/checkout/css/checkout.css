@@ -24,6 +24,13 @@
   padding-top: 64px;
 }
 
+.submit-btn {
+  font-family: 'Montserrat', sans-serif;
+}
+.submit-btn:hover {
+  color: #9eb4a7;
+}
+
 
 /*-------------------- Styling from Stripe documentation */
 .StripeElement,
