@@ -1,33 +1,31 @@
 <footer>
     <div class="container-fluid bg-white my-auto py-lg-0 text-center text-break">
          <div class="row footer-wrapper">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="text-black">1 Random Steet,</div>
                 <div class="text-black">London,</div>
                 <div class="text-black">England,</div>
                 <div class="text-black">W1B 5AH</div>
             </div>
-            <div class="col-4">
-                <div class="col pb-2">
-                    <a class="footer-link" href="">About Us</a>
-                    <a class="footer-link" href="">Offers</a>
-                    <a class="footer-link" href="">Treatments</a>
-                    <a class="footer-link" href="">Testimonials</a>
-                    <a class="footer-link" href="">Blog</a>
-                    <a class="footer-link" href="">Contact Us</a>
-                </div>
-                <div class="col pb-3">
-                    <a target="_blank" href=""><i class="fab fa-instagram fa-lg footer-icon"></i></a>
-                    <a target="_blank" href=""><i class="fab fa-twitter fa-lg footer-icon"></i></a>
-                    <a target="_blank" href=""><i class="fab fa-facebook-f fa-lg footer-icon"></i></a>
-                </div>
-                <div class="col">
-                    &#169; 2021 by Jack Tubby
-                </div>
+            <div class="col-12 col-md-4">
+                <a class="footer-link" href="{% url 'home' %}">About Us</a>
+                <a class="footer-link" href="{% url 'treatments' %}?category=packages_offers">Offers</a>
+                <a class="footer-link" href="{% url 'treatments' %}">Treatments</a>
+                <a class="footer-link" href="{% url 'profile' %}">Profile</a>
+                <a class="footer-link" href="{% url 'blogs' %}">Blog</a>
+                <a class="footer-link" href="{% url 'home' %}">Contact Us</a>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="text-black">Phone Number</div>
                 <div class="text-black">Purity@info.com</div>
+            </div>
+            <div class="col-12 pb-3">
+                <a target="_blank" href="{% url 'https://www.instagram.com/' %}"><i class="fab fa-instagram fa-lg footer-icon"></i></a>
+                <a target="_blank" href="{% url 'https://twitter.com/' %}"><i class="fab fa-twitter fa-lg footer-icon"></i></a>
+                <a target="_blank" href="{% url 'https://www.facebook.com/' %}"><i class="fab fa-facebook-f fa-lg footer-icon"></i></a>
+            </div>
+            <div class="col-12">
+                &#169; 2021 by Jack Tubby
             </div>
          </div>
          <div class="row">
