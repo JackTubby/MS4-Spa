@@ -122,16 +122,12 @@
                     </div>
                 </div>
                 {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                    <span class="icon mr-2">
-                        <!--ICON TO GO HERE-->
-                    </span>
+                <a href="{% url 'profile' %}" class="fill-btn">
                     <span class="text-uppercase">Back to order history</span>
                 </a>
                 {% else %}
                 <a href="{% url 'treatments' %}" class="purity-btn"><span>Take a look at more of our great treatments </span></a>
                 <a href="{% url 'treatments' %}" class="fill-btn purity-sm-btn"><span>Take a look at more of our great treatments </span></a>
-                
                 {% endif %}
             </div>
         </div>
