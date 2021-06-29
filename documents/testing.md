@@ -88,6 +88,15 @@
 #### HTML
 #### CSS
 #### JavaScript
+###### [JSHint](https://jshint.com/) used to check JavaScript syntax.
+- Cart.html script | Issues - [3 Warnings](image-validation/cart-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- Stripe_elements.js | Issues - [3 Warnings](image-validation/stripe-elements-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- Countryfield.js | Issues - [2 Warnings](image-validation/countryfield-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- Treatments.html | Issues - [1 Warning](image-validation/treatments-js.png) > All fixed.
+- quantity_input_script.html | Issues - [3 Warnings](quantity-input-script-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- edit_treatment.html | Issues - [1 Warning](edit-treatment-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- add_treatments.html | Issues - [1 Warning](add-treatments-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
 #### Python
 - Autopepe8 installed as a dependency for checking code as written, all python ran through.
 ###### [ExtendsClass](https://extendsclass.com/python-tester.html) Python Syntax Checker used to check all python files syntax
