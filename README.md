@@ -97,7 +97,7 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key            |          Type        |         Validation             |
 |:--------------------:|:------------------:|:--------------------:|:------------------------------:|
 |                      |                    |                      |                                |
-|       ---            |    ---             |                      |    ---                         |
+|       ---            |    ---             |        ---           |    ---                         |
 | name                 | name               |  models.CharField    | max_length=254                 |
 | description          | description        |  models.TextField    |                                |  
 #### Checkout App
@@ -105,7 +105,7 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key            |          Type        |         Validation                              |
 |:--------------------:|:------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                    |                      |                                                 |
-|       ---            |    ---             |                      |    ---                                          |
+|       ---            |    ---             |       ---            |    ---                                          |
 | order number         | order_number       |  models.CharField    | max_length=32, null=False, editable=False       |
 | user profile         | user_profile       |  models.ForeignKey   | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'|
 | full name            | full_name          |  models.CharField    | max_length=50, null=False, blank=False          |
@@ -126,7 +126,7 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key            |          Type        |         Validation                              |
 |:--------------------:|:------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                    |                      |                                                 |
-|       ---            |    ---             |                      |    ---                                          |
+|       ---            |    ---             |           ---        |    ---                                          |
 | order                | order              |  models.ForeignKey   | (Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'|
 | treatment            | treatment          |  models.ForeignKey   | Treatment, null=False, blank=False, on_delete=models.CASCADE|
 | quantity             | quantity           |  models.IntegerField | null=False, blank=False, default=0                          |
@@ -136,7 +136,7 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key                |          Type        |         Validation                              |
 |:--------------------:|:----------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                        |                      |                                                 |
-|       ---            |    ---                 |                      |    ---                                          |
+|       ---            |    ---                 |          ---         |    ---                                          |
 | user                 | user                   |  models.OneToOneField| User, on_delete=models.CASCADE                  |
 | phone number         | default_phone_number   |  models.CharField    | max_length=20, null=True, blank=True            |
 | street_address1      | default_street_address1|  models.CharField    | max_length=80, null=True, blank=True            |
@@ -150,14 +150,14 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key                |          Type        |         Validation                   |
 |:--------------------:|:----------------------:|:--------------------:|:------------------------------------:|
 |                      |                        |                      |                                      |
-|       ---            |    ---                 |                      |    ---                               |
+|       ---            |    ---                 |          ---         |    ---                               |
 | name                 | name                   |  models.CharField    | max_length=254                       |
 | friendly name        | friendly_name          |  models.CharField    | max_length=254, null=True, blank=True|
 ###### treatment model
 |      Name            |     Key                |          Type        |         Validation                              |
 |:--------------------:|:----------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                        |                      |                                                 |
-|       ---            |    ---                 |                      |    ---                                          |
+|       ---            |    ---                 |          ---         |    ---                                          |
 | category             | category               |  models.ForeignKey   | 'Category', null=True, blank=True, on_delete=models.SET_NULL|
 | sku                  | sku                    |  models.CharField    | max_length=12                                   |
 | name                 | name                   |  models.CharField    | max_length=50                                   |
@@ -172,7 +172,7 @@ SQLite3 was used during development which is included in the default Django inst
 |      Name            |     Key                |          Type                    |         Validation                              |
 |:--------------------:|:----------------------:|:--------------------------------:|:-----------------------------------------------:|
 |                      |                        |                                  |                                                 |
-|       ---            |    ---                 |                                  |    ---                                          |
+|       ---            |    ---                 |          ---                     |    ---                                          |
 | treatment            | treatment              |  models.ForeignKey               | Treatment, on_delete=models.CASCADE, null=True  |
 | user                 | user                   |  models.ForeignKey               | User, on_delete=models.CASCADE, null=True       |
 | rate                 | rate                   |  models.PositiveSmallIntegerField| choices=RATE_CHOICES, default=3                 |
