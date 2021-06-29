@@ -91,6 +91,7 @@ When choosing imagery I used [Pexels](https://www.pexels.com/). Images were used
 ### Information Architecture
 #### Database
 SQLite3 was used during development which is included in the default Django installation. Heroku Postgres is used in the production site.
+![Database Schema](documents/images/database-schema.png)
 ##### Blog App
 ###### blog model
 |      Name            |     Key            |          Type        |         Validation             |
