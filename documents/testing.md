@@ -86,3 +86,53 @@
 
 ## Code Validation
 #### HTML
+#### CSS
+#### JavaScript
+#### Python
+- Autopepe8 installed as a dependency for checking code as written, all python ran through.
+###### [ExtendsClass](https://extendsclass.com/python-tester.html) Python Syntax Checker used to check all python files syntax
+- **Blog App Syntax Check**
+  - admin.py []()
+  - apps.py []()
+  - forms.py []()
+  - models.py []()
+  - tests.py []()
+  - urls.py []()
+  - views.py [One Error]() []()
+- **Cart App Syntax Check**
+  - apps.py []()
+  - contexts.py []()
+  - urls.py []()
+  - views.py [One Error]() []()
+- **Checkout App Syntax Check**
+  - admin.py []()
+  - apps.py []()
+  - forms.py [One Error]() []()
+  - models.py [One Error]() []()
+  - signals.py []()
+  - urls.py []()
+  - views.py []()
+  - webhook_handler.py [One Error]() []()
+  - webhooks.py []()
+- **Home App Syntax Check**
+  - apps.py []()
+  - urls.py []()
+  - views.py []()
+- **Profiles App Syntax Check**
+  - apps.py []()
+  - forms.py [One Error]() []()
+  - models.py []()
+  - urls.py []()
+  - views.py [One Error]() []()
+- **Purity App Syntax Check**
+  - settings.py [One Error]() []()
+  - urls.py []()
+- **Treatments App Syntax Check**
+  - admin.py []()
+  - apps.py []()
+  - forms.py []()
+  - models.py []()
+  - urls.py []()
+  - views.py [One Error]() []()
+  - widgets.py []()
+**All errors found in validation are fixed**
