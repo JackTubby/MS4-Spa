@@ -121,7 +121,15 @@ SQLite3 was used during development which is included in the default Django inst
 | grand total          | grand_total        |  models.DecimalField | max_digits=10, decimal_places=2, null=False, default=0| 
 | original cart        | original_cart      |  models.TextField    | null=False, blank=False, default=''             | 
 | stripe pid           | stripe_pid         |  models.CharField    | max_length=254 ,null=False, blank=False, default=''|  
- 
+###### orderlineitem model
+|      Name            |     Key            |          Type        |         Validation                              |
+|:--------------------:|:-------------------|---------------------:|:-----------------------------------------------:|
+|                      |                    |                      |                                                 |
+|       ---            |    ---             |                      |    ---                                          |
+| order                | order              |  models.ForeignKey   | (Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'|
+| treatment            | treatment          |  models.ForeignKey   | Treatment, null=False, blank=False, on_delete=models.CASCADE|
+| quantity             | quantity           |  models.IntegerField | null=False, blank=False, default=0                          |
+| lineitem_total       | lineitem_total     |  models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False     |
 
 #### Wireframes
 TO ADD
