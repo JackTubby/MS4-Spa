@@ -94,12 +94,34 @@ SQLite3 was used during development which is included in the default Django inst
 ##### Blog App
 ###### blog model
 |      Name            |     Key            |          Type        |         Validation             |
-|:--------------------:|:-------------------|- -------------------:|:------------------------------:|
+|:--------------------:|:-------------------|---------------------:|:------------------------------:|
 |                      |                    |                      |                                |
 |       ---            |    ---             |                      |    ---                         |
 | name                 | name               |  models.CharField    | max_length=254                 |
-| description          | description        |  models.TextField    |                                |             
-
+| description          | description        |  models.TextField    |                                |  
+#### Checkout App
+###### order model
+|      Name            |     Key            |          Type        |         Validation                              |
+|:--------------------:|:-------------------|---------------------:|:-----------------------------------------------:|
+|                      |                    |                      |                                                 |
+|       ---            |    ---             |                      |    ---                                          |
+| order number         | order_number       |  models.CharField    | max_length=32, null=False, editable=False       |
+| user profile         | user_profile       |  models.ForeignKey   | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'|
+| full name            | full_name          |  models.CharField    | max_length=50, null=False, blank=False          |
+| email                | email              |  models.EmailField   | max_length=254, null=False, blank=False         |
+| phone number         | phone_number       |  models.IntegerField | null=False, blank=False                         |
+| country              | country            |  CountryField        | blank_label='Country *', null=False, blank=False|
+| postcode             | postcode           |  models.CharField    | max_length=20, null=True, blank=True            |
+| town or city         | town_or_city       |  models.CharField    | max_length=40, null=False, blank=False          | 
+| street_address1      | street_address1    |  models.CharField    | max_length=80, null=False, blank=False          | 
+| street_address2      | street_address2    |  models.CharField    | max_length=80, null=False, blank=False          | 
+| county               | county             |  models.CharField    | max_length=80, null=True, blank=True            | 
+| date                 | date               |  models.DateTimeField| auto_now_add=True                               | 
+| order total          | order_total        |  models.DecimalField | max_digits=10, decimal_places=2, null=False, default=0|
+| grand total          | grand_total        |  models.DecimalField | max_digits=10, decimal_places=2, null=False, default=0| 
+| original cart        | original_cart      |  models.TextField    | null=False, blank=False, default=''             | 
+| stripe pid           | stripe_pid         |  models.CharField    | max_length=254 ,null=False, blank=False, default=''|  
+ 
 
 #### Wireframes
 TO ADD
