@@ -136,3 +136,5 @@
   - views.py [One Error]() [Passed Validation Image]()
   - widgets.py [Passed Validation Image](testing-images/treatments-widgets-validation.png)
 **All errors found in validation are fixed**
+
+## Responsive Tests
