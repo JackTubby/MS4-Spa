@@ -138,3 +138,24 @@
 **All errors found in validation are fixed**
 
 ## Responsive Tests
+- DevTools - Devices tested across a range of widths:
+  - Mobiles: iphone5(320px) | Samsung S5 (360px) | iPhone 6/7/8/X (375px) | iPhone 6/7/8 Plus (414px)
+  - Tablets: iPad (768px) | iPad Pro (1024px)
+  - Desktops: Laptop (1200px) | Large Desktop screen (1920px)
+
+- Viewed on physical devices:
+  - Mobiles: small phone (320px) | large phone (414px)
+  - Tablets: large tablet (768px)
+  - Desktops: Medium laptop (1366px) | Large Desktop screen (1920px) | Very Large Desktop screen (1440px)
+
+- Viewed site on above range (including Responsive mode) on various browsers: >   - Google Chrome
+  - Firefox
+  - Opera
+  - Safari
+
+## Known Bugs & Issues
+
+## Deployment
+* Ensured deployed page on Heroku loads up correctly.
+* Ensured Debug variable in app.py file is set to False.
+* Confirmed that there is no difference between the deployed version and the development version.
