@@ -36,8 +36,7 @@
 |          ---         |                                    ---                                   |                              ---                              |
 | Registered user      | log in and log out of my account;                                        | safeguard all my information whilst not active on the site    |
 | Registered user      | update my billing information;                                           | update any new detials I obtain                               |
-| Registered user      | store my order history;                                                  | gain access to previous treatment orders                      |
-| Registered user      | view old order recipts;                                                  | to check my order details at any time                         |
+| Registered user      | store my order history and check previous order recipts;                 | gain access to previous treatment orders                      |
 | Registered user      | add rating to orders I purchased;                                        | so I can give the treatment a rating depending on what I thought of it|
 |          ---         |                                    ---                                   |                              ---                              |
 | Site admin/superuser | add new treatments to the site;                                          | always make new treatments avaliable for users                |
