@@ -87,16 +87,19 @@ In the project, icons were obtained from [Font Awesome](https://fontawesome.com/
 * "Monstratt" Used alongside "Lato" it is a clean and readble font perfect for getting information to the user.
 #### Imagery
 When choosing imagery I used [Pexels](https://www.pexels.com/). Images were used mainly for background images in the site as well as a fallback image if user's uploaded image is not avaliable.
-#### Information Architecture
-###### Database
+
+### Information Architecture
+#### Database
 SQLite3 was used during development which is included in the default Django installation. Heroku Postgres is used in the production site.
-###### Apps and Models used
-- Blog App
-- Cart App
-- Checkout App
-- Home App
-- Profiles App
-- Treatments App
+##### Blog App
+###### blog model
+|      Name            |     Key            |          Type        |         Validation             |
+|:--------------------:|:-------------------|- -------------------:|:------------------------------:|
+|                      |                    |                      |                                |
+|       ---            |    ---             |                      |    ---                         |
+| name                 | name               |  models.CharField    | max_length=254                 |
+| description          | description        |  models.TextField    |                                |             
+
 
 #### Wireframes
 TO ADD
