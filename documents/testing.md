@@ -98,21 +98,21 @@
   - models.py [Passed Validation Image](testing-images/blog-models-validation.png)
   - tests.py [Passed Validation Image](testing-images/blog-tests-validation.png)
   - urls.py [Passed Validation Image](testing-images/blog-urls-validation.png)
-  - views.py [One Error]() []()
+  - views.py [One Error](testing-images/blog-urls-error-validation.png)
 - **Cart App Syntax Check**
   - apps.py [Passed Validation Image](testing-images/cart-apps-validation.png)
   - contexts.py [Passed Validation Image](testing-images/cart-contexts-validation.png)
-  - urls.py [Passed Validation Image](testing-images/cart-views-validation.png)
-  - views.py [One Error]() []()
+  - urls.py [Passed Validation Image](testing-images/cart-urls-validation.png)
+  - views.py [One Error](testing-images/cart-views-error-validation.png)
 - **Checkout App Syntax Check**
   - admin.py [Passed Validation Image](testing-images/checkout-admin-validation.png)
   - apps.py [Passed Validation Image](testing-images/checkout-apps-validation.png)
-  - forms.py [One Error]() []()
-  - models.py [One Error]() []()
+  - forms.py [One Error](testing-images/checkout-forms-error-validation.png)
+  - models.py [One Error](testing-images/checkout-models-error-validation.png)
   - signals.py [Passed Validation Image](testing-images/checkout-signals-validation.png)
   - urls.py [Passed Validation Image](testing-images/checkout-urls-validation.png)
   - views.py [Passed Validation Image](testing-images/checkout-views-validation.png)
-  - webhook_handler.py [One Error]() []()
+  - webhook_handler.py [One Error](testing-images/checkout-webhookh-error-validation.png)
   - webhooks.py [Passed Validation Image](testing-images/checkout-webhooks-validation.png)
 - **Home App Syntax Check**
   - apps.py [Passed Validation Image](testing-images/home-apps-validation.png)
@@ -123,7 +123,7 @@
   - forms.py [One Error]() []()
   - models.py [Passed Validation Image](testing-images/profiles-apps-validation.png)
   - urls.py [Passed Validation Image](testing-images/profiles-urls-validation.png)
-  - views.py [One Error]() []()
+  - views.py [One Error](testing-images/profiles-views-error-validation.png)
 - **Purity App Syntax Check**
   - settings.py [One Error]() []()
   - urls.py [Passed Validation Image](testing-images/purity-urls-validation.png)
@@ -133,9 +133,12 @@
   - forms.py [Passed Validation Image](testing-images/treatments-forms-validation.png)
   - models.py [Passed Validation Image](testing-images/treatments-models-validation.png)
   - urls.py [Passed Validation Image](testing-images/treatments-urls-validation.png)
-  - views.py [One Error]() [Passed Validation Image]()
+  - views.py [One Error](testing-images/treatments-views-error-validation.png)
   - widgets.py [Passed Validation Image](testing-images/treatments-widgets-validation.png)
-**All errors found in validation are fixed**
+- **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
+
+## Stripe Tests
+* Using stripe dashboard in the webhooks section I checked my site returned webhooks correctly. **Worked**
 
 ## Responsive Tests
 - DevTools - Devices tested across a range of widths:
