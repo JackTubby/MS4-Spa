@@ -5,7 +5,7 @@
 
 #index-img {
     min-height: 80vh;
-    background: url('../../../../media/spa.jpg') no-repeat center center fixed;
+    background: url('../../../../media/home.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
 }
@@ -66,7 +66,7 @@
 
 /* FAQ */
 #faq-wrapper {
-    background: url('../../../../media/spa.jpg') no-repeat center;
+    background: url('../../../../media/faq.jpg') no-repeat center;
     background-size: cover;
 }
 
