@@ -246,23 +246,28 @@ A page for users who have purchased the treatment can set a rating.
 * AWS S3 bucket
 
 ## Testing
-
+Purity was tested throughout making bug fixes along the way as shown in my commits.
+The full testing process can be found [here](documents/testing.md).
 
 ## Deployment
 [Deployment MD](documents/deployment.md)
 
 ## Resources
-* [Stack Overflow]()
+* Stack Overflow
 * [Code Institute Course](https://codeinstitute.net/)
-* [YouTube]()
-* [Balsamiq]()
-* [Am I Responsive]()
-* [TinyPNG]()
+* YouTube
+* Balsamiq Wireframes
+* Am I Responsive
+* TinyPNG
 
 ## Credits
-
+ADD CREDITED CODE
 ### Media
-
+* [Pexels](https://www.pexels.com/) was used for imagery.
 ### Acknowledgements
-
+* Mentor Precious Ijege for his support and knowledge.
+* Tutor support at Code Institute for their assistance.
+* Slack community for assistance and questions.
+* Code Insitute course content.
 ### Support
+For any queries or support contact jack200034@hotmail.com
