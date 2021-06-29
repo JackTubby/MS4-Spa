@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 {% include 'includes/main-nav.html' %}
     <div class="container pt-5 mt-5">
-        <div class="row">
+        <div class="row text-center">
             <div class="col pt-5">
                 <hr>
                 <h2 class="logo-font pt-5 text-black">Edit a Blog</h2>
@@ -21,7 +13,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12">
                 <form action="{% url 'edit_blog' blog.id %}" method="POST" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -31,8 +23,8 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <a class="rounded-0 btn" href="{% url 'home' %}">Cancel</a>
-                    <button class="rounded-0 btn" type="submit">Update Blog</button>
+                    <a class="rounded-0 btn fill-btn w-100 py-3 my-3" href="{% url 'blogs' %}">Cancel</a>
+                    <button class="rounded-0 btn fill-btn w-100 py-3 mb-5" type="submit">Update Blog</button>
                 </form>
             </div>
         </div>
