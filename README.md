@@ -130,6 +130,20 @@ SQLite3 was used during development which is included in the default Django inst
 | treatment            | treatment          |  models.ForeignKey   | Treatment, null=False, blank=False, on_delete=models.CASCADE|
 | quantity             | quantity           |  models.IntegerField | null=False, blank=False, default=0                          |
 | lineitem_total       | lineitem_total     |  models.DecimalField | max_digits=6, decimal_places=2, null=False, blank=False     |
+##### Profiles App
+###### userprofile model
+|      Name            |     Key                |          Type        |         Validation                              |
+|:--------------------:|:-----------------------|---------------------:|:-----------------------------------------------:|
+|                      |                        |                      |                                                 |
+|       ---            |    ---                 |                      |    ---                                          |
+| user                 | user                   |  models.OneToOneField| User, on_delete=models.CASCADE                  |
+| phone number         | default_phone_number   |  models.CharField    | max_length=20, null=True, blank=True            |
+| street_address1      | default_street_address1|  models.CharField    | max_length=80, null=True, blank=True            |
+| street_address2      | default_street_address2|  models.CharField    | max_length=80, null=True, blank=True            |
+| town or city         | default_town_or_city   |  models.CharField    | max_length=40, null=True, blank=True            |
+| county               | default_county         |  models.CharField    | max_length=80, null=True, blank=True            |
+| postcode             | default_postcode       |  models.CharField    | max_length=20, null=True, blank=True            |
+| country              | default_country        |  CountryField        | blank_label='Country', null=True, blank=True    |
 
 #### Wireframes
 TO ADD
