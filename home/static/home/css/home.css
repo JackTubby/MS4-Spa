@@ -70,6 +70,10 @@
     background-size: cover;
 }
 
+.faq-inside-wrapper {
+    min-height: 95vh;
+}
+
 #accordion {
     width: 80%;
     margin: auto;
