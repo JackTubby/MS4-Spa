@@ -186,15 +186,42 @@ TO ADD
 ### Existing Features
 * Created with HTML5, CSS3, JavaScript, jQuery, Bootstrap, Django, Python.
 * Responsive design.
-* Home/Index page for users to understand what the site is.
-* Footer with social media links, navigation links, address and contact details.
-* CRUD functionality for admin users to create treatments or blogs edit and delete them, with any user being able to be read them.
-* Rating system where users who purchase the treatment can set a rating and it works out the average.
-* Full Stripe payment system implemented to purchase treatments.
-* Full user authentications system.
-* Profile page showing users previous orders, save billing information and change password.
-* Treatment search functionality, searching by name and description.
-* Treatment sort by choices.
+###### Home Page
+A simple and clean landing page, showing what the website provides, link to the treatments and a contact detail area.
+[Home Page Screenshot](documents/images/homepage-features.png)
+###### Treatments Page
+A page showing all treatments on the site, the page provides sorting options, treatment category links, ability for the user to click on the treatment to view its details and also for admin users a button to add treatments to the site.
+[Treatments Page Screenshot](documents/images/treatmentspage-features.png)
+###### Treatment Details Page
+This page provides all details about the treatment, and a image representing the type of treatment. Also on the site is the treatments average rating where only users who have purchased the treatment can add a rating. For admin users an edit and delete button are provided.
+[Treatment Details Page Screenshot](documents/images/treatmentdetailspage-features.png)
+###### Cart Page
+A page where all treatments a user has added are, showing the name, sku, price, quantity with the ablity to update the quantity, for (amount of people its for) and the total of that line item. There is also a grand total which works out all the items cost, below is a link to the terms of service and below that is a link to the checkout page.
+[Cart Page Screenshot](documents/images/cartpage-features.png)
+###### Checkout Page
+Checkout page shows the list of all items in the cart, the price of them all and a billing details form, once filled out correctly you can choose to adjust cart or complete order. Choosing complete order will take payment and take you to a success page showing a recipt of your purchase.
+[Checkout Page Screenshot](documents/images/checkoutpage-features.png)
+###### Blog Page
+A page showing all blogs that store owners have added, blogs can range from updates to information about subjects.
+[Blog Page Screenshot](documents/images/blogpage-features.png)
+###### Blog Details Page
+A page that shows the blog text for a user to read, this page also contains a back to blogs button and a edit/delete button for admin users only.
+[Treatment Details Page Screenshot](documents/images/blogdetailspage-features.png)
+###### Profile Page
+The profile page shows all order history which are clickable to see previous order recipts, default billing information that can be changed and a change password button for users to update there password.
+[Treatment Details Page Screenshot](documents/images/profilepage-features.png)
+###### Add Treatment Management Page
+A page for admin users to add treatments to the site.
+[Treatment Details Page Screenshot](documents/images/addtreatmentpage-features.png)
+###### Edit Treatment Page
+A page for admin users to edit treatments on the site.
+[Treatment Details Page Screenshot](documents/images/edittreatmentpage-features.png)
+###### Add Blog Page
+A page for admin users to add blogs to the site.
+[Treatment Details Page Screenshot](documents/images/addblogpage-features.png)
+###### Edit Blog Page
+A page for admin users to edit blogs on the site.
+[Treatment Details Page Screenshot](documents/images/editblogspage-features.png)
 
 ### Features Left To Implement
 * A future feature I would like to implement would be a discount feature where admin users can run offers on treatments.
