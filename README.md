@@ -23,7 +23,7 @@
 |                      |                                                                          |                                                               |
 |          ---         |                                    ---                                   |                              ---                              |
 | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
-| Anonymous user       | understand the what the site is for from the homepage;                   | to make sure the website fits my needs                        |
+| Anonymous user       | Understand what the site is about from landing page;                     | to make sure the website fits my needs                        |
 | Anonymous user       | easily navigate around the site;                                         | find what I am looking for quickly and easily                 |
 | Anonymous user       | search for treatments;                                                   | browse for treatments instead of scrolling through them all   |
 | Anonymous user       | filter my search results;                                                | see the range of prices & categorys                           |
@@ -36,8 +36,9 @@
 |          ---         |                                    ---                                   |                              ---                              |
 | Registered user      | log in and log out of my account;                                        | safeguard all my information whilst not active on the site    |
 | Registered user      | update my billing information;                                           | update any new detials I obtain                               |
-| Registered user      | access to special offers/packages;                                       | get great deals on treatments                                 |
 | Registered user      | store my order history;                                                  | gain access to previous treatment orders                      |
+| Registered user      | view old order recipts;                                                  | to check my order details at any time                         |
+| Registered user      | add rating to orders I purchased;                                        | so I can give the treatment a rating depending on what I thought of it|
 |          ---         |                                    ---                                   |                              ---                              |
 | Site admin/superuser | add new treatments to the site;                                          | always make new treatments avaliable for users                |
 | Site admin/superuser | add blogs to the site;                                                   | update users on any new updates with the company              |
