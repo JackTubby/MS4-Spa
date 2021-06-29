@@ -94,7 +94,7 @@ SQLite3 was used during development which is included in the default Django inst
 ##### Blog App
 ###### blog model
 |      Name            |     Key            |          Type        |         Validation             |
-|:--------------------:|:-------------------|---------------------:|:------------------------------:|
+|:--------------------:|:------------------:|:--------------------:|:------------------------------:|
 |                      |                    |                      |                                |
 |       ---            |    ---             |                      |    ---                         |
 | name                 | name               |  models.CharField    | max_length=254                 |
@@ -102,7 +102,7 @@ SQLite3 was used during development which is included in the default Django inst
 #### Checkout App
 ###### order model
 |      Name            |     Key            |          Type        |         Validation                              |
-|:--------------------:|:-------------------|---------------------:|:-----------------------------------------------:|
+|:--------------------:|:------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                    |                      |                                                 |
 |       ---            |    ---             |                      |    ---                                          |
 | order number         | order_number       |  models.CharField    | max_length=32, null=False, editable=False       |
@@ -123,7 +123,7 @@ SQLite3 was used during development which is included in the default Django inst
 | stripe pid           | stripe_pid         |  models.CharField    | max_length=254 ,null=False, blank=False, default=''|  
 ###### orderlineitem model
 |      Name            |     Key            |          Type        |         Validation                              |
-|:--------------------:|:-------------------|---------------------:|:-----------------------------------------------:|
+|:--------------------:|:------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                    |                      |                                                 |
 |       ---            |    ---             |                      |    ---                                          |
 | order                | order              |  models.ForeignKey   | (Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'|
@@ -133,7 +133,7 @@ SQLite3 was used during development which is included in the default Django inst
 ##### Profiles App
 ###### userprofile model
 |      Name            |     Key                |          Type        |         Validation                              |
-|:--------------------:|:-----------------------|---------------------:|:-----------------------------------------------:|
+|:--------------------:|:----------------------:|:--------------------:|:-----------------------------------------------:|
 |                      |                        |                      |                                                 |
 |       ---            |    ---                 |                      |    ---                                          |
 | user                 | user                   |  models.OneToOneField| User, on_delete=models.CASCADE                  |
@@ -144,6 +144,15 @@ SQLite3 was used during development which is included in the default Django inst
 | county               | default_county         |  models.CharField    | max_length=80, null=True, blank=True            |
 | postcode             | default_postcode       |  models.CharField    | max_length=20, null=True, blank=True            |
 | country              | default_country        |  CountryField        | blank_label='Country', null=True, blank=True    |
+##### Treatments App
+###### category model
+|      Name            |     Key                |          Type        |         Validation                   |
+|:--------------------:|:----------------------:|:--------------------:|:------------------------------------:|
+|                      |                        |                      |                                      |
+|       ---            |    ---                 |                      |    ---                               |
+| name                 | name                   |  models.CharField    | max_length=254                       |
+| friendly name        | friendly_name          |  models.CharField    | max_length=254, null=True, blank=True|
+
 
 #### Wireframes
 TO ADD
