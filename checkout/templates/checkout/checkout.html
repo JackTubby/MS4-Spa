@@ -47,7 +47,7 @@
                                     {% if item.treatment.image %}
                                         <img class="w-100" src="{{ item.treatment.image.url }}" alt="{{ treatment.name }}">
                                     {% else %}
-                                        <img class="w-100" src="../../../media/test.jpg" alt="{{ treatment.name }}">
+                                        <img class="w-100" src="{{ MEDIA_URL }}treatmentdefault.jpg" alt="{{ treatment.name }}">
                                     {% endif %}
                                 </a>
                             </div>
