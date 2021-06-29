@@ -189,43 +189,43 @@ TO ADD
 * Responsive design.
 ###### Home Page
 A simple and clean landing page, showing what the website provides, link to the treatments and a contact detail area.
-[Home Page Screenshot](documents/images/homepage-features.png)
+[Home Page Screenshot](documents/images-features/homepage-features.png)
 ###### Treatments Page
 A page showing all treatments on the site, the page provides sorting options, treatment category links, ability for the user to click on the treatment to view its details and also for admin users a button to add treatments to the site.
-[Treatments Page Screenshot](documents/images/treatmentspage-features.png)
+[Treatments Page Screenshot](documents/images-features/treatmentspage-features.png)
 ###### Treatment Details Page
 This page provides all details about the treatment, and a image representing the type of treatment. Also on the site is the treatments average rating where only users who have purchased the treatment can add a rating. For admin users an edit and delete button are provided.
-[Treatment Details Page Screenshot](documents/images/treatmentdetailspage-features.png)
+[Treatment Details Page Screenshot](documents/images-features/treatmentdetailspage-features.png)
 ###### Cart Page
 A page where all treatments a user has added are, showing the name, sku, price, quantity with the ablity to update the quantity, for (amount of people its for) and the total of that line item. There is also a grand total which works out all the items cost, below is a link to the terms of service and below that is a link to the checkout page.
-[Cart Page Screenshot](documents/images/cartpage-features.png)
+[Cart Page Screenshot](documents/images-features/cartpage-features.png)
 ###### Checkout Page
 Checkout page shows the list of all items in the cart, the price of them all and a billing details form, once filled out correctly you can choose to adjust cart or complete order. Choosing complete order will take payment and take you to a success page showing a recipt of your purchase.
-[Checkout Page Screenshot](documents/images/checkoutpage-features.png)
+[Checkout Page Screenshot](documents/images-features/checkoutpage-features.png)
 ###### Blog Page
 A page showing all blogs that store owners have added, blogs can range from updates to information about subjects.
-[Blog Page Screenshot](documents/images/blogpage-features.png)
+[Blog Page Screenshot](documents/images-features/blogpage-features.png)
 ###### Blog Details Page
 A page that shows the blog text for a user to read, this page also contains a back to blogs button and a edit/delete button for admin users only.
-[Treatment Details Page Screenshot](documents/images/blogdetailspage-features.png)
+[Treatment Details Page Screenshot](documents/images-features/blogdetailspage-features.png)
 ###### Profile Page
 The profile page shows all order history which are clickable to see previous order recipts, default billing information that can be changed and a change password button for users to update there password.
-[Profile Page Screenshot](documents/images/profilepage-features.png)
+[Profile Page Screenshot](documents/images-features/profilepage-features.png)
 ###### Add Treatment Management Page
 A page for admin users to add treatments to the site.
-[Add Treatment Page Screenshot](documents/images/addtreatmentpage-features.png)
+[Add Treatment Page Screenshot](documents/images-features/addtreatmentpage-features.png)
 ###### Edit Treatment Page
 A page for admin users to edit treatments on the site.
-[Edit Treatment Page Screenshot](documents/images/edittreatmentpage-features.png)
+[Edit Treatment Page Screenshot](documents/images-features/edittreatmentpage-features.png)
 ###### Add Blog Page
 A page for admin users to add blogs to the site.
-[Add Blog Page Screenshot](documents/images/addblogpage-features.png)
+[Add Blog Page Screenshot](documents/images-features/addblogpage-features.png)
 ###### Edit Blog Page
 A page for admin users to edit blogs on the site.
-[Edit Blog Page Screenshot](documents/images/editblogspage-features.png)
+[Edit Blog Page Screenshot](documents/images-features/editblogspage-features.png)
 ###### Add Rating page
 A page for users who have purchased the treatment can set a rating.
-[Add Rating Page Screenshot](documents/images/addratingpage-features.png)
+[Add Rating Page Screenshot](documents/images-features/addratingpage-features.png)
 
 ### Features Left To Implement
 * A future feature I would like to implement would be a discount feature where admin users can run offers on treatments.
