@@ -152,6 +152,30 @@ SQLite3 was used during development which is included in the default Django inst
 |       ---            |    ---                 |                      |    ---                               |
 | name                 | name                   |  models.CharField    | max_length=254                       |
 | friendly name        | friendly_name          |  models.CharField    | max_length=254, null=True, blank=True|
+###### treatment model
+|      Name            |     Key                |          Type        |         Validation                              |
+|:--------------------:|:----------------------:|:--------------------:|:-----------------------------------------------:|
+|                      |                        |                      |                                                 |
+|       ---            |    ---                 |                      |    ---                                          |
+| category             | category               |  models.ForeignKey   | 'Category', null=True, blank=True, on_delete=models.SET_NULL|
+| sku                  | sku                    |  models.CharField    | max_length=12                                   |
+| name                 | name                   |  models.CharField    | max_length=50                                   |
+| description          | description            |  models.TextField    | max_length=200                                  |
+| hours                | hours                  |  models.IntegerField | default=0                                       |
+| minutes              | minutes                |  models.IntegerField | default=0                                       |
+| amount               | amount                 |  models.IntegerField | default=1                                       |
+| price                | price                  |  models.DecimalField | max_digits=6, decimal_places=2                  |
+| image url            | image_url              |  models.URLField     | max_length=1024, null=True, blank=True          |
+| image                | image                  |  models.ImageField   | null=True, blank=True                           |
+###### rating model
+|      Name            |     Key                |          Type                    |         Validation                              |
+|:--------------------:|:----------------------:|:--------------------------------:|:-----------------------------------------------:|
+|                      |                        |                                  |                                                 |
+|       ---            |    ---                 |                                  |    ---                                          |
+| treatment            | treatment              |  models.ForeignKey               | Treatment, on_delete=models.CASCADE, null=True  |
+| user                 | user                   |  models.ForeignKey               | User, on_delete=models.CASCADE, null=True       |
+| rate                 | rate                   |  models.PositiveSmallIntegerField| choices=RATE_CHOICES, default=3                 |
+| time_added           | time_added             |  models.DateTimeField            | default=timezone.now                            |
 
 
 #### Wireframes
