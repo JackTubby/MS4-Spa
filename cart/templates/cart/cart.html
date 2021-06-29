@@ -41,7 +41,7 @@
                                 {% if item.treatment.image %}
                                 <img src="{{ item.treatment.image.url }}" class="cart-img img-fluid" alt="{{ item.treatment.name }}">
                                 {% else %}
-                                <img src="{{ MEDIA_URL }}test.jpg" class="cart-img img-fluid" alt="{{ item.treatment.name }}">
+                                <img src="{{ MEDIA_URL }}treatmentdefault.jpg" class="cart-img img-fluid" alt="{{ item.treatment.name }}">
                                 {% endif %}
                                 <span id="remove_{{ item.item_id }}" class="close remove-item text-danger"></span>
                             </div>
