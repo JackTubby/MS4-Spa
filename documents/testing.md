@@ -86,7 +86,14 @@
 
 ## Code Validation
 #### HTML
+###### [HTML Validator](https://validator.w3.org/) used to check HTML. 
+- 9 errors
+- 4 warnings
 #### CSS
+###### [CSS Validator](https://jigsaw.w3.org/css-validator/) used to check CSS. 
+- 3 errors > base.css error fixed > two other errors are bootstrap errors so can be ignored.
+- All warnings mostly come from Django & Bootstrap so can be ignored.
+- [CSS Validation Image](image-validation/css-validation.png)
 #### JavaScript
 ###### [JSHint](https://jshint.com/) used to check JavaScript syntax.
 - Cart.html script | Issues - [3 Warnings](image-validation/cart-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
