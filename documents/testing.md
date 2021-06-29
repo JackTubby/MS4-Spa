@@ -93,57 +93,57 @@
 - Stripe_elements.js | Issues - [3 Warnings](image-validation/stripe-elements-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
 - Countryfield.js | Issues - [2 Warnings](image-validation/countryfield-js.png) > All fixed apart from 'template literal syntax' is only available in ES6 (use 'esversion: 6').
 - Treatments.html | Issues - [1 Warning](image-validation/treatments-js.png) > All fixed.
-- quantity_input_script.html | Issues - [3 Warnings](quantity-input-script-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
-- edit_treatment.html | Issues - [1 Warning](edit-treatment-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
-- add_treatments.html | Issues - [1 Warning](add-treatments-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- quantity_input_script.html | Issues - [3 Warnings](image-validation/quantity-input-script-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- edit_treatment.html | Issues - [1 Warning](image-validation/edit-treatment-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- add_treatments.html | Issues - [1 Warning](image-validation/add-treatments-js.png) > No fixes required for 'template literal syntax' is only available in ES6 (use 'esversion: 6').
 
 #### Python
 - Autopepe8 installed as a dependency for checking code as written, all python ran through.
 ###### [ExtendsClass](https://extendsclass.com/python-tester.html) Python Syntax Checker used to check all python files syntax
 - **Blog App Syntax Check**
-  - admin.py [Passed Validation Image](testing-images/blog-admin-validation.png)
-  - apps.py [Passed Validation Image](testing-images/blog-apps-validation.png)
-  - forms.py [Passed Validation Image](testing-images/blog-forms-validation.png)
-  - models.py [Passed Validation Image](testing-images/blog-models-validation.png)
-  - tests.py [Passed Validation Image](testing-images/blog-tests-validation.png)
-  - urls.py [Passed Validation Image](testing-images/blog-urls-validation.png)
-  - views.py [One Error](testing-images/blog-urls-error-validation.png)
+  - admin.py [Passed Validation Image](image-validation/blog-admin-validation.png)
+  - apps.py [Passed Validation Image](image-validation/blog-apps-validation.png)
+  - forms.py [Passed Validation Image](image-validation/blog-forms-validation.png)
+  - models.py [Passed Validation Image](image-validation/blog-models-validation.png)
+  - tests.py [Passed Validation Image](image-validation/blog-tests-validation.png)
+  - urls.py [Passed Validation Image](image-validation/blog-urls-validation.png)
+  - views.py [One Error](image-validation/blog-urls-error-validation.png)
 - **Cart App Syntax Check**
-  - apps.py [Passed Validation Image](testing-images/cart-apps-validation.png)
-  - contexts.py [Passed Validation Image](testing-images/cart-contexts-validation.png)
-  - urls.py [Passed Validation Image](testing-images/cart-urls-validation.png)
-  - views.py [One Error](testing-images/cart-views-error-validation.png)
+  - apps.py [Passed Validation Image](image-validation/cart-apps-validation.png)
+  - contexts.py [Passed Validation Image](image-validation/cart-contexts-validation.png)
+  - urls.py [Passed Validation Image](image-validation/cart-urls-validation.png)
+  - views.py [One Error](image-validation/cart-views-error-validation.png)
 - **Checkout App Syntax Check**
-  - admin.py [Passed Validation Image](testing-images/checkout-admin-validation.png)
-  - apps.py [Passed Validation Image](testing-images/checkout-apps-validation.png)
-  - forms.py [One Error](testing-images/checkout-forms-error-validation.png)
-  - models.py [One Error](testing-images/checkout-models-error-validation.png)
-  - signals.py [Passed Validation Image](testing-images/checkout-signals-validation.png)
-  - urls.py [Passed Validation Image](testing-images/checkout-urls-validation.png)
-  - views.py [Passed Validation Image](testing-images/checkout-views-validation.png)
-  - webhook_handler.py [One Error](testing-images/checkout-webhookh-error-validation.png)
-  - webhooks.py [Passed Validation Image](testing-images/checkout-webhooks-validation.png)
+  - admin.py [Passed Validation Image](image-validation/checkout-admin-validation.png)
+  - apps.py [Passed Validation Image](image-validation/checkout-apps-validation.png)
+  - forms.py [One Error](image-validation/checkout-forms-error-validation.png)
+  - models.py [One Error](image-validation/checkout-models-error-validation.png)
+  - signals.py [Passed Validation Image](image-validation/checkout-signals-validation.png)
+  - urls.py [Passed Validation Image](image-validation/checkout-urls-validation.png)
+  - views.py [Passed Validation Image](image-validation/checkout-views-validation.png)
+  - webhook_handler.py [One Error](image-validation/checkout-webhookh-error-validation.png)
+  - webhooks.py [Passed Validation Image](image-validation/checkout-webhooks-validation.png)
 - **Home App Syntax Check**
-  - apps.py [Passed Validation Image](testing-images/home-apps-validation.png)
-  - urls.py [Passed Validation Image](testing-images/home-urls-validation.png)
-  - views.py [Passed Validation Image](testing-images/home-views-validation.png)
+  - apps.py [Passed Validation Image](image-validation/home-apps-validation.png)
+  - urls.py [Passed Validation Image](image-validation/home-urls-validation.png)
+  - views.py [Passed Validation Image](image-validation/home-views-validation.png)
 - **Profiles App Syntax Check**
-  - apps.py [Passed Validation Image](testing-images/profiles-apps-validation.png)
+  - apps.py [Passed Validation Image](image-validation/profiles-apps-validation.png)
   - forms.py [One Error]() []()
-  - models.py [Passed Validation Image](testing-images/profiles-apps-validation.png)
-  - urls.py [Passed Validation Image](testing-images/profiles-urls-validation.png)
-  - views.py [One Error](testing-images/profiles-views-error-validation.png)
+  - models.py [Passed Validation Image](image-validation/profiles-apps-validation.png)
+  - urls.py [Passed Validation Image](image-validation/profiles-urls-validation.png)
+  - views.py [One Error](image-validation/profiles-views-error-validation.png)
 - **Purity App Syntax Check**
   - settings.py [One Error]() []()
-  - urls.py [Passed Validation Image](testing-images/purity-urls-validation.png)
+  - urls.py [Passed Validation Image](image-validation/purity-urls-validation.png)
 - **Treatments App Syntax Check**
-  - admin.py [Passed Validation Image](testing-images/treatments-admin-validation.png)
-  - apps.py [Passed Validation Image](testing-images/treatments-apps-validation.png)
-  - forms.py [Passed Validation Image](testing-images/treatments-forms-validation.png)
-  - models.py [Passed Validation Image](testing-images/treatments-models-validation.png)
-  - urls.py [Passed Validation Image](testing-images/treatments-urls-validation.png)
-  - views.py [One Error](testing-images/treatments-views-error-validation.png)
-  - widgets.py [Passed Validation Image](testing-images/treatments-widgets-validation.png)
+  - admin.py [Passed Validation Image](image-validation/treatments-admin-validation.png)
+  - apps.py [Passed Validation Image](image-validation/treatments-apps-validation.png)
+  - forms.py [Passed Validation Image](image-validation/treatments-forms-validation.png)
+  - models.py [Passed Validation Image](image-validation/treatments-models-validation.png)
+  - urls.py [Passed Validation Image](image-validation/treatments-urls-validation.png)
+  - views.py [One Error](image-validation/treatments-views-error-validation.png)
+  - widgets.py [Passed Validation Image](image-validation/treatments-widgets-validation.png)
 - **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
 
 ## Stripe Tests
