@@ -209,19 +209,22 @@ A page that shows the blog text for a user to read, this page also contains a ba
 [Treatment Details Page Screenshot](documents/images/blogdetailspage-features.png)
 ###### Profile Page
 The profile page shows all order history which are clickable to see previous order recipts, default billing information that can be changed and a change password button for users to update there password.
-[Treatment Details Page Screenshot](documents/images/profilepage-features.png)
+[Profile Page Screenshot](documents/images/profilepage-features.png)
 ###### Add Treatment Management Page
 A page for admin users to add treatments to the site.
-[Treatment Details Page Screenshot](documents/images/addtreatmentpage-features.png)
+[Add Treatment Page Screenshot](documents/images/addtreatmentpage-features.png)
 ###### Edit Treatment Page
 A page for admin users to edit treatments on the site.
-[Treatment Details Page Screenshot](documents/images/edittreatmentpage-features.png)
+[Edit Treatment Page Screenshot](documents/images/edittreatmentpage-features.png)
 ###### Add Blog Page
 A page for admin users to add blogs to the site.
-[Treatment Details Page Screenshot](documents/images/addblogpage-features.png)
+[Add Blog Page Screenshot](documents/images/addblogpage-features.png)
 ###### Edit Blog Page
 A page for admin users to edit blogs on the site.
-[Treatment Details Page Screenshot](documents/images/editblogspage-features.png)
+[Edit Blog Page Screenshot](documents/images/editblogspage-features.png)
+###### Add Rating page
+A page for users who have purchased the treatment can set a rating.
+[Add Rating Page Screenshot](documents/images/addratingpage-features.png)
 
 ### Features Left To Implement
 * A future feature I would like to implement would be a discount feature where admin users can run offers on treatments.
