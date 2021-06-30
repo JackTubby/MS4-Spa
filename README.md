@@ -1,8 +1,5 @@
 # Purity - Spa Website
 
-## Table of Contents
-![Purity Home Page](documents/images/purity-home-main.png)
-
 ### User Stories
 |      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
 |:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
