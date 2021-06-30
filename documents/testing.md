@@ -74,8 +74,8 @@
 ## Code Validation
 #### HTML
 ###### [HTML Validator](https://validator.w3.org/) used to check HTML. 
-- 9 errors
-- 4 warnings
+- 9 errors - Errors are due to Bootstrap/Django which can not be fixed. Errors cause no issues to site and do not require an immediate fix.
+- 4 warnings - Warnings have been checked they are not an issue.
 #### CSS
 ###### [CSS Validator](https://jigsaw.w3.org/css-validator/) used to check CSS. 
 - 3 errors > base.css error fixed > two other errors are bootstrap errors so can be ignored.
