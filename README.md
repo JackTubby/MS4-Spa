@@ -10,13 +10,12 @@
 | Anonymous user       | Understand what the site is about from landing page;                     | to make sure the website fits my needs                        |
 | Anonymous user       | easily navigate around the site;                                         | find what I am looking for quickly and easily                 |
 | Anonymous user       | search for treatments;                                                   | browse for treatments instead of scrolling through them all   |
-| Anonymous user       | filter my search results;                                                | see the range of prices & categorys                           |
+| Anonymous user       | filter my search results;                                                | see the range of prices and categorys                         |
 | Anonymous user       | read details about the treatments;                                       | to understand what the treatment provides                     |    
 | Anonymous user       | add treatments into my cart;                                             | add a treatment whilst looking at more                        |
 | Anonymous user       | understand why I should sign up;                                         | understand the benifits of signing up                         |
 | Anonymous user       | gain access to the companys social media;                                | visit you social media pages                                  |
-| Anonymous user       | register for a user profile account by choosing a username and password; | save billing details & gain access to offers, ratings         |
-| Anonymous user       | able to view blog/updates for the company;                               | understand what's new in the company & there aims             |
+| Anonymous user       | register for a user profile account by choosing a username and password; | save billing details and gain access to offers, ratings        
 |          ---         |                                    ---                                   |                              ---                              |
 | Registered user      | log in and log out of my account;                                        | safeguard all my information whilst not active on the site    |
 | Registered user      | update my billing information;                                           | update any new detials I obtain                               |
