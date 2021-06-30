@@ -13,19 +13,19 @@
 | Anonymous user       | filter my search results;                                                | see the range of prices and categorys                         |
 | Anonymous user       | read details about the treatments;                                       | to understand what the treatment provides                     |    
 | Anonymous user       | add treatments into my cart;                                             | add a treatment whilst looking at more                        |
-| Anonymous user       | understand why I should sign up;                                         | understand the benifits of signing up                         |
+| Anonymous user       | understand why I should sign up;                                         | understand the benefits of signing up                         |
 | Anonymous user       | gain access to the companys social media;                                | visit you social media pages                                  |
-| Anonymous user       | register for a user profile account by choosing a username and password; | save billing details and gain access to offers, ratings        
+| Anonymous user       | register for a user profile account by choosing a username and password; | save billing details and gain access to offers, ratings       | 
 |          ---         |                                    ---                                   |                              ---                              |
 | Registered user      | log in and log out of my account;                                        | safeguard all my information whilst not active on the site    |
-| Registered user      | update my billing information;                                           | update any new detials I obtain                               |
-| Registered user      | store my order history and check previous order recipts;                 | gain access to previous treatment orders                      |
+| Registered user      | update my billing information;                                           | update any new details I obtain                               |
+| Registered user      | store my order history and check previous order receipts;                 | gain access to previous treatment orders                     |
 | Registered user      | add rating to orders I purchased;                                        | so I can give the treatment a rating depending on what I thought of it|
 |          ---         |                                    ---                                   |                              ---                              |
 | Site admin/superuser | add new treatments to the site;                                          | always make new treatments avaliable for users                |
 | Site admin/superuser | add blogs to the site;                                                   | update users on any new updates with the company              |
 | Site admin/superuser | delete treatments;                                                       | delete treatments that are no longer provided                 |
-| Site admin/superuser | edit treatment                                                           | make changes to any added treatments                          |
+| Site admin/superuser | edit treatment;                                                          | make changes to any added treatments                          |
 | Site admin/superuser | delete blogs;                                                            | delete any updates that may not be needed anymore             |
 | Site admin/superuser | edit blogs;                                                              | edit blogs for any mistakes/changes on the updates            |
 |                      |                                                                          |                                                               |
@@ -35,21 +35,21 @@
 ### Project Goals
 * Ease of use.
 * Look at the stores treatments.
-* Able to purchase treatments in a simple process.
+* Be able to purchase treatments in a simple process.
 * Full authentication functionality.
 * CRUD functionality for store owners to add blogs & treatments.
-* Users who purchase a treatment able to set a rating.
+* Users who purchase a treatment, be able to set a rating.
 
 ### Scope
 * Allow users to make purchases on the site.
 * Allow users to set ratings on treatments they have purchased.
 * Allow users to register for an account & change password when needed.
-* Allow Admins to use CRUD functionality to add treatments & blogs.
+* Allow admins to use CRUD functionality to add treatments & blogs.
 * Create the site using FullStack development skills.
 
 ### Structure
-* Fixed navigation bar, This will increase UI/UX for all users on a wide range of devices. For example small screens can easily navigate from anywhere in the page.
-* The navigation bar will contain a drop down menu containing page links and the website title. Also located in the navigation bar will be a profile dropdown containing login/signup or profile for logged in users, admins will have a link to add a treatment or blog. The final link in the navbar will be a link to the cart also showing the cart total.
+* Fixed navigation bar, this will increase UI/UX for all users on a wide range of devices. For example, small screens can easily navigate from anywhere in the page.
+* The navigation bar will contain a dropdown menu containing page links and the website title. Also located in the navigation bar will be a profile dropdown containing login/signup or profile for logged in users, admins will have a link to add a treatment or blog. The final link in the navbar will be a link to the cart also showing the cart total.
 * The top right just below the navbar will show all toast messages.
 * Every page will contain a footer which will consist of the company address, links, contact details and social media links.
 
@@ -57,19 +57,19 @@
 #### Colours
 I have chosen a wide range of colours for my website:
 * #9eb4a7 This light shade of green was used to give a calm and relaxing feeling to the site. It was used mainly on buttons and on some backgrounds making the text stand out more.
-* #f3c1a4 A mix of orange and beige complimenting the overall theme of the site, this was mainly used on buttons and background colours.
-* White was used alot over the site giving it a clean and calm feel inline with the sites goal. White was used on a lot of backgrounds and used on some text when on a dark background.
+* #f3c1a4 A mix of orange and beige complementing the overall theme of the site, this was mainly used on buttons and background colours.
+* White was used alot over the site giving it a clean and calm feel in-line with the sites goals. White was mainly used on backgrounds and used on some text when on a darker background.
 * Black was used for text to make it stand out on lighter backgrounds and catch the users eye.
-* Any other colours where chosen through development, a case of this may be when using a previously chosen colour the text did not stand out enough so the colour was changed to match this.
+* Any other colours were chosen throughout development, a case of this was when previously chosen colours and text did not stand out enough, so the colour was changed to match this.
 #### Icons
-In the project, icons were obtained from [Font Awesome](https://fontawesome.com/). Icons were used for different settings, for example they was used for social media icons but also to help users understand details. An example of this is the checkout button showing a locked lock to give the feel this is the final step to take payment.
+In the project, icons were obtained from [Font Awesome](https://fontawesome.com/). Icons were used for different settings, for example they was used for social media icons but also to help users understand details. An example of this is the checkout button showing a locked lock to give the feel this is the final step before payment is taken.
 #### Typography
 * "Lato" used as a base font as it is readable and simple.
 * "Dancing Script" An elegant font fitting the clean and fancy theme, mainly used for headings.
 * "Courgette" Also an elegant font fitting the clean and fancy theme, mainly used for headings.
 * "Monstratt" Used alongside "Lato" it is a clean and readble font perfect for getting information to the user.
 #### Imagery
-When choosing imagery I used [Pexels](https://www.pexels.com/). Images were used mainly for background images in the site as well as a fallback image if user's uploaded image is not avaliable.
+When choosing imagery I used [Pexels](https://www.pexels.com/). Images were mainly used as background images in the site as well as a fallback images if user's/admin uploaded image is not avaliable.
 
 ### Information Architecture
 #### Database
@@ -180,39 +180,39 @@ A page showing all treatments on the site, the page provides sorting options, tr
 This page provides all details about the treatment, and a image representing the type of treatment. Also on the site is the treatments average rating where only users who have purchased the treatment can add a rating. For admin users an edit and delete button are provided.
 [Treatment Details Page Screenshot](documents/image-features/treatmentdetailspage-features.png)
 ###### Cart Page
-A page where all treatments a user has added are, showing the name, sku, price, quantity with the ablity to update the quantity, for (amount of people its for) and the total of that line item. There is also a grand total which works out all the items cost, below is a link to the terms of service and below that is a link to the checkout page.
+A page where all treatments a user has added are, showing the name, sku, price, quantity with the ability to update the quantity, for (amount of people its for) and the total of that line item. There is also a grand total which works out all the items cost, below is a link to the terms of service and below that is a link to the checkout page.
 [Cart Page Screenshot](documents/image-features/cartpage-features.png)
 ###### Checkout Page
-Checkout page shows the list of all items in the cart, the price of them all and a billing details form, once filled out correctly you can choose to adjust cart or complete order. Choosing complete order will take payment and take you to a success page showing a recipt of your purchase.
+Checkout page shows the list of all items in the cart, the price of them all and a billing details form, once filled out correctly you can choose to adjust cart or complete order. Choosing complete order will take payment and take you to a success page showing a receipt of your purchase.
 [Checkout Page Screenshot](documents/image-features/checkoutpage-features.png)
 ###### Blog Page
-A page showing all blogs that store owners have added, blogs can range from updates to information about subjects.
+A page showing all blogs that store owners have added, blogs can range from updates, to information about subjects.
 [Blog Page Screenshot](documents/image-features/blogpage-features.png)
 ###### Blog Details Page
 A page that shows the blog text for a user to read, this page also contains a back to blogs button and a edit/delete button for admin users only.
 [Treatment Details Page Screenshot](documents/image-features/blogdetailspage-features.png)
 ###### Profile Page
-The profile page shows all order history which are clickable to see previous order recipts, default billing information that can be changed and a change password button for users to update there password.
+The profile page shows all order history which are clickable to see previous order receipts, default billing information that can be changed and a change password button for users to update their password.
 [Profile Page Screenshot](documents/image-features/profilepage-features.png)
 ###### Add Treatment Management Page
 A page for admin users to add treatments to the site.
 [Add Treatment Page Screenshot](documents/image-features/addtreatmentpage-features.png)
 ###### Edit Treatment Page
 A page for admin users to edit treatments on the site.
-[Edit Treatment Page Screenshot](documents/image-features/edittreatmentpage-features.png)
+[Edit Treatment Page Screenshot](documents/image-features/edittreatmentpage.png)
 ###### Add Blog Page
 A page for admin users to add blogs to the site.
 [Add Blog Page Screenshot](documents/image-features/addblogpage-features.png)
 ###### Edit Blog Page
 A page for admin users to edit blogs on the site.
-[Edit Blog Page Screenshot](documents/image-features/editblogspage-features.png)
+[Edit Blog Page Screenshot](documents/image-features/editblogspage.png)
 ###### Add Rating page
-A page for users who have purchased the treatment can set a rating.
+A page for users who have purchased the treatment, to set a rating.
 [Add Rating Page Screenshot](documents/image-features/addratingpage-features.png)
 
 ### Features Left To Implement
 * A future feature I would like to implement would be a discount feature where admin users can run offers on treatments.
-* A future feature I would like to implement would be a booking system, so users can book a date and time for there treatment.
+* A future feature I would like to implement would be a booking system, so users can book a date and time for their treatment.
 
 ## Technologies Used
 * HTML5
@@ -245,7 +245,9 @@ The full testing process can be found [here](documents/testing.md).
 * TinyPNG
 
 ## Credits
-ADD CREDITED CODE
+[Bootstrap](https://getbootstrap.com/)
+[Card designs](https://freefrontend.com/bootstrap-cards/)
+[Code Insitute Walk Through Project](https://codeinstitute.net/)
 ### Media
 * [Pexels](https://www.pexels.com/) was used for imagery.
 ### Acknowledgements
