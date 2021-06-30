@@ -180,7 +180,8 @@ SQLite3 was used during development which is included in the default Django inst
 
 
 #### Wireframes
-TO ADD
+* Wireframes do not contain tablet wireframe due to the simular style as large & small screens, the only differences may be some slight position movement.
+* [Wireframes](documents/wireframe/spa-wireframe.pdf).
 
 ## Features
 ### Existing Features
