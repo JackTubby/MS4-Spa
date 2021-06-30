@@ -101,21 +101,21 @@
   - models.py [Passed Validation Image](image-validation/blog-models-validation.png)
   - tests.py [Passed Validation Image](image-validation/blog-tests-validation.png)
   - urls.py [Passed Validation Image](image-validation/blog-urls-validation.png)
-  - views.py [One Error](image-validation/blog-urls-error-validation.png)
+  - views.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
 - **Cart App Syntax Check**
   - apps.py [Passed Validation Image](image-validation/cart-apps-validation.png)
   - contexts.py [Passed Validation Image](image-validation/cart-contexts-validation.png)
   - urls.py [Passed Validation Image](image-validation/cart-urls-validation.png)
-  - views.py [One Error](image-validation/cart-views-error-validation.png)
+  - views.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
 - **Checkout App Syntax Check**
   - admin.py [Passed Validation Image](image-validation/checkout-admin-validation.png)
   - apps.py [Passed Validation Image](image-validation/checkout-apps-validation.png)
-  - forms.py [One Error](image-validation/checkout-forms-error-validation.png)
-  - models.py [One Error](image-validation/checkout-models-error-validation.png)
+  - forms.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
+  - models.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
   - signals.py [Passed Validation Image](image-validation/checkout-signals-validation.png)
   - urls.py [Passed Validation Image](image-validation/checkout-urls-validation.png)
   - views.py [Passed Validation Image](image-validation/checkout-views-validation.png)
-  - webhook_handler.py [One Error](image-validation/checkout-webhookh-error-validation.png)
+  - webhook_handler.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
   - webhooks.py [Passed Validation Image](image-validation/checkout-webhooks-validation.png)
 - **Home App Syntax Check**
   - apps.py [Passed Validation Image](image-validation/home-apps-validation.png)
@@ -123,12 +123,12 @@
   - views.py [Passed Validation Image](image-validation/home-views-validation.png)
 - **Profiles App Syntax Check**
   - apps.py [Passed Validation Image](image-validation/profiles-apps-validation.png)
-  - forms.py [One Error]() []()
+  - forms.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
   - models.py [Passed Validation Image](image-validation/profiles-apps-validation.png)
   - urls.py [Passed Validation Image](image-validation/profiles-urls-validation.png)
   - views.py [One Error](image-validation/profiles-views-error-validation.png)
 - **Purity App Syntax Check**
-  - settings.py [One Error]() []()
+  - settings.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
   - urls.py [Passed Validation Image](image-validation/purity-urls-validation.png)
 - **Treatments App Syntax Check**
   - admin.py [Passed Validation Image](image-validation/treatments-admin-validation.png)
@@ -136,7 +136,7 @@
   - forms.py [Passed Validation Image](image-validation/treatments-forms-validation.png)
   - models.py [Passed Validation Image](image-validation/treatments-models-validation.png)
   - urls.py [Passed Validation Image](image-validation/treatments-urls-validation.png)
-  - views.py [One Error](image-validation/treatments-views-error-validation.png)
+  - views.py **One Error** f strings **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
   - widgets.py [Passed Validation Image](image-validation/treatments-widgets-validation.png)
 - **Errors found are all due to f strings after further investigations it is a issue with ExtendsClass**
 
