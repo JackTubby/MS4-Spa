@@ -64,32 +64,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* FAQ */
-#faq-wrapper {
-    background: url('../../../../media/faq.jpg') no-repeat center;
-    background-size: cover;
-}
-
-.faq-inside-wrapper {
-    min-height: 95vh;
-}
-
-#accordion {
-    width: 80%;
-    margin: auto;
-}
-
-.faq-heading {
-    color: #323d50;
-    text-shadow: 1px 1px #000;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.faq-heading:hover {
-    color: #9eb4a7;
-}
-
 /* Contact Us */
 .contact-h-wrapper {
     background-color: #9eb4a7;
@@ -124,4 +98,30 @@
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     color: #000;
+}
+
+/* FAQ */
+#faq-wrapper {
+    background: url('../../../../media/faq.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.faq-inside-wrapper {
+    min-height: 95vh;
+}
+
+#accordion {
+    width: 80%;
+    margin: auto;
+}
+
+.faq-heading {
+    color: #323d50;
+    text-shadow: 1px 1px #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq-heading:hover {
+    color: #9eb4a7;
 }
