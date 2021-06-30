@@ -5,19 +5,6 @@
 
 
 ### User Stories
-- I want users to be able to find treatments and see more details about them
-- I want users to be able to easily navigate around the site
-- I want users to be able to add treatments to there basket 
-- I want users to be able to purchase treatments
-- I want users to be able to get in contact using a contact page
-- I want users to be able to leave the spa reviews/testimonials
-- I want users to be able to sign up/ login
-- I want users to be able to use an offers page only when logged in
-- I want users to to be able to sign up to the new letter
-- I want admin users to add/edit/delete treatments and offers
-- I want admin users to be able to post blog updates
-
-
 |      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
 |:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
 |                      |                                                                          |                                                               |
