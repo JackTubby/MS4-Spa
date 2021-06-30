@@ -173,6 +173,8 @@
   - Safari
 
 ## Known Bugs & Issues
+* Users are getting emails when they sign up and change password, but not when making an order. Due to time limitations I could not fix this but have added a message saying 'We have recieved your order a memeber of staff will be in contact with you to confirm your booking and give you your recipt'. Meaning it will be manual for now but would like to add this feature next.
+* The cart success message when updating the quantity has to close buttons, this is a minor issue and causes no real problems. Did not have time to fix.
 
 ## Deployment
 * Ensured deployed page on Heroku loads up correctly.
