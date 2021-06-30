@@ -7,7 +7,6 @@ from django.db.models.functions import Lower
 
 from .models import Treatment, Category, Rating
 from profiles.models import UserProfile
-from checkout.models import Order
 from .forms import TreatmentForm, RatingForm
 
 
@@ -185,7 +184,7 @@ def add_rating(request, treatment_id):
         for item in all_lineitems:
             if item.treatment == treatment:
                 user_purchased = True
-    if user_purchased == True:
+    if user_purchased is True:
         if request.method == 'POST':
             form = RatingForm(request.POST, request.FILES)
             if form.is_valid():
