@@ -1,22 +1,9 @@
 # Testing 
-<span id="testing"></span>
-
-## Table of Contents 
-> - [User Stories Testing](#userstories)
-> - [Code Validation](#validation)
->   - [HTML](#html)
->   - [CSS](#css)
->   - [JavaScript](#js)
->   - [Python](#py)
->   - [error](#error)
-> - [Responsive Testing](#responsive)
-
-<span id ="userstories"></span>
 
 ## User Story Testing
 ### Anonymous user
 #### View the site on all screen sizes
-* Site tested on all screen sizes as shown in [the responsive testing section](#responsive)
+* Site tested on all screen sizes as described in the responsive testing section.
 #### understand what the site is about from landing page
 - **Testing:** Used the [deployed site url](https://purity-mxhaib.herokuapp.com/) and clicked enter, The page opened showing the landing page instantly showing a welcome to message.
   - [Home page showing welcome message](testing-images/home-page-1.png)
