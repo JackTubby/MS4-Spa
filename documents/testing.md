@@ -19,44 +19,44 @@
 * Site tested on all screen sizes as shown in [the responsive testing section](#responsive)
 #### understand what the site is about from landing page
 - **Testing:** Used the [deployed site url](https://purity-mxhaib.herokuapp.com/) and clicked enter, The page opened showing the landing page instantly showing a welcome to message.
-  - [Adding url to navbar]() > [Home page showing welcome message]()
+  - [Home page showing welcome message](testing-images/home-page-1.png)
 #### easily navigate around the site
 - The site contains mutlitple ways to navigate, for example the navbar is fixed so no matter how far down a page the menu dropdown is available. The footer also container links around the site and multiple pages throughout the site has back buttons implemented. The home page also has a button strait away with easy navigation to the treatments page. 
 - **Testing:** From the landing page I used the dropdown menu and tested all links, using the footer I clicked all link, all links were correct. From the home page I clicked 'take a look button' this correctly opened the treatments page. Throughout the site I tested back buttons for example the treatment details and blog details page.
-  - [Menu dropdown links]() > [Footer links]() > ['take a look' button test]() > [Treatment details back button]() > [Blog details back button]()
+  - [Menu dropdown links](testing-images/menu-dropdown-2.png) > [Footer links](testing-images/footer-links-2.png) > ['take a look' button test](testing-images/take-a-2.png) > [Treatment details back button](testing-images/treatment-details-2.png) > [Blog details back button](testing-images/blog-details-2.png)
 #### search for treatments
 - **Testing:** On the treatments page I used the search bar to search treatments by name and description to check correct results was returned. Using the search bar I put in a treatment that did not exist, the correct result showed.
-  - [Search by name]() > [Search by description]() > [Searh a treatment that does not exist]()
+  - [Search by name](testing-images/search-by-3.png) > [Search by description](testing-images/search-description-3.png) > [Searh a treatment that does not exist](testing-images/search-a-3.png)
 #### filter my search results
 - **Testing:** Searched for a treatment then using the 'sort by..' dropdown tested options.
-  - [Use sort by dropdown]()
+  - [Use sort by dropdown](testing-images/use-sort-4.png)
 #### read details about the treatments
 - **Testing:** On the treatments page I clicked a treatment to test the treatment details page opened.
-  - [Treatments page]() > [Treatment details page]()
+  - [Treatments page](testing-images/treatments-page-5.png) > [Treatment details page](treatment-details-5.png)
 #### add treatments into my cart
 - **Testing:** On the treatment details page I selected a quantity and clicked 'add to cart' button, checked the total was displayed at the top right of the navbar, checked toast showed when adding the treatment. Clicked 'go to cart' button to make sure the treatment was located inside of the cart page.
-  - [Clicked add to cart button]() > [Cart total showing correctly]() > [Cart success toast shows]() > [Cart page showing treatment in cart]()
+  - [Clicked add to cart button](testing-images/clicked-add-6.png) > [Cart total showing correctly](testing-images/cart-total-6.png) > [Cart success toast shows](testing-images/cart-success-6.png) > [Cart page showing treatment in cart](testing-images/cart-page-6.png)
 #### understand why I should sign up
 - The aim of the site is for all users to be able to make purchases but there are two reasons for a user to sign up. 1) To save billing information for next time checkout. 2) To add a rating on a treatment that is purchased.
 - **Testing:** On the checkout page I checked non-logged in users could not save there information and that logged in users could. On the treatment details page I checked that non-logged in users could not add a rating and a message was shown, that logged in users who have purchased the treatment could.
-  - [Non-logged in user on checkout]() > [Logged in users in the checkout]() > [Logged in users saved info in the profile]() > [non-logged in user not able to add rating]() > [Logged in user who purchased the treatment can add a rating]()
+  - [Non-logged in user on checkout](testing-images/non-logged-7.png) > [Logged in users in the checkout](testing-images/logged-in-checkout-7.png) > [Logged in users saved info in the profile](testing-images/logged-in-profile-7.png) > [non-logged in user not able to add rating](testing-images/non-logged-rating-7.png) > [Logged in user who purchased the treatment can add a rating](testing-images/logged-in-rating-7.png)
 #### gain access to the companys social media
 - **Testing:** Using the social media icons in the footer, I clicked all social media links checking they opened in a new page.
-  - [Social media icons in the footer]() > [Social media site open in new page]()
+  - [Social media icons in the footer](testing-images/social-media-8.png) > [Social media site open in new page](testing-images/social-media-page-8.png)
 #### register for a user profile account by choosing a username and password
 - **Testing:** Using the sign up page I filled information wrong by including spaces to check validation worked correctly, I then put information of another user in to check the validation worked there, worked successfully. I then put new user details in the check a user was successfully created.
-  - [Wrong information]() > [Already signed up user]() > [New user]()
+  - [Wrong information](testing-images/wrong-info-9.png) > [Already signed up user](testing-images/already-signed-9.png) > [New user](testing-images/new-user-9.png)
 #### able to view blog/updates for the company
 - **Testing:** On the blog page I checked all users had access then clicked a blog to make sure the blog details page opened correctly.
-  - [blog page]() > [blog details page]()
+  - [blog page](testing-images/blog-page-10.png) > [blog details page](testing-images/blog-details-10.png)
 
 ### Registered User
 #### log in and log out of my account
 - **Testing:** First I put wrong information in checking form validation worked. Then using previous sign up details I went to the login page and put details in checked I was logged in correctly.
-  - [Wrong information]() > [Correct details]()
+  - [Wrong information](testing-images/wrong-info-sign-11.png) > [Correct details](testing-images/correct-details-sign-11.png)
 #### update my billing information
 - **Testing:** First I went to the checkout page and filled in billing information making sure the save information checkbox was selected then made the purchase. From there I went to my profile and checked my details were showing successfully, then I made changes to the information in the profile clicked 'Update Information', I went back to the checkout to check information was changed successfully.
-  - [Checkout page adding information]() > [Profile page checking information is there]() > [Changed information and clicked update button]() > [Checkout page showing updated information]()
+  - [Checkout page adding information](testing-images/checkout-page-adding-12.png) > [Profile page checking information is there](testing-images/checkout-page-checking-12.png) > [Changed information and clicked update button](testing-images/changed-information-checkout-12.png) > [Checkout page showing updated information](testing-images/checkout-page-updated-12.png)
 #### store my order history and check previous order recipts
 - **Testing:** Made a purchase then went to my profile, checked the order number was matching the purchase and that the recipt showed when clicked.
   - [Make a purchase get order number]() > [Profile check order is in there correctly]() > [Clicked order check recipt shows]()
