@@ -59,30 +59,30 @@
   - [Checkout page adding information](testing-images/checkout-page-adding-12.png) > [Profile page checking information is there](testing-images/checkout-page-checking-12.png) > [Changed information and clicked update button](testing-images/changed-information-checkout-12.png) > [Checkout page showing updated information](testing-images/checkout-page-updated-12.png)
 #### store my order history and check previous order recipts
 - **Testing:** Made a purchase then went to my profile, checked the order number was matching the purchase and that the recipt showed when clicked.
-  - [Make a purchase get order number]() > [Profile check order is in there correctly]() > [Clicked order check recipt shows]()
+  - [Profile check order is in there correctly](testing-images/check-ordernumber-13.png) > [Clicked order check recipt shows](testing-images/check-ordernumber-receipt-13.png)
 #### Add ratings to orders I purchased
 - **Testing:** Made a puchase, then went back to the same treatment details to make sure 'add rating' button showed. Then I clicked the button to make sure the rating form opens, I chose a rating and clicked add rating, making sure the rating was added.
-  - [Made a purchase]() > [Add Rating button showing]() > [Add rating form opens]() > [Check rating was added successfully]()
+  - [Add Rating button showing](testing-images/check-add-rating-14.png) > [Add rating form opens](testing-images/add-rating-form-14.png) > [Check rating was added successfully](testing-images/rating-add-successfully-14.png)
 
 ### Site admin/superuser
 #### add new treatments to the site
 - **Testing:** I clicked treatment management link to check it opened the add treatment form. I filled in the form with the correct details and added it, I then checked it was added to the site.
-  - [Treatment management link]() > [Add Treatment form]() > [Fill treatment form and add to site]() > [Check treatment was added to site]()
+  - [Add Treatment form](testing-images/treatment-management-form-15.png) > [Fill treatment form and add to site](testing-images/fill-treatment-15.png) > [Check treatment was added to site](testing-images/treatment-added-15.png)
 #### edit treatment
 - **Testing:** Going to an added treatment I clicked the edit button and made sure the edit treatment form opened. I made changes to the details and clicked update, from there I checked the changes were applied correctly.
-  - [Edit button]() > [Edit form]() > [Make changes and click update]() > [Check changes were applied]()
+  - [Edit form](testing-images/treatment-edit-16.png) > [Make changes and click update](testing-images/treatment-edit-change-16.png) > [Check changes were applied](testing-images/treatment-edit-applied-16.png)
 #### delete treatments
 - **Testing:** Click on a treatment and check the delete button is displayed, I then clicked the delete button making sure the are you sure delete modal opened. Once opened I clicked delete, then checked the treatment was gone.
-  - [Delete button]() > [Delete modal]() > [Delete treatment check it has gone]()
+  - [Delete button](testing-images/delete-btn-17.png) > [Delete modal](testing-images/delete-modal-17.png) > [Delete treatment check it has gone](testing-images/treatment-deleted-17.png)
 #### add blogs to the site
 - **Testing:** I clicked blog management link to check it opened the add blog form. I filled in the form with the correct details and added it, I then checked it was added to the site.
-  - [Blog management link]() > [Add Blog form]() > [Fill blog form and add to site]() > [Check blog was added to site]()
+  - [Add Blog form](testing-images/add-blog-form-18.png) > [Fill blog form and add to site](testing-images/blog-filled-18.png) > [Check blog was added to site](testing-images/add-blog-18.png)
 #### edit blogs
 - **Testing:** Going to an added blog I clicked the edit button and made sure the edit blog form opened. I made changes to the details and clicked update, from there I checked the changes were applied correctly.
-  - [Edit button]() > [Edit form]() > [Make changes and click update]() > [Check changes were applied]()
+  - [Edit form](testing-images/edit-blog-form-19.png) > [Check changes were applied](testing-images/edit-blog-addded-19.png)
 #### delete blogs
 - **Testing:** Click on a blog and check the delete button is displayed, I then clicked the delete button making sure the are you sure delete modal opened. Once opened I clicked delete, then checked the blog was gone.
-  - [Delete button]() > [Delete modal]() > [Delete blog check it has gone]()
+  - [Delete button](testing-images/blog-delete-20.png) > [Delete modal](testing-images/blog-delete-modal-20.png) > [Delete blog check it has gone](testing-images/blog-removed-20.png)
 
 ## Code Validation
 #### HTML
