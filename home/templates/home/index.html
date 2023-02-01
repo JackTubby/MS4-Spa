@@ -7,69 +7,74 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                
-            </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 {% include 'includes/main-nav.html' %}
 <main>
-<div class="container-fluid p-0 g-0">
-<!-- Hero Section -->
-  <div class="row h-100 page-padding" id="index-img">
-      <div class="col-7 col-md-6 my-auto pl-5">
-          <!-- Slogan -->
-          <h1 class="display-4 logo-font shadow-font primary-colour">
-              Find relaxation with one of our treatments
-          </h1>
-          <!-- Take a look btn, opens treatments page -->
-          <div class="my-5">
-              <h4>
-                  <a href="{% url 'treatments' %}" class="take-a-look-button btn btn-lg rounded-0 py-3">Take a look</a>
-              </h4>
-          </div>
-      </div>
-  </div>
-</div>
-<div class="container p-0">
-  <!-- Welcome To Section -->
-    <div class="row pt-4 about-wrapper">
-        <div class="col-12 text-center">
-            <h3 class="about-header">Welcome to</h3>
-            <h5 class="home-h5">PURITY SPA</h5>
-            <p class="about-p">Purity Spa offers a wide range of natural treatments using a wide range of products to achieve the best possible experience and results. Providing bespoke treatments, we can help you achieve your
-                goals in comfort and privacy. We provide excellent service & quality treatments, find your treatment now.
-            </p>
+    <div class="container-fluid p-0 g-0">
+        <!-- Hero Section -->
+        <div class="row h-100 page-padding" id="index-img">
+            <div class="col-7 col-md-6 my-auto pl-5">
+                <!-- Slogan -->
+                <h1 class="display-4 logo-font shadow-font primary-colour">
+                    Find relaxation with one of our treatments
+                </h1>
+                <!-- Take a look btn, opens treatments page -->
+                <div class="my-5">
+                    <h4>
+                        <a href="{% url 'treatments' %}" class="take-a-look-button btn btn-lg rounded-0 py-3">Take a
+                            look</a>
+                    </h4>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Contact Us -->
-    <div class="row">
-      <div class="col-12 col-md-6 contact-h-wrapper">
-        <h5 class="contact-h">Need Help? Get In Touch.</h5>
-      </div>
-      <div class="col-12 col-md-6 text-center py-2">
-        <div class="col-12 contact-i-h">Opening Hours</div>
-        <div class="col-12 contact-i">Monday 9-21</div>
-        <div class="col-12 contact-i">Tuesday 9-21</div>
-        <div class="col-12 contact-i">Wednesday 9-21</div>
-        <div class="col-12 contact-i">Thursday 9-21</div>
-        <div class="col-12 contact-i">Friday 9-21</div>
-        <div class="col-12 contact-i">Saturday 9-21</div>
-        <div class="col-12 contact-i pb-4">Sunday 9-18</div>
-        <div class="col-12 contact-i-h">Address & Contact Details</div>
-        <div class="col-12 contact-i">1 Random Steet</div>
-        <div class="col-12 contact-i">London W1B 5AH</div>
-        <div class="col-12 contact-i">England</div>
-        <div class="col-12 contact-i">020 3893 3062</div>
-        <div class="col-12"><a class="contact-i text-primary" href="mailto: purity@info.com">Purity@info.com</a></div>
-      </div>
+    <div class="container p-0">
+        <!-- Welcome To Section -->
+        <div class="row pt-4 about-wrapper">
+            <div class="col-12 text-center">
+                <h3 class="about-header">Welcome to</h3>
+                <h5 class="home-h5">PURITY SPA</h5>
+                <p class="about-p">Purity Spa offers a wide range of natural treatments using a wide range of products
+                    to achieve the best possible experience and results. Providing bespoke treatments, we can help you
+                    achieve your
+                    goals in comfort and privacy. We provide excellent service & quality treatments, find your treatment
+                    now.
+                </p>
+            </div>
+        </div>
+        <!-- Contact Us -->
+        <div class="row">
+            <div class="col-12 col-md-6 contact-h-wrapper">
+                <h5 class="contact-h">Need Help? Get In Touch.</h5>
+            </div>
+            <div class="col-12 col-md-6 text-center py-2">
+                <div class="col-12 contact-i-h">Opening Hours</div>
+                <div class="col-12 contact-i">Monday 9-21</div>
+                <div class="col-12 contact-i">Tuesday 9-21</div>
+                <div class="col-12 contact-i">Wednesday 9-21</div>
+                <div class="col-12 contact-i">Thursday 9-21</div>
+                <div class="col-12 contact-i">Friday 9-21</div>
+                <div class="col-12 contact-i">Saturday 9-21</div>
+                <div class="col-12 contact-i pb-4">Sunday 9-18</div>
+                <div class="col-12 contact-i-h">Address & Contact Details</div>
+                <div class="col-12 contact-i">1 Random Steet</div>
+                <div class="col-12 contact-i">London W1B 5AH</div>
+                <div class="col-12 contact-i">England</div>
+                <div class="col-12 contact-i">020 3893 3062</div>
+                <div class="col-12"><a class="contact-i text-primary" href="mailto: purity@info.com">Purity@info.com</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </main>
 {% include 'includes/footer.html' %}
 {% endblock %}
